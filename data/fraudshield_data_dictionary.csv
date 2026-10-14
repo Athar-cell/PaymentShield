@@ -1,0 +1,19 @@
+table_name,column_name,definition,type
+transactions,transaction_id,Synthetic unique transaction identifier.,string
+transactions,split,"Group-safe model split assigned at user level: train, validation, or test.",category
+transactions,amount_inr,Transaction amount in Indian rupees.,number
+transactions,receiver_known,Whether the receiver was previously seen for this user.,boolean
+transactions,merchant_match,Whether displayed/expected merchant agrees with the UPI identity.,boolean
+transactions,new_device,Whether the transaction came from a new device.,boolean
+transactions,message_category,Message-linked scam category or none when no message is present.,category
+transactions,label_fraud,"Ground-truth target: 1 for fraudulent/suspicious event, 0 otherwise.",binary target
+transactions,fraud_category,Ground-truth category. Legitimate is the negative class.,category target
+scam_messages,message_text,"Synthetic, paraphrased message content designed for NLP classification.",text
+scam_messages,asks_for_upi_pin,Whether the message asks for a UPI PIN.,boolean
+scam_messages,label_fraud,Ground-truth target for message classification.,binary target
+qr_events,decoded_upi_id,Synthetic decoded UPI identifier from a QR payload.,string
+qr_events,merchant_match,Whether expected merchant and decoded merchant agree.,boolean
+qr_events,amount_match,Whether the amount in the QR payload matches the intended amount.,boolean
+qr_events,sticker_tampered,Synthetic indicator for a suspicious or replaced QR sticker.,boolean
+qr_events,label_fraud,Ground-truth target for QR risk classification.,binary target
+
