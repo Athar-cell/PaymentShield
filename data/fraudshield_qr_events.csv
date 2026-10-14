@@ -1,0 +1,986 @@
+qr_id,transaction_id,split,expected_merchant,decoded_merchant,expected_upi_id,decoded_upi_id,merchant_match,amount_match,sticker_tampered,qr_source,label_fraud,fraud_category,source_type
+QR_DEMO_qr_scam,TX_DEMO_QR,train,DMart,Personal UPI,dmart@merchant,personal upi@ybl,false,false,true,printed_sticker,1,qr_scam,synthetic_demo
+QR00001,TX000001,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00002,TX000012,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00003,TX000014,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00004,TX000019,train,BigBasket,Unknown Store,bigbasket@merchant,unknownstore@paytm,false,false,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00005,TX000021,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00006,TX000025,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00007,TX000036,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00008,TX000040,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00009,TX000041,validation,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00010,TX000042,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00011,TX000049,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00012,TX000051,train,Flipkart,Unknown Store,flipkart@merchant,unknownstore@ybl,false,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR00013,TX000057,validation,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00014,TX000059,validation,Reliance Fresh,FastPay Services,reliancefresh@merchant,fastpayservices@ybl,false,false,false,printed_sticker,1,remote_access_scam,synthetic_qr_payload
+QR00015,TX000062,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00016,TX000063,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00017,TX000064,validation,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00018,TX000065,test,Uber,Uber,uber@merchant,uber@merchant,true,false,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00019,TX000071,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00020,TX000072,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00021,TX000074,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00022,TX000077,train,Flipkart,Cashback Desk,flipkart@merchant,cashbackdesk@paytm,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00023,TX000080,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00024,TX000081,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00025,TX000082,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00026,TX000087,validation,DMart,Personal UPI,dmart@merchant,personalupi@okicici,false,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00027,TX000088,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00028,TX000090,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00029,TX000092,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00030,TX000093,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00031,TX000096,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00032,TX000102,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00033,TX000104,validation,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00034,TX000108,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00035,TX000110,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00036,TX000112,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00037,TX000115,train,Zomato,Cashback Desk,zomato@merchant,cashbackdesk@ybl,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR00038,TX000117,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00039,TX000119,train,Uber,Cashback Desk,uber@merchant,cashbackdesk@paytm,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00040,TX000122,train,DMart,Personal UPI,dmart@merchant,personalupi@oksbi,false,false,true,social_media,1,qr_scam,synthetic_qr_payload
+QR00041,TX000123,train,IRCTC,Unknown Store,irctc@merchant,unknownstore@ybl,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00042,TX000127,validation,Myntra,Cashback Desk,myntra@merchant,cashbackdesk@paytm,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00043,TX000133,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00044,TX000142,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00045,TX000148,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00046,TX000149,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00047,TX000151,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00048,TX000159,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00049,TX000162,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00050,TX000164,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00051,TX000166,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00052,TX000174,validation,Zomato,Cashback Desk,zomato@merchant,cashbackdesk@ybl,false,false,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00053,TX000175,train,Uber,FastPay Services,uber@merchant,fastpayservices@paytm,false,true,false,social_media,1,qr_scam,synthetic_qr_payload
+QR00054,TX000181,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00055,TX000183,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00056,TX000185,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00057,TX000198,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00058,TX000199,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,true,phone_screen,0,legitimate,synthetic_qr_payload
+QR00059,TX000201,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,false,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00060,TX000216,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00061,TX000218,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00062,TX000225,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00063,TX000228,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00064,TX000229,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00065,TX000232,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00066,TX000236,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00067,TX000237,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00068,TX000239,test,Flipkart,Personal UPI,flipkart@merchant,personalupi@oksbi,false,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00069,TX000240,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00070,TX000241,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00071,TX000242,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00072,TX000245,train,Uber,Uber,uber@merchant,uber@merchant,true,false,false,social_media,0,legitimate,synthetic_qr_payload
+QR00073,TX000246,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,false,false,phone_screen,1,remote_access_scam,synthetic_qr_payload
+QR00074,TX000249,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00075,TX000250,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00076,TX000255,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00077,TX000256,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00078,TX000258,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00079,TX000260,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00080,TX000263,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00081,TX000281,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00082,TX000298,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00083,TX000309,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00084,TX000320,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00085,TX000322,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00086,TX000325,train,Amazon,FastPay Services,amazon@merchant,fastpayservices@ybl,false,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00087,TX000327,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00088,TX000331,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00089,TX000333,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00090,TX000338,train,IRCTC,FastPay Services,irctc@merchant,fastpayservices@paytm,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00091,TX000342,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00092,TX000345,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00093,TX000352,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00094,TX000355,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00095,TX000357,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00096,TX000360,test,Amazon,FastPay Services,amazon@merchant,fastpayservices@ybl,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00097,TX000363,test,Zomato,Cashback Desk,zomato@merchant,cashbackdesk@oksbi,false,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR00098,TX000365,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00099,TX000368,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00100,TX000374,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,1,remote_access_scam,synthetic_qr_payload
+QR00101,TX000378,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00102,TX000379,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00103,TX000384,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00104,TX000392,validation,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00105,TX000398,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00106,TX000400,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00107,TX000401,validation,BigBasket,Support Agent,bigbasket@merchant,supportagent@ybl,false,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00108,TX000405,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00109,TX000410,validation,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00110,TX000411,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00111,TX000412,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00112,TX000414,train,BigBasket,FastPay Services,bigbasket@merchant,fastpayservices@oksbi,false,false,true,social_media,1,qr_scam,synthetic_qr_payload
+QR00113,TX000416,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00114,TX000418,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00115,TX000425,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00116,TX000427,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00117,TX000439,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00118,TX000441,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00119,TX000443,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00120,TX000444,test,DMart,Personal UPI,dmart@merchant,personalupi@ybl,false,true,false,merchant_counter,1,investment_scam,synthetic_qr_payload
+QR00121,TX000445,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00122,TX000447,train,DMart,Unknown Store,dmart@merchant,unknownstore@paytm,false,true,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00123,TX000448,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00124,TX000452,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00125,TX000457,train,Zomato,Unknown Store,zomato@merchant,unknownstore@paytm,false,true,false,merchant_counter,1,investment_scam,synthetic_qr_payload
+QR00126,TX000461,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00127,TX000472,validation,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00128,TX000475,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00129,TX000479,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00130,TX000491,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00131,TX000493,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00132,TX000498,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00133,TX000512,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00134,TX000513,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00135,TX000520,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00136,TX000524,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00137,TX000531,train,IRCTC,Unknown Store,irctc@merchant,unknownstore@oksbi,false,true,false,social_media,1,qr_scam,synthetic_qr_payload
+QR00138,TX000532,test,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00139,TX000533,validation,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00140,TX000539,validation,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00141,TX000544,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00142,TX000550,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00143,TX000552,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00144,TX000553,train,Amazon,Unknown Store,amazon@merchant,unknownstore@oksbi,false,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00145,TX000572,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00146,TX000574,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00147,TX000575,train,Uber,Uber,uber@merchant,uber@merchant,true,false,true,social_media,1,investment_scam,synthetic_qr_payload
+QR00148,TX000598,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00149,TX000599,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00150,TX000603,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00151,TX000613,validation,Reliance Fresh,Unknown Store,reliancefresh@merchant,unknownstore@okicici,false,false,false,phone_screen,1,remote_access_scam,synthetic_qr_payload
+QR00152,TX000620,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00153,TX000623,test,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00154,TX000628,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00155,TX000640,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00156,TX000642,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00157,TX000659,validation,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00158,TX000660,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,1,impersonation_scam,synthetic_qr_payload
+QR00159,TX000662,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00160,TX000664,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,1,remote_access_scam,synthetic_qr_payload
+QR00161,TX000667,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00162,TX000673,train,Zomato,FastPay Services,zomato@merchant,fastpayservices@ybl,false,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR00163,TX000678,test,Zomato,Personal UPI,zomato@merchant,personalupi@okicici,false,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00164,TX000695,validation,BigBasket,Personal UPI,bigbasket@merchant,personalupi@oksbi,false,false,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00165,TX000700,validation,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,1,impersonation_scam,synthetic_qr_payload
+QR00166,TX000702,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00167,TX000713,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00168,TX000719,train,BookMyShow,FastPay Services,bookmyshow@merchant,fastpayservices@ybl,false,true,false,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00169,TX000724,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00170,TX000740,validation,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00171,TX000745,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00172,TX000753,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,false,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00173,TX000756,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,false,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00174,TX000760,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00175,TX000761,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00176,TX000763,train,IRCTC,Cashback Desk,irctc@merchant,cashbackdesk@ybl,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR00177,TX000765,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00178,TX000768,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00179,TX000774,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00180,TX000781,test,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00181,TX000789,test,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00182,TX000793,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00183,TX000799,test,Flipkart,FastPay Services,flipkart@merchant,fastpayservices@okicici,false,true,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00184,TX000808,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00185,TX000809,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00186,TX000813,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00187,TX000818,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,false,false,merchant_counter,1,impersonation_scam,synthetic_qr_payload
+QR00188,TX000826,train,Zomato,Support Agent,zomato@merchant,supportagent@paytm,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00189,TX000829,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_countue,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00498,TX002092,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00499,TX002099,test,BigBasket,FastPay Services,bigbasket@merchant,fastpayservices@ybl,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00500,TX002106,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00501,TX002107,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00502,TX002111,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00503,TX002114,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00504,TX002117,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,true,social_media,0,legitimate,synthetic_qr_payload
+QR00505,TX002121,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00506,TX002130,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00507,TX002144,validation,DMart,Unknown Store,dmart@merchant,unknownstore@paytm,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00508,TX002147,test,Apollo Pharmacy,Cashback Desk,apollopharmacy@merchant,cashbackdesk@ybl,false,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00509,TX002155,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00510,TX002157,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00511,TX002159,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00512,TX002160,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00513,TX002161,train,Amazon,Personal UPI,amazon@merchant,personalupi@okicici,false,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00514,TX002163,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00515,TX002165,train,Uber,Support Agent,uber@merchant,supportagent@paytm,false,true,false,social_media,1,qr_scam,synthetic_qr_payload
+QR00516,TX002169,train,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00517,TX002171,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00518,TX002177,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00519,TX002180,train,BigBasket,Support Agent,bigbasket@merchant,supportagent@oksbi,false,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00520,TX002181,train,Myntra,Personal UPI,myntra@merchant,personalupi@oksbi,false,true,false,printed_sticker,1,remote_access_scam,synthetic_qr_payload
+QR00521,TX002187,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00522,TX002188,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00523,TX002189,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00524,TX002195,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00525,TX002200,train,Apollo Pharmacy,Personal UPI,apollopharmacy@merchant,personalupi@oksbi,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00526,TX002204,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00527,TX002207,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00528,TX002209,test,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00529,TX002210,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,social_media,1,remote_access_scam,synthetic_qr_payload
+QR00530,TX002211,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00531,TX002214,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00532,TX002215,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00533,TX002216,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00534,TX002219,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,false,false,printed_sticker,1,investment_scam,synthetic_qr_payload
+QR00535,TX002221,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00536,TX002230,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00537,TX002232,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00538,TX002236,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00539,TX002237,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00540,TX002239,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00541,TX002244,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,false,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00542,TX002251,train,Swiggy,FastPay Services,swiggy@merchant,fastpayservices@paytm,false,false,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00543,TX002252,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00544,TX002253,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00545,TX002254,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00546,TX002260,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00547,TX002261,train,IRCTC,Personal UPI,irctc@merchant,personalupi@ybl,false,false,true,social_media,1,qr_scam,synthetic_qr_payload
+QR00548,TX002266,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00549,TX002273,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00550,TX002278,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00551,TX002285,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_paye,phone_screen,0,legitimate,synthetic_qr_payload
+QR00643,TX002665,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00644,TX002671,test,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00645,TX002674,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00646,TX002675,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00647,TX002676,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00648,TX002679,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00649,TX002684,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00650,TX002685,test,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00651,TX002686,validation,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00652,TX002687,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00653,TX002688,test,DMart,Unknown Store,dmart@merchant,unknownstore@oksbi,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR00654,TX002691,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00655,TX002693,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00656,TX002695,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00657,TX002702,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00658,TX002704,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00659,TX002710,train,Apollo Pharmacy,Support Agent,apollopharmacy@merchant,supportagent@okicici,false,false,false,merchant_counter,1,impersonation_scam,synthetic_qr_payload
+QR00660,TX002717,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00661,TX002719,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00662,TX002720,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00663,TX002724,train,Swiggy,Cashback Desk,swiggy@merchant,cashbackdesk@ybl,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00664,TX002727,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00665,TX002729,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00666,TX002730,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00667,TX002733,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00668,TX002737,validation,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00669,TX002743,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00670,TX002749,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00671,TX002750,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00672,TX002757,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00673,TX002760,test,Myntra,Unknown Store,myntra@merchant,unknownstore@ybl,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00674,TX002766,validation,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,true,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00675,TX002767,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00676,TX002769,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00677,TX002770,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00678,TX002773,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00679,TX002777,train,IRCTC,Unknown Store,irctc@merchant,unknownstore@okicici,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00680,TX002784,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00681,TX002786,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00682,TX002796,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00683,TX002798,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00684,TX002799,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00685,TX002800,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00686,TX002802,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00687,TX002803,validation,Amazon,FastPay Services,amazon@merchant,fastpayservices@ybl,false,true,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00688,TX002804,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00689,TX002809,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00690,TX002810,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00691,TX002815,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00692,TX002819,validation,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00693,TX002823,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00694,TX002829,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,true,social_media,0,legitimate,synthetic_qr_payload
+QR00695,TX002831,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00696,TX002833,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,true,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00697,TX002835,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00698,TX002836,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00699,TX002838,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00700,TX002840,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counterazon,amazon@merchant,amazon@merchant,true,true,true,phone_screen,0,legitimate,synthetic_qr_payload
+QR00750,TX003054,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00751,TX003055,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00752,TX003058,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00753,TX003069,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00754,TX003073,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,false,false,social_media,1,qr_scam,synthetic_qr_payload
+QR00755,TX003074,train,DMart,FastPay Services,dmart@merchant,fastpayservices@okicici,false,true,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00756,TX003076,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00757,TX003078,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00758,TX003081,train,IRCTC,FastPay Services,irctc@merchant,fastpayservices@oksbi,false,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00759,TX003084,train,Flipkart,Support Agent,flipkart@merchant,supportagent@oksbi,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00760,TX003089,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00761,TX003091,train,Reliance Fresh,Unknown Store,reliancefresh@merchant,unknownstore@paytm,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00762,TX003093,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00763,TX003094,train,Reliance Fresh,Reliance Fresh,reliancefoad
+QR00783,TX003158,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00784,TX003170,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00785,TX003174,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00786,TX003175,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00787,TX003181,train,Uber,Support Agent,uber@merchant,supportagent@okicici,false,true,false,phone_screen,1,impersonation_scam,synthetic_qr_payload
+QR00788,TX003184,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00789,TX003185,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00790,TX003190,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00791,TX003193,train,Uber,Uber,uber@merchant,uber@merchant,true,true,true,phone_screen,0,legitimate,synthetic_qr_payload
+QR00792,TX003198,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00793,TX003203,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00794,TX003205,train,Uber,Cashback Desk,uber@merchant,cashbackdesk@oksbi,false,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00795,TX003207,validation,BigBasket,FastPay Services,bigbasket@merchant,fastpayservices@ybl,false,true,false,merchant_counter,1,impersonation_scam,synthetic_qr_payload
+QR00796,TX003218,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00797,TX003221,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00798,TX003222,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00799,TX003227,test,DMart,Personal UPI,dmart@merchant,personalupi@oksbi,false,false,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00800,TX003231,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,false,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00801,TX003239,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00802,TX003245,train,Zomato,FastPay Services,zomato@merchant,fastpayservices@paytm,false,true,false,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR00803,TX003246,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00804,TX003252,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00805,TX003265,test,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00806,TX003267,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00807,TX003269,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00808,TX003271,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,false,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00809,TX003281,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00810,TX003282,test,Reliance Fresh,Unknown Store,reliancefresh@merchant,unknownstore@paytm,false,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00811,TX003286,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,false,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00812,TX003296,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00813,TX003298,train,Reliance Fresh,FastPay Services,reliancefresh@merchant,fastpayservices@ybl,false,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00814,TX003301,test,BigBasket,FastPay Services,bigbasket@merchant,fastpayservices@paytm,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR00815,TX003302,test,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00816,TX003341,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00817,TX003346,train,Zomato,FastPay Services,zomato@merchant,fastpayservices@okicici,false,true,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR00818,TX003348,test,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00819,TX003350,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00820,TX003356,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00821,TX003359,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00822,TX003362,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00823,TX003363,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,1,remote_access_scam,synthetic_qr_payload
+QR00824,TX003372,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00825,TX003376,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00826,TX003378,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,true,social_media,0,legitimate,synthetic_qr_payload
+QR00827,TX003379,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00828,TX003383,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00829,TX003387,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00830,TX003390,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00831,TX003405,validation,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,false,false,social_media,0,legitimate,synthetic_qr_payload
+QR00832,TX003412,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00833,TX003413,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00834,TX003415,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00835,TX003416,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00836,TX003418,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00837,TX003419,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00838,TX003426,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,true,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00839,TX003429,validation,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00840,TX003438,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00841,TX003439,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00842,TX003440,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00843,TX003441,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00844,TX003456,validation,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00845,TX003458,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00846,TX003462,test,Reliance Fresh,Unknown Store,reliancefresh@merchant,unknownstore@ybl,false,false,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00847,TX003463,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,true,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00848,TX003468,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00849,TX003471,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00850,TX003472,validation,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00851,TX003481,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00852,TX003484,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00853,TX003487,train,BookMyShow,Unknown Store,bookmyshow@merchant,unknownstore@okicici,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00854,TX003494,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00855,TX003500,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00856,TX003504,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00857,TX003506,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00858,TX003509,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00859,TX003511,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00860,TX003512,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00861,TX003514,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00862,TX003516,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00863,TX003524,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00864,TX003536,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00865,TX003539,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00866,TX003540,test,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00867,TX003541,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00868,TX003543,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00869,TX003554,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00870,TX003563,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00871,TX003568,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00872,TX003571,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00873,TX003575,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00874,TX003580,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00875,TX003583,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00876,TX003584,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00877,TX003587,test,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00878,TX003588,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00879,TX003591,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00880,TX003594,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00881,TX003596,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00882,TX003599,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00883,TX003603,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00884,TX003613,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00885,TX003618,validation,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00886,TX003620,train,Uber,Support Agent,uber@merchant,supportagent@okicici,false,true,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00887,TX003622,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00888,TX003624,train,Apollo Pharmacy,Personal UPI,apollopharmacy@merchant,personalupi@okicici,false,true,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR00889,TX003632,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00890,TX003633,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00891,TX003636,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00892,TX003637,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00893,TX003639,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00894,TX003641,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00895,TX003647,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00896,TX003655,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00897,TX003657,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR00898,TX003658,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00899,TX003659,validation,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00900,TX003662,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00901,TX003663,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00902,TX003676,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00903,TX003680,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00904,TX003681,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00905,TX003688,validation,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00906,TX003693,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00907,TX003699,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,false,false,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR00908,TX003705,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,false,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00909,TX003706,train,Uber,Cashback Desk,uber@merchant,cashbackdesk@oksbi,false,true,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00910,TX003712,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00911,TX003717,validation,BookMyShow,Unknown Store,bookmyshow@merchant,unknownstore@oksbi,false,true,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00912,TX003721,test,BookMyShow,Personal UPI,bookmyshow@merchant,personalupi@paytm,false,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00913,TX003727,train,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,social_media,0,legitimate,synthetic_qr_payload
+QR00914,TX003728,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00915,TX003731,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00916,TX003737,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00917,TX003739,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00918,TX003740,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00919,TX003742,train,Swiggy,Support Agent,swiggy@merchant,supportagent@oksbi,false,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00920,TX003744,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,true,social_media,0,legitimate,synthetic_qr_payload
+QR00921,TX003746,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00922,TX003747,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00923,TX003749,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,social_media,1,investment_scam,synthetic_qr_payload
+QR00924,TX003753,test,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00925,TX003755,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00926,TX003757,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00927,TX003761,validation,Reliance Fresh,Unknown Store,reliancefresh@merchant,unknownstore@ybl,false,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00928,TX003763,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00929,TX003765,train,Uber,Cashback Desk,uber@merchant,cashbackdesk@ybl,false,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00930,TX003768,validation,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00931,TX003770,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00932,TX003776,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00933,TX003778,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00934,TX003779,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00935,TX003788,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00936,TX003791,validation,Amazon,Support Agent,amazon@merchant,supportagent@okicici,false,false,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00937,TX003794,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,false,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00938,TX003795,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00939,TX003796,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00940,TX003802,train,Reliance Fresh,FastPay Services,reliancefresh@merchant,fastpayservices@ybl,false,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR00941,TX003804,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00942,TX003805,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00943,TX003806,test,Myntra,Unknown Store,myntra@merchant,unknownstore@ybl,false,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00944,TX003812,train,Zomato,Support Agent,zomato@merchant,supportagent@okicici,false,true,false,phone_screen,1,impersonation_scam,synthetic_qr_payload
+QR00945,TX003819,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,1,remote_access_scam,synthetic_qr_payload
+QR00946,TX003821,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00947,TX003822,train,Amazon,Cashback Desk,amazon@merchant,cashbackdesk@paytm,false,true,true,printed_sticker,1,remote_access_scam,synthetic_qr_payload
+QR00948,TX003832,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00949,TX003833,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00950,TX003840,train,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,social_media,0,legitimate,synthetic_qr_payload
+QR00951,TX003844,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00952,TX003848,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00953,TX003852,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00954,TX003855,train,Zomato,Personal UPI,zomato@merchant,personalupi@ybl,false,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00955,TX003861,test,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00956,TX003863,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00957,TX003867,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00958,TX003870,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00959,TX003871,train,Myntra,Personal UPI,myntra@merchant,personalupi@okicici,false,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR00960,TX003876,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00961,TX003877,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00962,TX003880,test,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00963,TX003884,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00964,TX003886,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00965,TX003892,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00966,TX003894,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00967,TX003899,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00968,TX003900,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00969,TX003904,train,Uber,Cashback Desk,uber@merchant,cashbackdesk@ybl,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR00970,TX003906,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00971,TX003908,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00972,TX003911,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00973,TX003912,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00974,TX003914,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00975,TX003915,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00976,TX003916,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00977,TX003920,train,Uber,Uber,uber@merchant,uber@merchant,true,true,true,social_media,0,legitimate,synthetic_qr_payload
+QR00978,TX003922,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00979,TX003926,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00980,TX003930,test,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00981,TX003932,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00982,TX003937,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00983,TX003946,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00984,TX003950,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00985,TX003955,train,DMart,FastPay Services,dmart@merchant,fastpayservices@okicici,false,false,false,printed_sticker,1,remote_access_scam,synthetic_qr_payload
+QR00986,TX003959,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00987,TX003967,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00988,TX003973,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00989,TX003975,train,DMart,Support Agent,dmart@merchant,supportagent@ybl,false,true,false,printed_sticker,1,remote_access_scam,synthetic_qr_payload
+QR00990,TX003982,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR00991,TX003991,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00992,TX003996,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR00993,TX003999,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,1,investment_scam,synthetic_qr_payload
+QR00994,TX004003,train,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,social_media,1,investment_scam,synthetic_qr_payload
+QR00995,TX004004,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR00996,TX004013,train,Reliance Fresh,Unknown Store,reliancefresh@merchant,unknownstore@okicici,false,false,false,social_media,1,qr_scam,synthetic_qr_payload
+QR00997,TX004014,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR00998,TX004023,train,Apollo Pharmacy,Unknown Store,apollopharmacy@merchant,unknownstore@paytm,false,false,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR00999,TX004031,validation,Swiggy,Personal UPI,swiggy@merchant,personalupi@oksbi,false,true,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01000,TX004042,test,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01001,TX004043,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01002,TX004044,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01003,TX004045,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01004,TX004051,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01005,TX004059,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01006,TX004060,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01007,TX004065,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01008,TX004068,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01009,TX004077,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01010,TX004085,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01011,TX004087,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01012,TX004090,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01013,TX004096,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01014,TX004100,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01015,TX004101,train,BigBasket,Support Agent,bigbasket@merchant,supportagent@okicici,false,true,false,printed_sticker,1,impersonation_scam,synthetic_qr_payload
+QR01016,TX004102,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01017,TX004117,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01018,TX004119,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01019,TX004120,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,false,false,phone_screen,1,remote_access_scam,synthetic_qr_payload
+QR01020,TX004127,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01021,TX004135,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,1,impersonation_scam,synthetic_qr_payload
+QR01022,TX004136,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01023,TX004142,train,Uber,Support Agent,uber@merchant,supportagent@okicici,false,true,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01024,TX004146,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01025,TX004149,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01026,TX004154,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01027,TX004160,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01028,TX004164,train,Flipkart,Personal UPI,flipkart@merchant,personalupi@paytm,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01029,TX004169,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01030,TX004171,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01031,TX004174,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01032,TX004185,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01033,TX004191,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01034,TX004194,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,false,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01035,TX004195,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01036,TX004199,train,Amazon,Cashback Desk,amazon@merchant,cashbackdesk@oksbi,false,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01037,TX004201,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01038,TX004206,validation,Swiggy,Support Agent,swiggy@merchant,supportagent@okicici,false,true,true,phone_screen,0,legitimate,synthetic_qr_payload
+QR01039,TX004219,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01040,TX004225,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01041,TX004226,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01042,TX004228,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01043,TX004229,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01044,TX004233,train,Zomato,Unknown Store,zomato@merchant,unknownstore@ybl,false,true,false,social_media,1,qr_scam,synthetic_qr_payload
+QR01045,TX004234,validation,Reliance Fresh,Unknown Store,reliancefresh@merchant,unknownstore@oksbi,false,false,false,social_media,1,qr_scam,synthetic_qr_payload
+QR01046,TX004236,validation,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01047,TX004244,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01048,TX004258,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01049,TX004262,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01050,TX004266,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01051,TX004287,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01052,TX004290,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01053,TX004297,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01054,TX004305,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01055,TX004306,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01056,TX004308,train,Zomato,FastPay Services,zomato@merchant,fastpayservices@paytm,false,false,false,phone_screen,1,qr_scam,synthetic_qr_payload
+QR01057,TX004315,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01058,TX004318,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01059,TX004323,validation,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01060,TX004325,train,Myntra,Support Agent,myntra@merchant,supportagent@oksbi,false,true,false,social_media,1,remote_access_scam,synthetic_qr_payload
+QR01061,TX004326,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01062,TX004334,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01063,TX004347,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01064,TX004350,validation,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01065,TX004352,train,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,social_media,0,legitimate,synthetic_qr_payload
+QR01066,TX004359,train,Uber,FastPay Services,uber@merchant,fastpayservices@ybl,false,true,false,phone_screen,1,qr_scam,synthetic_qr_payload
+QR01067,TX004360,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01068,TX004361,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01069,TX004362,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01070,TX004363,train,Apollo Pharmacy,Personal UPI,apollopharmacy@merchant,personalupi@paytm,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01071,TX004364,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01072,TX004369,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01073,TX004374,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01074,TX004375,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,true,social_media,0,legitimate,synthetic_qr_payload
+QR01075,TX004378,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01076,TX004381,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01077,TX004394,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01078,TX004396,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01079,TX004397,validation,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01080,TX004402,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01081,TX004413,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR01082,TX004414,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01083,TX004416,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01084,TX004421,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01085,TX004423,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01086,TX004428,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01087,TX004429,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01088,TX004433,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01089,TX004444,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01090,TX004448,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01091,TX004463,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01092,TX004475,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01093,TX004476,train,Apollo Pharmacy,Cashback Desk,apollopharmacy@merchant,cashbackdesk@okicici,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01094,TX004478,test,Reliance Fresh,FastPay Services,reliancefresh@merchant,fastpayservices@oksbi,false,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01095,TX004479,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01096,TX004481,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01097,TX004483,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01098,TX004496,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01099,TX004505,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,true,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01100,TX004506,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01101,TX004524,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01102,TX004526,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01103,TX004531,validation,DMart,Support Agent,dmart@merchant,supportagent@ybl,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR01104,TX004533,train,Myntra,Personal UPI,myntra@merchant,personalupi@ybl,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01105,TX004539,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,false,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01106,TX004540,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01107,TX004542,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01108,TX004552,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01109,TX004553,validation,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01110,TX004558,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,false,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01111,TX004560,train,Reliance Fresh,Personal UPI,reliancefresh@merchant,personalupi@oksbi,false,true,false,printed_sticker,1,investment_scam,synthetic_qr_payload
+QR01112,TX004569,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01113,TX004572,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01114,TX004573,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01115,TX004584,train,Reliance Fresh,FastPay Services,reliancefresh@merchant,fastpayservices@okicici,false,true,false,social_media,1,impersonation_scam,synthetic_qr_payload
+QR01116,TX004585,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01117,TX004586,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01118,TX004587,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01119,TX004589,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,false,false,merchant_counter,1,remote_access_scam,synthetic_qr_payload
+QR01120,TX004594,validation,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,social_media,0,legitimate,synthetic_qr_payload
+QR01121,TX004598,train,Flipkart,FastPay Services,flipkart@merchant,fastpayservices@paytm,false,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR01122,TX004599,train,Amazon,Cashback Desk,amazon@merchant,cashbackdesk@paytm,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR01123,TX004601,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01124,TX004602,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01125,TX004604,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01126,TX004606,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01127,TX004608,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01128,TX004609,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,1,remote_access_scam,synthetic_qr_payload
+QR01129,TX004611,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01130,TX004618,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01131,TX004627,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01132,TX004632,test,DMart,Unknown Store,dmart@merchant,unknownstore@paytm,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01133,TX004639,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01134,TX004641,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01135,TX004645,validation,IRCTC,Personal UPI,irctc@merchant,personalupi@oksbi,false,false,false,phone_screen,1,investment_scam,synthetic_qr_payload
+QR01136,TX004646,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01137,TX004651,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01138,TX004653,validation,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,merchant_counter,1,investment_scam,synthetic_qr_payload
+QR01139,TX004655,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01140,TX004665,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01141,TX004666,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,1,remote_access_scam,synthetic_qr_payload
+QR01142,TX004671,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01143,TX004678,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01144,TX004684,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01145,TX004686,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01146,TX004687,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01147,TX004688,validation,Amazon,Support Agent,amazon@merchant,supportagent@paytm,false,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01148,TX004690,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01149,TX004697,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,false,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01150,TX004706,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,true,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01151,TX004707,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01152,TX004714,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01153,TX004719,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01154,TX004727,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01155,TX004728,train,Amazon,Unknown Store,amazon@merchant,unknownstore@ybl,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01156,TX004742,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01157,TX004743,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01158,TX004746,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01159,TX004753,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01160,TX004755,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01161,TX004759,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01162,TX004760,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01163,TX004767,train,BookMyShow,Support Agent,bookmyshow@merchant,supportagent@ybl,false,true,false,merchant_counter,1,investment_scam,synthetic_qr_payload
+QR01164,TX004781,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01165,TX004788,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01166,TX004791,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01167,TX004804,train,Amazon,Cashback Desk,amazon@merchant,cashbackdesk@oksbi,false,true,true,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01168,TX004805,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01169,TX004806,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,false,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01170,TX004807,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01171,TX004818,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01172,TX004821,train,Myntra,Personal UPI,myntra@merchant,personalupi@paytm,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR01173,TX004837,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01174,TX004838,train,Swiggy,Personal UPI,swiggy@merchant,personalupi@ybl,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR01175,TX004839,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01176,TX004846,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01177,TX004853,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,false,false,social_media,0,legitimate,synthetic_qr_payload
+QR01178,TX004856,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01179,TX004859,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01180,TX004865,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01181,TX004876,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01182,TX004880,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01183,TX004882,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01184,TX004884,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01185,TX004888,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01186,TX004891,train,Myntra,Unknown Store,myntra@merchant,unknownstore@okicici,false,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01187,TX004894,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01188,TX004903,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01189,TX004905,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01190,TX004909,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01191,TX004917,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01192,TX004925,test,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01193,TX004935,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01194,TX004937,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01195,TX004943,validation,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01196,TX004956,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01197,TX004957,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01198,TX004961,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01199,TX004966,validation,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01200,TX004968,validation,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01201,TX004969,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01202,TX004970,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01203,TX004971,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01204,TX004972,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01205,TX004976,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01206,TX004979,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01207,TX004980,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01208,TX004983,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01209,TX004988,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01210,TX004993,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01211,TX005002,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01212,TX005004,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01213,TX005007,validation,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01214,TX005009,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01215,TX005013,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01216,TX005020,test,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01217,TX005021,test,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01218,TX005028,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01219,TX005036,test,Flipkart,Support Agent,flipkart@merchant,supportagent@ybl,false,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01220,TX005038,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01221,TX005039,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01222,TX005055,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01223,TX005058,train,DMart,Personal UPI,dmart@merchant,personalupi@ybl,false,false,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR01224,TX005063,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01225,TX005067,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01226,TX005069,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01227,TX005072,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01228,TX005081,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01229,TX005085,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01230,TX005088,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01231,TX005095,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01232,TX005096,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01233,TX005098,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01234,TX005108,train,Apollo Pharmacy,Personal UPI,apollopharmacy@merchant,personalupi@oksbi,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01235,TX005114,test,Swiggy,Cashback Desk,swiggy@merchant,cashbackdesk@ybl,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01236,TX005115,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01237,TX005120,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01238,TX005124,test,Amazon,Unknown Store,amazon@merchant,unknownstore@paytm,false,true,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR01239,TX005140,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,1,qr_scam,synthetic_qr_payload
+QR01240,TX005144,test,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01241,TX005146,validation,Zomato,Support Agent,zomato@merchant,supportagent@ybl,false,false,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR01242,TX005156,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01243,TX005157,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01244,TX005162,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01245,TX005163,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01246,TX005165,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01247,TX005166,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01248,TX005174,test,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01249,TX005176,validation,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01250,TX005177,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01251,TX005184,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01252,TX005185,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01253,TX005190,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01254,TX005191,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01255,TX005193,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01256,TX005196,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01257,TX005200,train,Swiggy,Unknown Store,swiggy@merchant,unknownstore@paytm,false,false,false,merchant_counter,1,investment_scam,synthetic_qr_payload
+QR01258,TX005203,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,false,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01259,TX005206,train,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01260,TX005207,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01261,TX005211,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01262,TX005212,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01263,TX005216,validation,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01264,TX005222,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01265,TX005223,train,Myntra,FastPay Services,myntra@merchant,fastpayservices@ybl,false,true,false,social_media,1,qr_scam,synthetic_qr_payload
+QR01266,TX005226,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,1,impersonation_scam,synthetic_qr_payload
+QR01267,TX005230,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01268,TX005231,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR01269,TX005232,train,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01270,TX005235,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01271,TX005242,train,Swiggy,FastPay Services,swiggy@merchant,fastpayservices@paytm,false,true,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01272,TX005244,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01273,TX005259,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01274,TX005261,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01275,TX005271,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01276,TX005278,test,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01277,TX005283,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01278,TX005284,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01279,TX005285,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01280,TX005288,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01281,TX005289,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01282,TX005293,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01283,TX005295,test,Flipkart,Support Agent,flipkart@merchant,supportagent@oksbi,false,true,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR01284,TX005302,train,DMart,Cashback Desk,dmart@merchant,cashbackdesk@ybl,false,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01285,TX005303,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01286,TX005305,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,1,investment_scam,synthetic_qr_payload
+QR01287,TX005308,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01288,TX005309,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01289,TX005312,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01290,TX005313,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01291,TX005318,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01292,TX005321,train,DMart,Support Agent,dmart@merchant,supportagent@paytm,false,false,false,phone_screen,1,impersonation_scam,synthetic_qr_payload
+QR01293,TX005323,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01294,TX005328,test,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01295,TX005329,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01296,TX005330,train,BookMyShow,Unknown Store,bookmyshow@merchant,unknownstore@ybl,false,true,false,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01297,TX005333,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01298,TX005336,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01299,TX005340,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01300,TX005341,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01301,TX005347,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01302,TX005349,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01303,TX005350,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,false,false,social_media,1,remote_access_scam,synthetic_qr_payload
+QR01304,TX005364,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01305,TX005366,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,true,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01306,TX005372,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01307,TX005375,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01308,TX005376,validation,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01309,TX005387,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01310,TX005390,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01311,TX005391,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01312,TX005392,validation,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,false,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01313,TX005396,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01314,TX005397,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01315,TX005400,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01316,TX005405,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01317,TX005406,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01318,TX005407,validation,Swiggy,Unknown Store,swiggy@merchant,unknownstore@oksbi,false,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR01319,TX005423,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01320,TX005429,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01321,TX005432,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,true,social_media,0,legitimate,synthetic_qr_payload
+QR01322,TX005435,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01323,TX005440,validation,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01324,TX005441,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01325,TX005444,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01326,TX005445,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01327,TX005447,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01328,TX005455,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01329,TX005457,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01330,TX005467,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01331,TX005468,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01332,TX005475,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01333,TX005476,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01334,TX005483,train,Apollo Pharmacy,Personal UPI,apollopharmacy@merchant,personalupi@okicici,false,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR01335,TX005487,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01336,TX005494,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01337,TX005497,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01338,TX005504,train,IRCTC,Support Agent,irctc@merchant,supportagent@ybl,false,true,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01339,TX005510,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01340,TX005516,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01341,TX005517,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01342,TX005522,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01343,TX005525,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01344,TX005532,train,BigBasket,Support Agent,bigbasket@merchant,supportagent@paytm,false,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01345,TX005535,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01346,TX005539,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01347,TX005542,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01348,TX005545,train,BookMyShow,FastPay Services,bookmyshow@merchant,fastpayservices@oksbi,false,true,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR01349,TX005548,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01350,TX005557,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01351,TX005558,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,true,social_media,0,legitimate,synthetic_qr_payload
+QR01352,TX005559,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01353,TX005562,validation,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01354,TX005566,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01355,TX005568,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01356,TX005572,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01357,TX005576,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01358,TX005585,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01359,TX005586,train,Myntra,Unknown Store,myntra@merchant,unknownstore@oksbi,false,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01360,TX005587,train,Uber,FastPay Services,uber@merchant,fastpayservices@ybl,false,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01361,TX005593,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01362,TX005597,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01363,TX005599,train,Swiggy,Support Agent,swiggy@merchant,supportagent@ybl,false,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01364,TX005603,train,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01365,TX005605,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01366,TX005610,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01367,TX005624,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01368,TX005636,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01369,TX005640,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01370,TX005641,train,Reliance Fresh,FastPay Services,reliancefresh@merchant,fastpayservices@okicici,false,false,false,social_media,1,qr_scam,synthetic_qr_payload
+QR01371,TX005655,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01372,TX005657,validation,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01373,TX005663,validation,Swiggy,Unknown Store,swiggy@merchant,unknownstore@ybl,false,true,false,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01374,TX005674,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,true,phone_screen,0,legitimate,synthetic_qr_payload
+QR01375,TX005686,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01376,TX005691,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01377,TX005703,validation,Uber,Support Agent,uber@merchant,supportagent@oksbi,false,false,false,social_media,1,impersonation_scam,synthetic_qr_payload
+QR01378,TX005710,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01379,TX005713,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01380,TX005715,train,DMart,DMart,dmart@merchant,dmart@merchant,true,false,false,social_media,0,legitimate,synthetic_qr_payload
+QR01381,TX005718,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01382,TX005728,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,false,false,phone_screen,1,remote_access_scam,synthetic_qr_payload
+QR01383,TX005729,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01384,TX005731,train,Reliance Fresh,Cashback Desk,reliancefresh@merchant,cashbackdesk@okicici,false,false,false,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01385,TX005735,train,Apollo Pharmacy,FastPay Services,apollopharmacy@merchant,fastpayservices@oksbi,false,false,true,phone_screen,1,qr_scam,synthetic_qr_payload
+QR01386,TX005736,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,false,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01387,TX005737,validation,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,false,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01388,TX005749,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01389,TX005750,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01390,TX005751,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01391,TX005753,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01392,TX005754,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01393,TX005755,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01394,TX005758,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01395,TX005760,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01396,TX005763,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01397,TX005775,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01398,TX005780,train,Apollo Pharmacy,Personal UPI,apollopharmacy@merchant,personalupi@oksbi,false,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01399,TX005786,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01400,TX005791,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01401,TX005792,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01402,TX005793,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01403,TX005797,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01404,TX005798,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01405,TX005799,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01406,TX005801,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01407,TX005814,test,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01408,TX005816,train,IRCTC,Personal UPI,irctc@merchant,personalupi@oksbi,false,false,false,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01409,TX005820,train,Flipkart,Flipkart,flipkart@merchant,flipkart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01410,TX005821,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01411,TX005824,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,true,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01412,TX005826,train,Uber,Uber,uber@merchant,uber@merchant,true,false,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01413,TX005828,train,BookMyShow,Unknown Store,bookmyshow@merchant,unknownstore@paytm,false,false,true,merchant_counter,1,qr_scam,synthetic_qr_payload
+QR01414,TX005833,validation,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01415,TX005834,test,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01416,TX005836,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,false,false,printed_sticker,1,impersonation_scam,synthetic_qr_payload
+QR01417,TX005837,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01418,TX005847,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01419,TX005848,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01420,TX005849,train,IRCTC,Support Agent,irctc@merchant,supportagent@paytm,false,true,false,phone_screen,1,remote_access_scam,synthetic_qr_payload
+QR01421,TX005851,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01422,TX005854,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01423,TX005856,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01424,TX005858,train,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01425,TX005860,train,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01426,TX005861,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01427,TX005865,validation,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01428,TX005883,train,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01429,TX005895,test,DMart,DMart,dmart@merchant,dmart@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01430,TX005896,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01431,TX005900,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01432,TX005903,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01433,TX005919,train,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01434,TX005924,validation,Amazon,Amazon,amazon@merchant,amazon@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01435,TX005937,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01436,TX005939,train,Apollo Pharmacy,Apollo Pharmacy,apollopharmacy@merchant,apollopharmacy@merchant,true,false,true,printed_sticker,1,qr_scam,synthetic_qr_payload
+QR01437,TX005945,test,IRCTC,IRCTC,irctc@merchant,irctc@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01438,TX005948,validation,Zomato,Zomato,zomato@merchant,zomato@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01439,TX005953,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01440,TX005959,test,BigBasket,BigBasket,bigbasket@merchant,bigbasket@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01441,TX005963,train,Amazon,Support Agent,amazon@merchant,supportagent@paytm,false,true,true,social_media,1,qr_scam,synthetic_qr_payload
+QR01442,TX005970,train,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01443,TX005971,train,Myntra,Myntra,myntra@merchant,myntra@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01444,TX005974,test,Reliance Fresh,Reliance Fresh,reliancefresh@merchant,reliancefresh@merchant,true,true,false,social_media,0,legitimate,synthetic_qr_payload
+QR01445,TX005975,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01446,TX005979,train,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,true,false,phone_screen,0,legitimate,synthetic_qr_payload
+QR01447,TX005983,train,BookMyShow,BookMyShow,bookmyshow@merchant,bookmyshow@merchant,true,true,false,printed_sticker,0,legitimate,synthetic_qr_payload
+QR01448,TX005987,train,Uber,Uber,uber@merchant,uber@merchant,true,true,false,merchant_counter,0,legitimate,synthetic_qr_payload
+QR01449,TX005989,test,Swiggy,Swiggy,swiggy@merchant,swiggy@merchant,true,false,false,social_media,0,legitimate,synthetic_qr_payload
+QR01450,TX005991,train,BigBasket,Unknown Store,bigbasket@merchant,unknownstore@okicici,false,false,false,printed_sticker,1,qr_scam,synthetic_qr_payload
+
