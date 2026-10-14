@@ -89,7 +89,10 @@ if submitted:
     color = {"high": "#DC2626", "medium": "#D97706", "low": "#15803D"}[result["risk_band"]]
     st.markdown(f"## Risk: <span style='color:{color}'>{result['risk_band'].upper()}</span>", unsafe_allow_html=True)
     st.metric("Risk score", f"{result['risk_score']}/100")
-    st.warning(result["recommendation"] if result["risk_band"] != "low" else result["recommendation"])
+    if result["risk_band"] == "low":
+        st.success(result["recommendation"])
+    else:
+        st.warning(result["recommendation"])
     st.subheader("Why")
     for reason in result["reasons"]:
         st.write(f"• {reason}")
