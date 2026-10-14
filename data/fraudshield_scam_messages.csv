@@ -1,0 +1,1150 @@
+message_id,transaction_id,split,source_channel,message_text,category,urgency_score,asks_for_otp,asks_for_upi_pin,asks_to_scan_qr,asks_to_install_app,contains_payment_request,label_fraud,source_type
+MSG_DEMO_legitimate,TX_DEMO_SAFE,train,whatsapp,Lunch payment to Rahul,legitimate,5,false,false,false,false,false,0,synthetic_demo
+MSG_DEMO_qr_scam,TX_DEMO_QR,train,whatsapp,Scan this QR to receive your cashback. Enter your UPI PIN to verify.,qr_scam,93,false,true,true,false,true,1,synthetic_demo
+MSG_DEMO_kyc_scam,TX_DEMO_KYC,train,whatsapp,Urgent KYC verification. Install AnyDesk and enter your UPI PIN to keep your account active.,kyc_scam,93,false,true,false,true,true,1,synthetic_demo
+MSG_DEMO_refund_scam,TX_DEMO_REFUND,train,whatsapp,Your Rs 5000 refund is ready. Approve the collect request to receive it.,refund_scam,93,false,false,false,false,true,1,synthetic_demo
+MSG00001,TX000002,train,sms_link,Movie tickets for tonight,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG00002,TX000005,train,in_app,Dinner split for yesterday,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG00003,TX000006,train,sms_link,Monthly subscription payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00004,TX000010,train,email,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,53,true,false,false,false,true,1,synthetic_template
+MSG00005,TX000011,validation,sms_link,We could not process your refund. Pay Rs 356 verification charge to release Rs 27925.,refund_scam,62,false,false,false,false,true,1,synthetic_template
+MSG00006,TX000013,test,in_app,Recharge for mobile plan,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG00007,TX000015,validation,email,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,72,false,true,true,false,false,1,synthetic_template
+MSG00008,TX000016,validation,sms_link,Booking confirmation payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG00009,TX000019,train,phone_call,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,63,false,false,true,false,false,1,synthetic_template
+MSG00010,TX000021,train,sms_link,Payment for groceries,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00011,TX000027,validation,in_app,Movie tickets for tonight,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG00012,TX000034,test,in_app,Payment for groceries,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00013,TX000037,test,in_app,Booking confirmation payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG00014,TX000039,train,in_app,Movie tickets for tonight,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG00015,TX000043,validation,phone_call,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,69,true,false,false,false,false,1,synthetic_template
+MSG00016,TX000044,validation,social_media,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,86,false,false,false,false,true,1,synthetic_template
+MSG00017,TX000047,train,sms_link,Cab fare from airport,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG00018,TX000050,train,in_app,Rent transfer for March,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG00019,TX000051,train,phone_call,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,90,false,false,true,false,false,1,synthetic_template
+MSG00020,TX000058,test,in_app,Tuition fee transfer,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG00021,TX000059,validation,whatsapp,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,91,false,false,false,true,false,1,synthetic_template
+MSG00022,TX000061,test,qr_sticker,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,90,false,false,false,false,false,1,synthetic_template
+MSG00023,TX000063,test,sms_link,Booking confirmation payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00024,TX000068,train,whatsapp,Join the private trading group and send Rs 32718 for a guaranteed profit allocation.,investment_scam,62,false,false,false,false,true,1,synthetic_template
+MSG00025,TX000073,validation,email,Install the verification app and keep the screen visible while we help you.,remote_access_scam,60,false,false,false,true,false,1,synthetic_template
+MSG00026,TX000076,test,phone_call,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,97,false,false,false,false,true,1,synthetic_template
+MSG00027,TX000079,train,sms_link,Payment for groceries,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG00028,TX000082,test,in_app,Movie tickets for tonight,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG00029,TX000083,train,in_app,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,92,false,false,false,true,false,1,synthetic_template
+MSG00030,TX000085,train,in_app,Payment for groceries,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG00031,TX000086,train,in_app,Recharge for mobile plan,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG00032,TX000091,train,sms_link,Booking confirmation payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00033,TX000092,train,sms_link,Pharmacy purchase,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG00034,TX000096,test,sms_link,Tuition fee transfer,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG00035,TX000098,train,email,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,53,false,false,false,false,false,1,synthetic_template
+MSG00036,TX000102,train,in_app,Online order payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG00037,TX000108,train,sms_link,Cab fare from airport,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG00038,TX000109,train,qr_sticker,Your payment complaint is being handled. Pay the service charge to close the ticket.,support_scam,71,false,false,false,false,true,1,synthetic_template
+MSG00039,TX000110,validation,sms_link,Sending back the amount you lent me,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG00040,TX000111,test,in_app,Payment to the usual merchant,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG00041,TX000115,train,in_app,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,61,false,false,true,false,false,1,synthetic_template
+MSG00042,TX000118,train,in_app,Payment for groceries,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG00043,TX000120,train,in_app,Monthly subscription payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG00044,TX000121,train,sms_link,Pharmacy purchase,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG00045,TX000122,train,qr_sticker,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,91,false,true,true,false,true,1,synthetic_template
+MSG00046,TX000123,train,in_app,Payment for groceries,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00047,TX000124,validation,in_app,Rent transfer for March,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00048,TX000127,validation,sms_link,Pharmacy purchase,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG00049,TX000128,train,in_app,Payment for groceries,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00050,TX000135,train,sms_link,Rent transfer for March,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG00051,TX000136,train,in_app,Lunch payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00052,TX000137,train,sms_link,Recharge for mobile plan,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG00053,TX000138,train,sms_link,Booking confirmation payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG00054,TX000141,train,sms_link,Movie tickets for tonight,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG00055,TX000148,validation,in_app,Booking confirmation payment,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00056,TX000152,train,sms_link,Rent transfer for March,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG00057,TX000155,validation,in_app,Payment for groceries,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00058,TX000157,test,email,Call support on this number and approve the collect request for complaint verification.,support_scam,83,false,false,false,false,false,1,synthetic_template
+MSG00059,TX000158,train,qr_sticker,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,99,false,false,false,false,false,1,synthetic_template
+MSG00060,TX000165,train,in_app,Payment to the usual merchant,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00061,TX000170,validation,whatsapp,Your refund of Rs 38156 is ready. Approve the collect request to receive it.,refund_scam,66,false,false,false,false,true,1,synthetic_template
+MSG00062,TX000174,validation,whatsapp,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,73,false,true,true,false,true,1,synthetic_template
+MSG00063,TX000177,train,sms_link,Payment to the usual merchant,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00064,TX000180,test,sms_link,Cab fare from airport,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG00065,TX000183,train,in_app,Pharmacy purchase,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG00066,TX000184,train,sms_link,Electricity bill payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00067,TX000186,train,in_app,Sending back the amount you lent me,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00068,TX000188,train,in_app,Sending back the amount you lent me,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00069,TX000191,train,sms_link,Recharge for mobile plan,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG00070,TX000192,train,in_app,Payment for groceries,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG00071,TX000194,validation,in_app,Payment to the usual merchant,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG00072,TX000195,test,sms_link,Online order payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00073,TX000197,train,qr_sticker,Your friend changed numbers. Send the amount to this new UPI ID right away.,impersonation_scam,79,false,false,false,false,true,1,synthetic_template
+MSG00074,TX000201,train,in_app,Rent transfer for March,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG00075,TX000202,test,sms_link,Electricity bill payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG00076,TX000203,train,in_app,Tuition fee transfer,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00077,TX000213,train,social_media,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,76,false,false,false,true,false,1,synthetic_template
+MSG00078,TX000215,train,sms_link,Booking confirmation payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG00079,TX000216,validation,in_app,Pharmacy purchase,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG00080,TX000217,train,in_app,Monthly subscription payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG00081,TX000218,train,sms_link,Online order payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00082,TX000224,train,email,"Hi, I am your manager. Please pay this vendor urgently and send the screenshot.",impersonation_scam,61,false,false,false,false,true,1,synthetic_template
+MSG00083,TX000227,train,sms_link,Lucky draw winner alert: send the small confirmation payment to receive your prize.,lottery_scam,87,false,false,false,false,true,1,synthetic_template
+MSG00084,TX000228,train,in_app,Movie tickets for tonight,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG00085,TX000230,validation,in_app,Payment for groceries,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG00086,TX000231,train,email,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,61,false,true,true,false,false,1,synthetic_template
+MSG00087,TX000232,test,sms_link,Rent transfer for March,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG00088,TX000234,train,in_app,Recharge for mobile plan,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG00089,TX000237,train,in_app,Electricity bill payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00090,TX000241,train,sms_link,Dinner split for yesterday,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG00091,TX000243,train,in_app,Payment for groceries,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG00092,TX000246,train,whatsapp,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,83,false,false,false,true,false,1,synthetic_template
+MSG00093,TX000253,train,email,Your friend changed numbers. Send the amount to this new UPI ID right away.,impersonation_scam,76,false,false,false,false,true,1,synthetic_template
+MSG00094,TX000260,validation,sms_link,Electricity bill payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG00095,TX000261,train,in_app,Movie tickets for tonight,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG00096,TX000262,validation,sms_link,Recharge for mobile plan,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG00097,TX000268,train,sms_link,Lunch payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00098,TX000270,test,in_app,Lunch payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG00099,TX000271,train,in_app,Sending back the amount you lent me,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00100,TX000272,train,qr_sticker,Your refund of Rs 58881 is ready. Approve the collect request to receive it.,refund_scam,72,false,false,false,false,true,1,synthetic_template
+MSG00101,TX000273,train,sms_link,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,66,false,false,false,true,false,1,synthetic_template
+MSG00102,TX000275,validation,sms_link,Booking confirmation payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG00103,TX000277,train,sms_link,Dinner split for yesterday,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG00104,TX000280,train,qr_sticker,The payment is stuck. Read out the OTP so our support team can complete it.,otp_scam,90,true,false,false,false,true,1,synthetic_template
+MSG00105,TX000281,validation,sms_link,Rent transfer for March,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG00106,TX000288,train,in_app,Payment to the usual merchant,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00107,TX000289,test,sms_link,Movie tickets for tonight,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG00108,TX000293,train,sms_link,Sending back the amount you lent me,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG00109,TX000296,validation,email,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,70,false,false,false,false,true,1,synthetic_template
+MSG00110,TX000297,train,in_app,Monthly subscription payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00111,TX000301,test,whatsapp,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,95,false,false,false,false,true,1,synthetic_template
+MSG00112,TX000305,test,in_app,Monthly subscription payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG00113,TX000306,train,in_app,Online order payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG00114,TX000308,validation,in_app,Movie tickets for tonight,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG00115,TX000310,validation,in_app,Pharmacy purchase,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG00116,TX000311,train,in_app,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,61,false,false,false,true,false,1,synthetic_template
+MSG00117,TX000312,test,in_app,Movie tickets for tonight,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG00118,TX000313,train,in_app,Recharge for mobile plan,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG00119,TX000315,validation,in_app,Sending back the amount you lent me,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG00120,TX000317,train,social_media,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,65,true,false,false,false,false,1,synthetic_template
+MSG00121,TX000318,train,sms_link,Booking confirmation payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG00122,TX000320,validation,sms_link,Online order payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00123,TX000321,train,sms_link,"Hi, I am your manager. Please pay this vendor urgently and send the screenshot.",impersonation_scam,62,false,false,false,false,true,1,synthetic_template
+MSG00124,TX000323,train,phone_call,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,67,false,false,false,false,false,1,synthetic_template
+MSG00125,TX000325,train,phone_call,Scan this QR to receive your cashback of Rs 64343. No other steps needed.,qr_scam,72,false,false,true,false,true,1,synthetic_template
+MSG00126,TX000326,train,in_app,Sending back the amount you lent me,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00127,TX000328,train,sms_link,Online order payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG00128,TX000329,train,email,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,69,false,true,false,false,false,1,synthetic_template
+MSG00129,TX000330,train,qr_sticker,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,91,true,false,false,false,false,1,synthetic_template
+MSG00130,TX000333,test,in_app,Electricity bill payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG00131,TX000334,validation,in_app,Recharge for mobile plan,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG00132,TX000335,test,sms_link,Cab fare from airport,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG00133,TX000336,train,whatsapp,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,90,false,false,false,false,false,1,synthetic_template
+MSG00134,TX000338,train,sms_link,Tuition fee transfer,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00135,TX000339,train,phone_call,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,77,false,false,false,true,true,1,synthetic_template
+MSG00136,TX000340,train,in_app,Tuition fee transfer,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG00137,TX000343,train,in_app,Movie tickets for tonight,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG00138,TX000347,train,sms_link,Tuition fee transfer,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG00139,TX000348,train,in_app,Dinner split for yesterday,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG00140,TX000350,validation,sms_link,Sending back the amount you lent me,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00141,TX000352,train,sms_link,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,67,false,true,true,false,true,1,synthetic_template
+MSG00142,TX000353,validation,in_app,Rent transfer for March,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG00143,TX000355,train,in_app,Recharge for mobile plan,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG00144,TX000356,train,sms_link,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,88,false,false,false,true,false,1,synthetic_template
+MSG00145,TX000360,test,sms_link,Lunch payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG00146,TX000361,validation,in_app,Rent transfer for March,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00147,TX000362,train,sms_link,Payment for groceries,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00148,TX000363,test,in_app,Use this QR to verify your account and unlock the reward.,qr_scam,72,false,false,true,false,false,1,synthetic_template
+MSG00149,TX000364,validation,sms_link,Pharmacy purchase,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG00150,TX000366,train,in_app,Rent transfer for March,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG00151,TX000367,test,qr_sticker,Install the verification app and keep the screen visible while we help you.,remote_access_scam,96,false,false,false,true,false,1,synthetic_template
+MSG00152,TX000369,train,sms_link,Lunch payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG00153,TX000372,validation,in_app,Payment for groceries,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG00154,TX000373,test,phone_call,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,99,true,false,false,false,false,1,synthetic_template
+MSG00155,TX000374,train,whatsapp,Install the verification app and keep the screen visible while we help you.,remote_access_scam,97,false,false,false,true,false,1,synthetic_template
+MSG00156,TX000383,train,qr_sticker,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,66,false,false,false,false,true,1,synthetic_template
+MSG00157,TX000384,test,sms_link,Payment for groceries,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG00158,TX000387,train,in_app,Lunch payment,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00159,TX000389,test,in_app,Payment to the usual merchant,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG00160,TX000391,train,in_app,Online order payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00161,TX000392,validation,sms_link,Lunch payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00162,TX000393,train,email,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,96,true,false,false,false,false,1,synthetic_template
+MSG00163,TX000394,train,social_media,Lucky draw winner alert: send the small confirmation payment to receive your prize.,lottery_scam,96,false,false,false,false,true,1,synthetic_template
+MSG00164,TX000400,validation,in_app,Booking confirmation payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00165,TX000401,validation,in_app,Lunch payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00166,TX000402,train,email,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,66,false,false,false,false,false,1,synthetic_template
+MSG00167,TX000403,train,sms_link,Monthly subscription payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG00168,TX000405,test,in_app,Dinner split for yesterday,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG00169,TX000411,train,in_app,Electricity bill payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG00170,TX000414,train,whatsapp,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,83,false,true,true,false,true,1,synthetic_template
+MSG00171,TX000415,train,phone_call,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,97,false,false,false,false,false,1,synthetic_template
+MSG00172,TX000416,train,in_app,Electricity bill payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG00173,TX000420,validation,phone_call,This is the courier team. Pay the re-delivery fee now or your parcel will be returned.,impersonation_scam,90,false,false,false,false,true,1,synthetic_template
+MSG00174,TX000421,train,sms_link,Rent transfer for March,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG00175,TX000422,train,in_app,Online order payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00176,TX000424,train,in_app,Sending back the amount you lent me,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00177,TX000426,validation,sms_link,Movie tickets for tonight,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG00178,TX000427,validation,in_app,Cab fare from airport,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG00179,TX000429,train,social_media,Your payment complaint is being handled. Pay the service charge to close the ticket.,support_scam,98,false,false,false,false,true,1,synthetic_template
+MSG00180,TX000431,train,in_app,Recharge for mobile plan,legitimate,14,false,false,false,false,false,0,synthetic_template
+MSG00181,TX000433,test,social_media,The payment is stuck. Read out the OTP so our support team can complete it.,otp_scam,74,true,false,false,false,true,1,synthetic_template
+MSG00182,TX000438,test,sms_link,Dinner split for yesterday,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG00183,TX000440,train,qr_sticker,Guaranteed daily returns are available today. Transfer the entry amount to activate your account.,investment_scam,71,false,false,false,false,true,1,synthetic_template
+MSG00184,TX000444,test,email,Guaranteed daily returns are available today. Transfer the entry amount to activate your account.,investment_scam,66,false,false,false,false,true,1,synthetic_template
+MSG00185,TX000445,train,in_app,Dinner split for yesterday,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG00186,TX000446,train,in_app,Cab fare from airport,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG00187,TX000447,train,social_media,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,96,false,false,true,false,false,1,synthetic_template
+MSG00188,TX000448,test,in_app,Dinner split for yesterday,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG00189,TX000450,train,social_media,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,97,false,false,false,false,true,1,synthetic_template
+MSG00190,TX000451,train,sms_link,Sending back the amount you lent me,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG00191,TX000452,train,sms_link,Electricity bill payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00192,TX000453,train,qr_sticker,Guaranteed daily returns are available today. Transfer the entry amount to activate your account.,investment_scam,71,false,false,false,false,true,1,synthetic_template
+MSG00193,TX000455,train,in_app,Pharmacy purchase,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG00194,TX000457,train,email,Join the private trading group and send Rs 31671 for a guaranteed profit allocation.,investment_scam,89,false,false,false,false,true,1,synthetic_template
+MSG00195,TX000460,train,in_app,Cab fare from airport,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG00196,TX000461,test,sms_link,Payment to the usual merchant,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00197,TX000463,train,sms_link,Pharmacy purchase,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG00198,TX000465,test,in_app,Dinner split for yesterday,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG00199,TX000467,validation,sms_link,Monthly subscription payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG00200,TX000469,validation,in_app,Movie tickets for tonight,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG00201,TX000473,train,in_app,Cab fare from airport,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG00202,TX000475,train,in_app,Payment to the usual merchant,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG00203,TX000476,train,sms_link,Pharmacy purchase,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG00204,TX000478,train,in_app,Lunch payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG00205,TX000480,train,in_app,Payment to the usual merchant,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG00206,TX000483,train,sms_link,Movie tickets for tonight,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG00207,TX000484,test,phone_call,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,78,false,false,false,true,false,1,synthetic_template
+MSG00208,TX000486,validation,email,"Congratulations, you won Rs 1280. Pay Rs 9 processing fee to claim it today.",lottery_scam,91,false,false,false,false,true,1,synthetic_template
+MSG00209,TX000489,test,phone_call,Limited-time investment offer: deposit now and double your money this week.,investment_scam,65,false,false,false,false,false,1,synthetic_template
+MSG00210,TX000491,train,sms_link,Online order payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG00211,TX000493,test,sms_link,Tuition fee transfer,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG00212,TX000497,train,social_media,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,77,false,false,false,false,false,1,synthetic_template
+MSG00213,TX000499,train,in_app,Movie tickets for tonight,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG00214,TX000500,train,sms_link,Lunch payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00215,TX000503,test,in_app,Sending back the amount you lent me,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG00216,TX000504,train,in_app,Tuition fee transfer,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00217,TX000505,train,in_app,Booking confirmation payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG00218,TX000506,test,sms_link,Rent transfer for March,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG00219,TX000509,train,sms_link,Electricity bill payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG00220,TX000512,train,in_app,Movie tickets for tonight,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG00221,TX000513,train,in_app,Recharge for mobile plan,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG00222,TX000515,validation,social_media,We could not process your refund. Pay Rs 71 verification charge to release Rs 11430.,refund_scam,90,false,false,false,false,true,1,synthetic_template
+MSG00223,TX000519,train,in_app,Pharmacy purchase,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG00224,TX000524,train,in_app,Electricity bill payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00225,TX000525,train,whatsapp,Your refund of Rs 62521 is ready. Approve the collect request to receive it.,refund_scam,92,false,false,false,false,true,1,synthetic_template
+MSG00226,TX000526,train,in_app,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,64,false,false,false,true,false,1,synthetic_template
+MSG00227,TX000527,train,in_app,Pharmacy purchase,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG00228,TX000528,validation,in_app,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,98,true,false,false,false,false,1,synthetic_template
+MSG00229,TX000531,train,in_app,Use this QR to verify your account and unlock the reward.,qr_scam,64,false,false,true,false,false,1,synthetic_template
+MSG00230,TX000533,validation,sms_link,Booking confirmation payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG00231,TX000537,train,in_app,Recharge for mobile plan,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG00232,TX000543,train,sms_link,Booking confirmation payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG00233,TX000547,train,social_media,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,66,false,false,false,true,false,1,synthetic_template
+MSG00234,TX000548,train,whatsapp,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,51,true,false,false,false,true,1,synthetic_template
+MSG00235,TX000551,train,sms_link,Sending back the amount you lent me,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG00236,TX000552,validation,sms_link,Movie tickets for tonight,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG00237,TX000555,validation,sms_link,Booking confirmation payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00238,TX000556,train,in_app,Electricity bill payment,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00239,TX000562,train,in_app,Cab fare from airport,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG00240,TX000563,train,sms_link,Tuition fee transfer,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG00241,TX000566,train,in_app,Payment to the usual merchant,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00242,TX000567,train,sms_link,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,97,false,false,false,true,false,1,synthetic_template
+MSG00243,TX000570,train,sms_link,Monthly subscription payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00244,TX000573,validation,phone_call,This is the courier team. Pay the re-delivery fee now or your parcel will be returned.,impersonation_scam,83,false,false,false,false,true,1,synthetic_template
+MSG00245,TX000575,train,in_app,Guaranteed daily returns are available today. Transfer the entry amount to activate your account.,investment_scam,72,false,false,false,false,true,1,synthetic_template
+MSG00246,TX000576,train,in_app,Rent transfer for March,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG00247,TX000578,train,in_app,Movie tickets for tonight,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG00248,TX000579,train,sms_link,Dinner split for yesterday,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG00249,TX000580,validation,sms_link,Movie tickets for tonight,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG00250,TX000581,train,in_app,Dinner split for yesterday,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG00251,TX000582,train,sms_link,Movie tickets for tonight,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG00252,TX000583,train,qr_sticker,Your refund of Rs 62275 is ready. Approve the collect request to receive it.,refund_scam,87,false,false,false,false,true,1,synthetic_template
+MSG00253,TX000586,validation,in_app,Pharmacy purchase,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG00254,TX000590,train,in_app,Monthly subscription payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG00255,TX000591,train,in_app,Tuition fee transfer,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00256,TX000592,train,sms_link,Tuition fee transfer,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00257,TX000593,train,sms_link,Dinner split for yesterday,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG00258,TX000595,test,in_app,Booking confirmation payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG00259,TX000597,test,social_media,"Hi, I am your manager. Please pay this vendor urgently and send the screenshot.",impersonation_scam,95,false,false,false,false,true,1,synthetic_template
+MSG00260,TX000598,train,in_app,Cab fare from airport,legitimate,6,false,false,false,false,false,0,synthetic_sms_link,Payment to the usual merchant,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00430,TX000986,train,in_app,Movie tickets for tonight,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG00431,TX000987,train,sms_link,Rent transfer for March,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG00432,TX000989,train,in_app,Movie tickets for tonight,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG00433,TX000991,train,in_app,Online order payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00434,TX000993,test,in_app,Dinner split for yesterday,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG00435,TX000995,train,sms_link,Sending back the amount you lent thetic_template
+MSG00578,TX001371,train,sms_link,Sending back the amount you lent me,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG00579,TX001372,train,in_app,Monthly subscription payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG00580,TX001374,validation,in_app,Pharmacy purchase,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG00581,TX001376,train,in_app,Payment to the usual merchant,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG00582,TX001377,train,sms_link,Payment for groceries,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG00583,TX001380,train,whatsapp,This is the courier team. Pay the re-delivery fee now or your parcel will be returned.,impersonation_scam,80,false,false,false,false,true,1,synthetic_template
+MSG00584,TX001382,validation,phone_call,This is the courier team. Pay the re-delivery fee now or your parcel will be returned.,impersonation_scam,99,false,false,false,false,true,1,synthetic_template
+MSG00585,TX001389,train,whatsapp,"Hi, I am your manager. Please pay this vendor urgently and send the screenshot.",impersonation_scam,71,false,false,false,false,true,1,synthetic_template
+MSG00586,TX001392,train,in_app,Online order payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG00587,TX001394,train,in_app,Monthly subscription payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG00588,TX001395,validation,sms_link,Booking confirmation payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00589,TX001397,validation,in_app,Dinner split for yesterday,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG00590,TX001398,validation,sms_link,Cab fare from airport,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG00591,TX001402,train,sms_link,Pharmacy purchase,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG00592,TX001403,train,sms_link,Pharmacy purchase,legitimate,14,false,false,false,false,false,0,synthetic_template
+MSG00593,TX001405,train,sms_link,We could not process your refund. Pay Rs 302 verification charge to release Rs 28555.,refund_scam,74,false,false,false,false,true,1,synthetic_template
+MSG00594,TX001406,train,in_app,Pharmacy purchase,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG00595,TX001407,train,sms_link,Online order payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG00596,TX001409,validation,sms_link,Rent transfer for March,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG00597,TX001410,train,in_app,Recharge for mobile plan,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG00598,TX001412,train,in_app,Lucky draw winner alert: send the small confirmation payment tc_template
+MSG00932,TX002210,validation,sms_link,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,97,false,false,false,true,false,1,synthetic_template
+MSG00933,TX002212,train,sms_link,Pharmacy purchase,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG00934,TX002217,train,sms_link,Rent transfer for March,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG00935,TX002219,train,phone_call,Guaranteed daily returns are ava475,TX003516,validation,sms_link,Pharmacy purchase,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG01476,TX003518,validation,in_app,Pharmacy purchase,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG01477,TX003520,train,phone_call,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,92,true,false,false,false,false,1,synthetic_template
+MSG01478,TX003521,train,sms_link,Payment to the usual merchant,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG01479,TX003523,test,sms_link,Rent transfer for March,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01480,TX003525,train,in_app,Payment for groceries,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG01481,TX003528,train,in_app,Recharge for mobile plan,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG01482,TX003529,train,sms_link,Movie tickets for tonight,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG01483,TX003530,train,email,We could not process your refund. Pay Rs 1068 verification charge to release Rs 47603.,refund_scam,68,false,false,false,false,true,1,synthetic_template
+MSG01484,TX003531,train,sms_link,Booking confirmation payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01485,TX003532,train,in_app,Lunch payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01486,TX003533,train,in_app,Recharge for mobile plan,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG01487,TX003538,test,in_app,Lunch payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG01488,TX003540,test,in_app,Monthly subscription payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG01489,TX003541,train,sms_link,Payment for groceries,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG01490,TX003542,train,in_app,Rent transfer for March,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01491,TX003544,test,sms_link,Dinner split for yesterday,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG01492,TX003548,test,in_app,Limited-time investment offer: deposit now and double your money this week.,investment_scam,99,false,false,false,false,false,1,synthetic_temcam,70,false,false,false,false,false,1,synthetic_template
+MSG01495,TX003553,train,social_media,Your payment complaint is being handled. Pay the service charge to close the ticket.,support_scam,61,false,false,false,false,true,1,synthetic_template
+MSG01496,Tlse,false,false,true,0,synthetic_template
+MSG01498,TX003558,train,phone_call,Guaranteed daily returns are available today. Transfer the entry amount to activate your account.,investment_scam,81,false,false,false,false,true,1,synthetic_template
+MSG01499,TX003559,validation,sms_link,Monthly subscription payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01500,TX003562,test,qr_sticker,Install the verification app and keep the screen visible while we help you.,remote_access_scam,70,false,false,false,true,false,1,synthetic_template
+MSG01501,TX003563,train,in_app,Electricity bill payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01502,TX003564,train,in_app,Rent transfer for March,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01503,TX003566,train,email,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,97,false,false,false,false,true,1,synthetic_template
+MSG01504,TX003569,train,qr_sticker,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,94,false,true,false,false,false,1,synthetic_template
+MSG01505,TX003578,train,in_app,Call support on this number and approve the collect request for complaint verification.,support_scam,82,he usual merchant,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG01510,TX003592,train,phone_call,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,77,true,false,false,false,false,1,synthetic_template
+MSG01511,TX003593,train,in_app,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,88,false,false,false,true,true,1,synthetic_template
+MSG01512,TX003596,train,in_app,Booking confirmation payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01513,TX003597,train,in_app,Payment for groceries,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01514,TX003598,validation,in_app,Payment to the usual merchant,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01515,TX003601,validation,sms_link,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,97,false,false,false,true,true,1,synthetic_template
+MSG01516,TX003604,train,sms_link,Online order payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01517,TX003606,train,email,We could not process your refund. Pay Rs 722 verification charge to release Rs 37998.,refund_scam,60,false,false,false,false,true,1,synthetic_template
+MSG01518,TX003607,train,in_app,Dinner split for yesterday,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG01519,TX003608,validation,sms_link,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,73,false,false,false,true,true,1,synthetic_template
+MSG01520,TX003610,test,in_app,Dinner split for yesterday,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG01521,TX003613,train,in_app,Rent transfer for March,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG01522,TX003616,train,in_app,Sending back the amount you lent me,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01523,TX003617,train,sms_link,"Hi, I am yoan it to receive the money.,qr_scam,98,false,false,true,false,false,1,synthetic_template
+MSG01621,TX003856,train,sms_link,Rent transfer for March,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01622,TX003858,train,whatsapp,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,47,false,false,false,false,false,1,synthetic_template
+MSG01623,TX003859,train,qr_sticker,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,62,true,false,false,false,false,1,synthetic_template
+MSG01624,TX003861,test,in_app,Recharge for mobile plan,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG01625,TX003862,train,in_app,Electricity bill payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01626,TX003863,validation,sms_link,Cab fare from airport,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG01627,TX003864,train,sms_link,Monthly subscription payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01628,TX003867,train,in_app,Booking confirmation payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG01629,TX003868,train,sms_link,Lunch payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG01630,TX003870,test,sms_link,Tuition fee transfer,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG01631,TX003871,train,email,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,71,false,false,true,false,false,1,synthetic_template
+MSG01632,TX003872,train,in_app,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,95,true,false,false,false,false,1,synthetic_template
+MSG01633,TX003873,train,sms_link,Payment to the usual merchant,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01634,TX003880,test,sms_link,Movie tickets for tonight,legitimate,14,false,false,false,false,false,0,synthetic_template
+MSG01635,TX003884,train,in_app,Sending back the amount you lent me,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG01636,TX003885,train,sms_link,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,86,false,true,false,false,false,1,synthetic_template
+MSG01637,TX003889,validation,sms_link,Monthly subscription payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG01638,TX003890,test,sms_link,Cab fare from airport,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG01639,TX003892,train,sms_link,Cab fare from airport,legitimate,14,false,false,false,false,false,0,synthetic_template
+MSG01640,TX003893,train,in_app,Your refund of Rs 30348 is ready. Approve the collect request to receive it.,refund_scam,62,false,false,false,false,true,1,synthetic_template
+MSG01641,TX003898,train,phone_call,Install the verification app and keep the screen visible while we help you.,remote_access_scam,82,false,false,false,true,false,1,synthetic_template
+MSG01642,TX003904,train,phone_call,Use this QR to verify your account and unlock the reward.,qr_scam,63,false,false,true,false,false,1,synthetic_template
+MSG01643,TX003906,train,sms_link,Cab fare from airport,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG01644,TX003909,train,in_app,Dinner split for yesterday,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG01645,TX003910,train,sms_link,Payment for groceries,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01646,TX003913,test,in_app,Movie tickets for tonight,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG01647,TX003916,train,sms_link,Recharge for mobile plan,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG01648,TX003917,validation,in_app,Electricity bill payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01649,TX003923,validation,in_app,Lunch payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG01650,TX003925,train,sms_link,Pharmacy purchase,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG01651,TX003929,train,sms_link,Pharmacy purchase,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG01652,TX003930,test,in_app,Electricity bill payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG01653,TX003931,test,email,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,64,false,true,false,false,false,1,synthetic_template
+MSG01654,TX003932,train,in_app,Movie tickets for tonight,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG01655,TX003934,train,sms_link,We could not process your refund. Pay Rs 43 verification charge to release Rs 2488.,refund_scam,68,false,false,false,false,true,1,synthetic_template
+MSG01656,TX003939,train,sms_link,Movie tickets for tonight,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG01657,TX003940,train,in_app,Dinner split for yesterday,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG01658,TX003950,test,in_app,Recharge for mobile plan,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG01659,TX003954,validation,sms_link,Payment to the usual merchant,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG01660,TX003955,train,social_media,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,82,false,false,false,true,false,1,synthetic_template
+MSG01661,TX003958,train,in_app,Pharmacy purchase,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG01662,TX003959,validation,sms_link,Electricity bill payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG01663,TX003960,train,email,We found suspicious activity. Confirm your account by paying Rs 1 through the request.,support_scam,92,false,false,false,false,true,1,synthetic_template
+MSG01664,TX003961,train,in_app,Tuition fee transfer,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01665,TX003965,train,in_app,Rent transfer for March,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG01666,TX003969,test,in_app,Cab fare from airport,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG01667,TX003971,train,in_app,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,86,true,false,false,false,false,1,synthetic_template
+MSG01668,TX003974,train,qr_sticker,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,99,false,false,false,true,true,1,synthetic_template
+MSG01669,TX003975,train,social_media,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,78,false,false,false,true,false,1,synthetic_template
+MSG01670,TX003976,train,in_app,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,68,false,true,true,false,false,1,synthetic_template
+MSG01671,TX003977,train,social_media,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,53,false,false,false,false,false,1,synthetic_template
+MSG01672,TX003980,train,in_app,Cab fare from airport,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG01673,TX003983,train,sms_link,Lunch payment,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG01674,TX003984,train,in_app,Movie tickets for tonight,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG01675,TX003985,train,in_app,Online order payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01676,TX003986,train,in_app,Movie tickets for tonight,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG01677,TX003988,train,sms_link,Cab fare from airport,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG01678,TX003989,train,sms_link,Electricity bill payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG01679,TX003990,train,sms_link,Payment for groceries,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01680,TX003994,train,sms_link,Your friend changed numbers. Send the amount to this new UPI ID right away.,impersonation_scam,85,false,false,false,false,true,1,synthetic_template
+MSG01681,TX003998,train,sms_link,Electricity bill payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01682,TX004000,train,qr_sticker,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,72,false,false,false,false,false,1,synthetic_template
+MSG01683,TX004003,train,social_media,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,83,false,false,false,false,true,1,synthetic_template
+MSG01684,TX004004,train,sms_link,Payment to the usual merchant,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01685,TX004005,train,in_app,Payment to the usual merchant,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01686,TX004007,train,sms_link,Movie tickets for tonight,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG01687,TX004009,train,in_app,Monthly subscription payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG01688,TX004010,validation,whatsapp,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,61,true,false,false,false,false,1,synthetic_template
+MSG01689,TX004011,validation,sms_link,Payment for groceries,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01690,TX004013,train,sms_link,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,73,false,false,true,false,false,1,synthetic_template
+MSG01691,TX004016,train,in_app,Pharmacy purchase,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG01692,TX004017,test,in_app,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,55,false,false,false,false,false,1,synthetic_template
+MSG01693,TX004019,train,sms_link,Rent transfer for March,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG01694,TX004023,train,social_media,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,61,false,false,true,false,false,1,synthetic_template
+MSG01695,TX004026,train,email,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,83,false,false,false,false,true,1,synthetic_template
+MSG01696,TX004027,test,in_app,Monthly subscription payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG01697,TX004028,train,qr_sticker,Your order refund is pending. Install the support app and share the screen to complete it.,refund_scam,99,false,false,false,true,false,1,synthetic_template
+MSG01698,TX004030,train,in_app,Dinner split for yesterday,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG01699,TX004031,validation,in_app,Scan this QR to receive your cashback of Rs 47992. No other steps needed.,qr_scam,74,false,false,true,false,true,1,synthetic_template
+MSG01700,TX004037,train,phone_call,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,64,true,false,false,false,true,1,synthetic_template
+MSG01701,TX004039,validation,sms_link,Monthly subscription payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01702,TX004041,train,sms_link,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,84,false,false,false,false,false,1,synthetic_template
+MSG01703,TX004047,test,social_media,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,60,false,truate
+MSG01755,TX004184,test,in_app,Dinner split for yesterday,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG01756,TX004186,train,in_app,Pharmacy purchase,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG01757,TX004189,train,in_app,Payment for groceries,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01758,TX004192,train,sms_link,Payment to the usual merchant,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG01759,TX004196,train,whatsapp,Lucky draw winner alert: send the small confirmation payment to receive your prize.,lottery_scam,69,false,false,false,false,true,1,synthetic_template
+MSG01760,TX004197,train,phone_call,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,94,true,false,false,false,false,1,synthetic_template
+MSG01761,TX004203,validation,email,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,88,false,false,false,true,true,1,synthetic_template
+MSG01762,TX004204,train,email,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,78,false,false,false,true,true,1,synthetic_template
+MSG01763,TX004208,train,sms_link,Electricity bill payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG01764,TX004209,validation,sms_link,Recharge for mobile plan,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG01765,TX004212,test,in_app,Online order payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG01766,TX004213,train,in_app,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,50,true,false,false,false,true,1,synthetic_template
+MSG01767,TX004215,train,qis UPI request.,investment_scam,83,false,false,false,false,true,1,synthetic_template
+MSG01771,TX004221,train,in_app,Pharmacy purchase,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG01772,TX004222,test,sms_link,Dinner split for yesterday,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG01773,TX004227,train,sms_link,Payment to the usual merchant,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01774,TX004229,train,sms_link,Pharmacy purchase,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG01775,TX004231,test,sms_link,Lunch payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG01776,TX004233,train,sms_link,Use this QR to verify your account and unlock the reward.,qr_sse,false,false,true,1,synthetic_template
+MSG01786,TX004254,validation,in_app,Booking confirmation payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01787,TX004257,validation,in_app,Rent transfer for March,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG01788,TX004258,train,in_app,Movie tickets for tonight,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG01789,TX004259,train,sms_link,Lunch payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01790,TX004261,train,in_app,Sending back the amount you lent me,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG01791,TX004268,train,in_app,Sending back the amount you lent me,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01792,TX004273,validation,sms_link,Rent transfer for March,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01793,TX004276,train,sms_link,Payment to the usual merchant,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG01794,TX004280,train,in_app,Pharmacy purchase,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG01795,TX004283,train,sms_link,Pharmacy purchase,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG01796,TX004284,test,in_app,Lunch payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG01797,TX004286,train,in_app,Lunch payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG01798,TX004289,train,sms_link,Monthly subscription payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01799,TX004293,train,sms_link,Monthly subscription payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG01800,TX004294,train,in_app,Monthly subscription payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01801,TX004297,train,in_app,Movie tickets for tonight,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG01802,TX004298,train,sms_link,Dinner split for yesterday,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG01803,TX004300,train,sms_link,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,73,true,false,false,false,false,1,synthetic_template
+MSG01804,TX004305,validation,sms_link,Monthly subscription payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01805,TX004306,validation,sms_link,Tuition fee transfer,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01806,TX004307,validation,whatsapp,This is the courier team. Pay the re-delivery fee now or your parcel will be returned.,impersonation_scam,91,false,false,false,false,true,1,synthetic_template
+MSG01807,TX004314,validation,in_app,Monthly subscription payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG01808,TX004318,train,in_app,Dinner split for yesterday,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG01809,TX004319,validation,in_app,Cab fare from airport,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG01810,TX004321,validation,qr_sticker,Limited-time investment offer: deposit now and double your money this week.,investment_scam,93,false,false,false,false,false,1,synthetic_template
+MSG01811,TX004324,train,in_app,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,88,true,false,false,false,true,1,synthetic_template
+MSG01812,TX004325,train,sms_link,Install the verification app and keep the screen visible while we help you.,remote_access_scam,87,false,false,false,true,false,1,synthetic_template
+MSG01813,TX004326,train,sms_link,Rent transfer for March,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01814,TX004328,test,in_app,Recharge for mobile plan,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG01815,TX004331,train,sms_link,Sending back the amount you lent me,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG01816,TX004335,train,phone_call,Install the verification app and keep the screen false,1,synthetic_template
+MSG01818,TX004337,train,sms_link,Movie tickets for tonight,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG01819,TX004338,train,sms_link,Lucky draw winner alert: send the small confirmation payment to receive your prize.,lottery_scam,62,false,false,false,false,true,1,synthetic_template
+MSG01820,TX004339,train,sms_link,Sending back the amount you lent me,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01821,TX004341,train,in_app,Movie tickets for tonight,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG01822,TX004342,train,sms_link,Monthly subscription payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01823,TX004343,train,sms_link,Payment to the usual merchant,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG01824,TX004344,train,in_app,Payment for groceries,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01825,TX004347,train,in_app,Cab fare from airport,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG01826,TX004348,test,sms_link,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,73,false,false,false,true,false,1,synthetic_template
+MSG01827,TX004353,train,sms_link,Payment to the usual merchant,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG01828,TX004359,train,qr_sticker,Scan this QR to receive your cashback of Rs 29175. No other steps needed.,qr_scam,93,false,false,true,false,true,1,synthetic_template
+MSG01829,TX004364,test,sms_link,Electricity bill payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG01830,TX004367,train,sms_link,Pharmacy purchase,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG01831,TX004369,train,sms_link,Tuition fee transfer,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01832,TX004379,validation,in_app,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,91,false,false,false,false,false,1,synthetic_template
+MSG01833,TX004380,validation,in_app,Payment for groceries,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG01834,TX004383,train,sms_link,Movie tickets for tonight,legitimate,9,false,,in_app,Your failed transaction will be reversed after you share the OTP with the agent.,support_scam,74,true,false,false,false,false,1,synthetic_template
+MSG01837,TX004387,train,in_app,Pharmacy purchase,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG01838,TX004388,train,sms_link,Cab fare from airport,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG01839,TX004391,train,qr_sticker,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,71,true,false,false,false,false,1,synthetic_template
+MSG01840,TX004393,train,social_media,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,66,false,false,false,true,true,1,synthetic_template
+MSG01841,TX004394,train,in_app,Tuition fee transfer,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01842,TX004396,train,in_app,Tuition fee transfer,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01843,TX004397,validation,sms_link,Payment to the usual merchant,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG01844,TX004398,train,in_app,Cab fare from airport,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG01845,TX004404,test,in_app,Monthly subscription payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG01846,TX004407,validation,sms_link,Pharmacy purchase,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG01847,TX004408,validation,phone_call,Your payment complaint is being handled. Pay the service charge to close the ticket.,support_scam,80,false,false,false,false,true,1,synthetic_template
+MSG01848,TX004410,train,sms_link,Recharge for mobile plan,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG01849,TX004413,train,phone_call,Use this QR to verify your account and unlock the reward.,qr_scam,68,false,false,true,false,false,1,synthetic_template
+MSG01850,TX004414,train,sms_link,Pharmacy purchase,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG01851,TX004416,test,in_app,Tuition fee transfer,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG01852,TX004418,validation,sms_link,Recharge for mobile plan,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG0185in_app,Dinner split for yesterday,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG01861,TX004437,validation,sms_link,Recharge for mobile plan,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG01862,TX004438,train,sms_li66,TX004446,train,sms_link,Movie tickets for tonight,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG01867,TX004448,train,sms_link,Booking confirmation payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01868,TX004451,train,social_media,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,96,false,false,false,true,false,1,synthetic_template
+MSG01869,TX004452,train,in_app,Recharge for mobile plan,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG01870,TX004453,train,in_app,Dinner split for yesterday,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG01871,TX004456,train,sms_link,Online order payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01872,TX004459,train,sms_link,Recharge for mobile plan,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG01873,TX004461,train,sms_link,Recharge for mobile plan,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG01874,TX004465,test,in_app,Booking confirmation payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG01875,TX004466,train,in_app,Rent transfer for March,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG01876,TX004468,train,in_app,Rent transfer for March,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01877,TX004473,train,in_app,Electricity bill payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG01878,TX004474,train,sms_link,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,71,false,false,false,false,true,1,synthetic_template
+MSG01879,TX004477,train,social_media,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,68,false,false,false,false,true,1,synthetic_template
+MSG01880,TX004479,test,sms_link,Tuition fee transfer,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG01881,TX004480,train,in_app,Online order payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01882,TX004482,train,social_media,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,91,true,false,false,false,true,1,synthetic_template
+MSG01883,TX004483,validation,in_app,Booking confirmation payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG01884,TX004484,train,qr_sticker,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,50,false,false,false,false,false,1,synthetic_template
+MSG01885,TX004485,train,in_app,Rent transfer for March,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG01886,TX004490,train,in_app,Electricity bill payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01887,TX004492,train,in_app,Tuition fee transfer,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG01888,TX004494,train,sms_link,Recharge for mobile plan,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG01889,TX004496,train,sms_link,Pharmacy purchase,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG01890,TX004498,train,in_app,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,87,false,false,false,false,false,1,synthetic_template
+MSG01891,TX004500,train,sms_link,Movie tickets for tonight,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG01892,TX004507,train,sms_link,Online order payment,legitimate,4,false,false,false,false,94,false,false,false,true,false,1,synthetic_template
+MSG01911,TX004555,train,in_app,Sending back the amount you lent me,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG01912,TX004557,train,sms_link,Refund team here. Scan the QR and enter l,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,60,false,false,false,false,true,1,synthetic_template
+MSG01915,TX004561,validation,social_media,Your refund of Rs 30638 is ready. Approve the collect request to receive it.,refund_scam,70,false,false,false,false,true,1,synthetic_template
+MSG01916,TX004563,test,qr_sticker,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,72,false,false,false,true,true,1,synthetic_template
+MSG01917,TX004565,train,sms_link,Pharmacy purchase,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG01918,TX004566,train,in_app,Rent transfer for March,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01919,TX004567,test,in_app,Tuition fee transfer,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01920,TX004571,train,sms_link,Recharge for mobile plan,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG01921,TX004573,train,sms_link,Lunch payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG01922,TX004575,train,sms_link,Lunch payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01923,TX004577,validation,in_app,Rent transfer for March,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG01924,TX004580,train,sms_link,Payment to the usual merchant,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG01925,TX004583,train,in_app,You have been selected for alse,false,false,true,1,synthetic_template
+MSG01927,TX004589,validation,qr_sticker,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,82,false,false,false,true,true,1,synthetic_template
+MSG01928,TX004590,test,sms_link,Movie tickets for tonight,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG01929,TX004591,validation,sms_link,Movie tickets for tonight,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG01930,TX004594,validation,in_app,Monthly subscription payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG01931,TX004597,validation,in_app,Cab fare from airport,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG01932,TX004598,train,whatsapp,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,96,false,false,true,false,false,1,synthetic_template
+MSG01933,TX004599,train,qr_sticker,Scan this QR to receive your cashback of Rs 26807. No other steps needed.,qr_scam,61,false,false,true,false,true,1,synthetic_template
+MSG01934,TX004602,train,sms_link,Cab fare from airport,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG01935,TX004604,train,sms_link,Cab fare from airport,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG01936,TX004605,train,in_app,Monthly subscription payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG01937,TX004608,train,in_app,Payment for groceries,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01938,TX004609,train,qr_sticker,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,67,false,false,false,true,false,1,synthetic_template
+MSG01939,TX004610,train,in_app,Lunch payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01940,TX004611,train,sms_link,Dinner split for yesterday,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG01941,TX004612,train,in_app,Movie tickets for tonight,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG01942,TX004613,train,sms_link,Movie tickets for tonight,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG01943,TX004616,train,in_app,Lunch payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01944,TX004617,train,email,Your payment complaint is being handled. Pay the service charge to close the ticket.,support_scam,69,false,false,false,false,true,1,synthetic_template
+MSG01945,TX004625,train,sms_link,Electricity bill payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG01946,TX004628,validation,in_app,Booking confirmation payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG01947,TX004631,train,in_app,Sending back the amount you lent me,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG01948,TX004632,test,in_app,Lunch payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG01949,TX004633,validation,in_app,Pharmacy purchase,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG01950,TX004634,validation,sms_link,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,69,false,true,true,false,false,1,synthetic_template
+MSG01951,TX004635,test,in_app,Payment for groceries,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG01952,TX004637,train,qr_sticker,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,76,false,true,false,false,false,1,synthetic_template
+MSG01953,TX004638,validation,in_app,Recharge for mobile plan,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG01954,TX004640,train,sms_link,Sending back the amount you lent me,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG01955,TX004642,validation,phone_call,Your failed transaction will be reversed after you share the OTP with the agent.,support_scam,71,true,false,false,false,false,1,synthetic_template
+MSG01956,TX004651,train,sms_link,Dinner split for yesterday,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG01957,TX004652,train,qr_sticker,Your payment complaint is being handled. Pay the service charge to close the ticket.,support_scam,87,false,false,false,false,true,1,synthetic_template
+MSG01958,TX004653,validation,social_media,Limited-time investment offer: deposit now and double your money this week.,investment_scam,93,false,false,false,false,false,1,synthetic_template
+MSG01959,TX004655,train,sms_link,Recharge for mobile plan,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG01960,TX004656,test,email,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,66,true,false,false,false,true,1,synthetic_template
+MSG01961,TX004659,validation,sms_link,Sending back the amount you lent me,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01962,TX004660,train,in_app,Rent transfer for March,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG01963,TX004661,validation,phone_call,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,92,true,false,false,false,false,1,synthetic_template
+MSG01964,TX004663,train,in_app,Your order refund is pending. Install the support app and share the screen to complete it.,refund_scam,65,false,false,false,true,false,1,synthetic_template
+MSG01965,TX004665,train,sms_link,Dinner split for yesterday,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG01966,TX004666,train,in_app,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,79,false,false,false,true,false,1,synthetic_template
+MSG01967,TX004670,train,sms_link,Cab fare from airport,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG01968,TX004679,train,sms_link,Online order payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01969,TX004683,train,in_app,Dinner split for yesterday,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG01970,TX004685,test,in_app,Online order payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG01971,TX004687,train,in_app,Rent transfer for March,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01972,TX004692,train,sms_link,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,84,true,false,false,false,false,1,synthetic_template
+MSG01973,TX004695,train,sms_link,Recharge for mobile plan,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG01974,TX004700,train,sms_link,Sending back the amount you lent me,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01975,TX004702,validation,in_app,We could not process your refund. Pay Rs 1006 verification charge to release Rs 48994.,refund_scam,61,false,false,false,false,true,1,synthetic_template
+MSG01976,TX004705,train,sms_link,Cab fare from airport,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG01977,TX004707,train,in_app,Rent transfer for March,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG01978,TX004708,train,sms_link,Recharge for mobile plan,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG01979,TX004713,train,sms_link,Lunch payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG01980,TX004715,train,qr_sticker,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,73,false,false,false,true,false,1,synthetic_template
+MSG01981,TX004718,train,whatsapp,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,83,false,false,false,false,true,1,synthetic_template
+MSG01982,TX004720,train,sms_link,Payment to the usual merchant,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG01983,TX004722,train,phone_call,"Congratulations, you won Rs 4078. Pay Rs 63 processing fee to claim it today.",lottery_scam,83,false,false,false,false,true,1,synthetic_template
+MSG01984,TX004726,train,sms_link,Monthly subscription payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG01985,TX004730,validation,sms_link,Monthly subscription payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01986,TX004732,train,sms_link,Lunch payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG01987,TX004736,train,phone_call,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,94,false,false,false,false,true,1,synthetic_template
+MSG01988,TX004737,train,sms_link,Rent transfer for March,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG01989,TX004738,train,qr_sticker,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,80,false,false,false,true,false,1,synthetic_template
+MSG01990,TX004743,train,in_app,Online order payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG01991,TX004744,train,in_app,Payment to the usual merchant,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG01992,TX004748,train,phone_call,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,71,false,true,false,false,false,1,synthetic_template
+MSG01993,TX004750,validation,in_app,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,91,false,false,false,false,true,1,synthetic_template
+MSG01994,TX004752,train,sms_link,Your friend changed numbers. Send the amount to this new UPI ID right away.,impersonation_scam,61,false,false,false,false,true,1,synthetic_template
+MSG01995,TX004753,train,sms_link,Recharge for mobile plan,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG01996,TX004756,train,in_app,Monthly subscription payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG01997,TX004758,test,sms_link,Dinner split for yesterday,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG01998,TX004760,train,in_app,Payment for groceries,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG01999,TX004762,train,sms_link,Online order payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02000,TX004765,test,qr_sticker,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,69,false,false,false,true,false,1,synthetic_template
+MSG02001,TX004766,train,sms_link,Recharge for mobile plan,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02002,TX004767,train,whatsapp,Join the private trading group and send Rs 48846 for a guaranteed profit allocation.,investment_scam,88,false,false,false,false,true,1,synthetic_template
+MSG02003,TX004768,validation,phone_call,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,69,false,false,false,true,false,1,synthetic_template
+MSG02004,TX004770,train,sms_link,Tuition fee transfer,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02005,TX004771,train,in_app,Tuition fee transfer,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02006,TX004774,train,sms_link,Electricity bill payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02007,TX004782,test,sms_link,Electricity bill payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02008,TX004783,train,sms_link,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,91,false,false,false,false,true,1,synthetic_template
+MSG02009,TX004784,test,sms_link,We found suspicious activity. Confirm your account by paying Rs 1 through the request.,support_scam,84,false,false,false,false,true,1,synthetic_template
+MSG02010,TX004785,train,sms_link,Dinner split for yesterday,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG02011,TX004787,test,in_app,Dinner split for yesterday,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG02012,TX004788,train,in_app,Sending back the amount you lent me,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02013,TX004789,validation,sms_link,Tuition fee transfer,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02014,TX004790,train,social_media,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,63,false,false,false,false,true,1,synthetic_template
+MSG02015,TX004792,train,in_app,Monthly subscription payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02016,TX004794,train,sms_link,Payment for groceries,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02017,TX004796,validation,in_app,Sending back the amount you lent me,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02018,TX004800,train,in_app,Lunch payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02019,TX004801,test,sms_link,Payment for groceries,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02020,TX004802,train,in_app,Sending back the amount you lent me,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02021,TX004805,train,sms_link,Payment to the usual merchant,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02022,TX004810,train,sms_link,Movie tickets for tonight,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG02023,TX004811,train,sms_link,This is the courier team. Pay the re-delivery fee now or your parcel will be returned.,impersonation_scam,72,false,false,false,false,true,1,synthetic_template
+MSG02024,TX004813,train,in_app,Electricity bill payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02025,TX004814,train,sms_link,Pharmacy purchase,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG02026,TX004817,train,sms_link,Payment for groceries,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02027,TX004820,train,qr_sticker,"Congratulations, you won Rs 3292. Pay Rs 22 processing fee to claim it today.",lottery_scam,52,false,false,false,false,true,1,synthetic_template
+MSG02028,TX004821,train,sms_link,Scan this QR to receive your cashback of Rs 16808. No other steps needed.,qr_scam,92,false,false,true,false,true,1,synthetic_template
+MSG02029,TX004825,validation,phone_call,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,96,false,false,false,true,true,1,synthetic_template
+MSG02030,TX004826,train,sms_link,Cab fare from airport,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG02031,TX004830,train,sms_link,Rent transfer for March,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02032,TX004831,train,sms_link,Recharge for mobile plan,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG02033,TX004834,train,in_app,Sending back the amount you lent me,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02034,TX004838,train,email,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,94,false,false,true,false,false,1,synthetic_template
+MSG02035,TX004840,train,sms_link,Sending back the amount you lent me,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02036,TX004843,train,in_app,Booking confirmation payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02037,TX004848,validation,sms_link,Lunch payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02038,TX004851,train,in_app,Online order payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02039,TX004852,train,sms_link,Booking confirmation payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02040,TX004853,train,sms_link,Booking confirmation payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02041,TX004856,train,sms_link,Rent transfer for March,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02042,TX004857,train,sms_link,Dinner split for yesterday,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02043,TX004863,validation,in_app,Rent transfer for March,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02044,TX004864,test,in_app,Payment for groceries,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02045,TX004867,train,sms_link,Electricity bill payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02046,TX004871,train,email,"Hi, I am your manager. Please pay this vendor urgently and send the screenshot.",impersonation_scam,81,false,false,false,false,true,1,synthetic_template
+MSG02047,TX004872,train,sms_link,Your refund of Rs 14191 is ready. Approve the collect request to receive it.,refund_scam,96,false,false,false,false,true,1,synthetic_template
+MSG02048,TX004873,train,sms_link,Movie tickets for tonight,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG02049,TX004874,train,sms_link,Sending back the amount you lent me,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02050,TX004875,validation,sms_link,Dinner split for yesterday,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG02051,TX004878,test,sms_link,Sending back the amount you lent me,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02052,TX004886,train,sms_link,Lunch payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02053,TX004891,train,social_media,Scan this QR to receive your cashback of Rs 58938. No other steps needed.,qr_scam,76,false,false,true,false,true,1,synthetic_template
+MSG02054,TX004894,train,in_app,Rent transfer for March,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02055,TX004895,test,in_app,Tuition fee transfer,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02056,TX004896,test,sms_link,Pharmacy purchase,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG02057,TX004900,train,sms_link,Electricity bill payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02058,TX004902,train,phone_call,We could not process your refund. Pay Rs 1131 verification charge to release Rs 58373.,refund_scam,61,false,false,false,false,true,1,synthetic_template
+MSG02059,TX004904,train,sms_link,Tuition fee transfer,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02060,TX004907,train,qr_sticker,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,86,true,false,false,false,false,1,synthetic_template
+MSG02061,TX004913,train,in_app,Tuition fee transfer,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02062,TX004915,train,in_app,Online order payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02063,TX004920,train,sms_link,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,65,false,true,true,false,false,1,synthetic_template
+MSG02064,TX004921,test,sms_link,Dinner split for yesterday,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02065,TX004922,train,whatsapp,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,49,true,false,false,false,true,1,synthetic_template
+MSG02066,TX004923,test,sms_link,Payment for groceries,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02067,TX004924,train,sms_link,Cab fare from airport,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG02068,TX004927,train,sms_link,Sending back the amount you lent me,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02069,TX004931,train,in_app,Sending back the amount you lent me,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02070,TX004932,train,in_app,Payment for groceries,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02071,TX004933,train,in_app,Electricity bill payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02072,TX004934,train,phone_call,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,74,false,false,false,false,false,1,synthetic_template
+MSG02073,TX004935,train,sms_link,Pharmacy purchase,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG02074,TX004936,train,sms_link,Lunch payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02075,TX004937,train,sms_link,Lunch payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02076,TX004941,train,qr_sticker,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,76,false,false,false,true,false,1,synthetic_template
+MSG02077,TX004944,train,in_app,Lunch payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02078,TX004948,train,phone_call,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,79,false,true,false,false,false,1,synthetic_template
+MSG02079,TX004949,train,sms_link,Recharge for mobile plan,legitimate,14,false,false,false,false,false,0,synthetic_template
+MSG02080,TX004952,train,in_app,"Hi, I am your manager. Please pay this vendor urgently and send the screenshot.",impersonation_scam,97,false,false,false,false,true,1,synthetic_template
+MSG02081,TX004956,train,sms_link,Monthly subscription payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02082,TX004959,train,sms_link,Payment to the usual merchant,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02083,TX004962,train,in_app,Recharge for mobile plan,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG02084,TX004963,train,email,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,84,true,false,false,false,false,1,synthetic_template
+MSG02085,TX004964,validation,sms_link,Online order payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02086,TX004967,train,sms_link,Lunch payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02087,TX004968,validation,sms_link,Payment for groceries,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02088,TX004972,train,sms_link,Cab fare from airport,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG02089,TX004975,train,in_app,We could not process your refund. Pay Rs 1822 verification charge to release Rs 55156.,refund_scam,77,false,false,false,false,true,1,synthetic_template
+MSG02090,TX004978,train,in_app,Movie tickets for tonight,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02091,TX004979,train,sms_link,Rent transfer for March,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02092,TX004981,train,sms_link,Booking confirmation payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02093,TX004985,train,whatsapp,"Congratulations, you won Rs 2995. Pay Rs 96 processing fee to claim it today.",lottery_scam,78,false,false,false,false,true,1,synthetic_template
+MSG02094,TX004987,train,sms_link,Pharmacy purchase,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG02095,TX004990,train,in_app,Dinner split for yesterday,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG02096,TX004992,validation,sms_link,Pharmacy purchase,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG02097,TX004998,validation,phone_call,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,88,false,true,true,false,false,1,synthetic_template
+MSG02098,TX005000,train,in_app,Lunch payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02099,TX005001,train,in_app,Booking confirmation payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02100,TX005003,train,in_app,Booking confirmation payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02101,TX005005,validation,in_app,Dinner split for yesterday,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG02102,TX005006,validation,in_app,Tuition fee transfer,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02103,TX005008,train,in_app,Lunch payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02104,TX005010,train,social_media,Your order refund is pending. Install the support app and share the screen to complete it.,refund_scam,86,false,false,false,true,false,1,synthetic_template
+MSG02105,TX005011,train,sms_link,Lunch payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02106,TX005013,test,sms_link,Lunch payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02107,TX005017,train,in_app,Movie tickets for tonight,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG02108,TX005020,test,sms_link,Scan this QR to receive your cashback of Rs 27374. No other steps needed.,qr_scam,96,false,false,true,false,true,1,synthetic_template
+MSG02109,TX005023,validation,sms_link,Payment for groceries,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02110,TX005030,validation,phone_call,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,69,true,false,false,false,false,1,synthetic_template
+MSG02111,TX005032,train,qr_sticker,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,72,true,false,false,false,false,1,synthetic_template
+MSG02112,TX005039,train,sms_link,Recharge for mobile plan,legitimate,14,false,false,false,false,false,0,synthetic_template
+MSG02113,TX005040,train,in_app,Lunch payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02114,TX005041,train,in_app,Tuition fee transfer,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02115,TX005042,train,sms_link,Cab fare from airport,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG02116,TX005046,test,sms_link,Payment to the usual merchant,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02117,TX005050,train,sms_link,Rent transfer for March,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02118,TX005051,train,in_app,Tuition fee transfer,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02119,TX005057,test,in_app,Payment to the usual merchant,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02120,TX005058,train,whatsapp,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,74,false,true,true,false,true,1,synthetic_template
+MSG02121,TX005061,train,sms_link,Payment for groceries,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02122,TX005063,train,sms_link,Payment to the usual merchant,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02123,TX005070,train,in_app,Payment to the usual merchant,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02124,TX005080,train,email,Your refund of Rs 60841 is ready. Approve the collect request to receive it.,refund_scam,89,false,false,false,false,true,1,synthetic_template
+MSG02125,TX005081,test,in_app,Sending back the amount you lent me,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02126,TX005082,train,sms_link,Dinner split for yesterday,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG02127,TX005084,validation,in_app,Monthly subscription payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02128,TX005085,test,in_app,Lunch payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02129,TX005088,train,sms_link,Movie tickets for tonight,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02130,TX005089,validation,in_app,Online order payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02131,TX005092,train,social_media,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,94,false,false,false,true,false,1,synthetic_template
+MSG02132,TX005096,train,sms_link,Rent transfer for March,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02133,TX005101,train,in_app,Join the private trading group and send Rs 18209 for a guaranteed profit allocation.,investment_scam,77,false,false,false,false,true,1,synthetic_template
+MSG02134,TX005103,train,email,"Congratulations, you won Rs 4228. Pay Rs 101 processing fee to claim it today.",lottery_scam,62,false,false,false,false,true,1,synthetic_template
+MSG02135,TX005105,train,whatsapp,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,73,false,false,false,false,true,1,synthetic_template
+MSG02136,TX005108,train,sms_link,Booking confirmation payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02137,TX005109,test,email,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,76,false,false,false,false,false,1,synthetic_template
+MSG02138,TX005113,validation,in_app,Payment to the usual merchant,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02139,TX005116,train,sms_link,Monthly subscription payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02140,TX005117,validation,social_media,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,78,false,false,false,false,false,1,synthetic_template
+MSG02141,TX005118,train,sms_link,Payment to the usual merchant,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02142,TX005123,train,sms_link,Dinner split for yesterday,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG02143,TX005124,test,whatsapp,Scan this QR to receive your cashback of Rs 49467. No other steps needed.,qr_scam,99,false,false,true,false,true,1,synthetic_template
+MSG02144,TX005127,train,email,"To reverse the failed payment, download the support app and allow screen sharing now.",remote_access_scam,69,false,false,false,true,true,1,synthetic_template
+MSG02145,TX005128,train,in_app,Tuition fee transfer,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02146,TX005131,validation,in_app,Payment for groceries,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02147,TX005134,train,sms_link,Movie tickets for tonight,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG02148,TX005135,validation,social_media,Limited-time investment offer: deposit now and double your money this week.,investment_scam,66,false,false,false,false,false,1,synthetic_template
+MSG02149,TX005137,validation,sms_link,Booking confirmation payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02150,TX005138,train,social_media,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,97,true,false,false,false,true,1,synthetic_template
+MSG02151,TX005140,test,in_app,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,71,false,true,true,false,true,1,synthetic_template
+MSG02152,TX005142,train,in_app,Cab fare from airport,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02153,TX005144,test,sms_link,Cab fare from airport,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG02154,TX005146,validation,qr_sticker,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,92,false,true,true,false,true,1,synthetic_template
+MSG02155,TX005152,train,in_app,Pharmacy purchase,legitimate,14,false,false,false,false,false,0,synthetic_template
+MSG02156,TX005158,test,sms_link,Lunch payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02157,TX005159,validation,sms_link,Online order payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02158,TX005161,train,social_media,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,55,true,false,false,false,true,1,synthetic_template
+MSG02159,TX005167,test,sms_link,Payment for groceries,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02160,TX005168,train,sms_link,Rent transfer for March,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02161,TX005169,validation,in_app,Electricity bill payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02162,TX005170,validation,email,Guaranteed daily returns are available today. Transfer the entry amount to activate your account.,investment_scam,85,false,false,false,false,true,1,synthetic_template
+MSG02163,TX005172,train,sms_link,Payment for groceries,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02164,TX005174,test,sms_link,Payment for groceries,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02165,TX005175,train,in_app,Pharmacy purchase,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG02166,TX005176,validation,sms_link,Sending back the amount you lent me,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02167,TX005182,test,sms_link,Pharmacy purchase,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG02168,TX005183,validation,in_app,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,73,false,true,true,false,false,1,synthetic_template
+MSG02169,TX005187,train,in_app,Payment to the usual merchant,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02170,TX005189,test,sms_link,Tuition fee transfer,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02171,TX005190,train,in_app,Tuition fee transfer,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02172,TX005192,train,in_app,Sending back the amount you lent me,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02173,TX005193,train,sms_link,Lunch payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02174,TX005194,train,phone_call,Install the verification app and keep the screen visible while we help you.,remote_access_scam,85,false,false,false,true,false,1,synthetic_template
+MSG02175,TX005196,test,sms_link,Dinner split for yesterday,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG02176,TX005197,test,email,Your order refund is pending. Install the support app and share the screen to complete it.,refund_scam,76,false,false,false,true,false,1,synthetic_template
+MSG02177,TX005198,train,in_app,Payment to the usual merchant,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02178,TX005199,train,sms_link,Rent transfer for March,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02179,TX005201,train,in_app,Monthly subscription payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02180,TX005202,validation,in_app,Tuition fee transfer,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02181,TX005204,train,sms_link,Rent transfer for March,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02182,TX005206,train,in_app,Booking confirmation payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02183,TX005207,train,sms_link,Movie tickets for tonight,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG02184,TX005208,train,phone_call,We could not process your refund. Pay Rs 663 verification charge to release Rs 41258.,refund_scam,98,false,false,false,false,true,1,synthetic_template
+MSG02185,TX005209,train,phone_call,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,76,true,false,false,false,false,1,synthetic_template
+MSG02186,TX005210,train,social_media,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,85,false,false,false,true,false,1,synthetic_template
+MSG02187,TX005214,train,whatsapp,Your order refund is pending. Install the support app and share the screen to complete it.,refund_scam,82,false,false,false,true,false,1,synthetic_template
+MSG02188,TX005217,test,in_app,Pharmacy purchase,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG02189,TX005219,train,in_app,Install the verification app and keep the screen visible while we help you.,remote_access_scam,91,false,false,false,true,false,1,synthetic_template
+MSG02190,TX005221,train,in_app,Sending back the amount you lent me,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02191,TX005224,train,in_app,Booking confirmation payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02192,TX005226,train,email,This is the courier team. Pay the re-delivery fee now or your parcel will be returned.,impersonation_scam,97,false,false,false,false,true,1,synthetic_template
+MSG02193,TX005228,train,phone_call,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,76,false,false,false,true,false,1,synthetic_template
+MSG02194,TX005229,test,in_app,Recharge for mobile plan,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG02195,TX005230,validation,sms_link,Sending back the amount you lent me,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02196,TX005231,train,sms_link,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,93,false,true,true,false,true,1,synthetic_template
+MSG02197,TX005232,train,in_app,Cab fare from airport,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG02198,TX005233,train,qr_sticker,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,94,true,false,false,false,false,1,synthetic_template
+MSG02199,TX005234,train,sms_link,Booking confirmation payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02200,TX005235,validation,sms_link,Lunch payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02201,TX005237,train,in_app,Online order payment,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02202,TX005240,train,sms_link,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,51,false,false,false,false,false,1,synthetic_template
+MSG02203,TX005242,train,qr_sticker,Use this QR to verify your account and unlock the reward.,qr_scam,82,false,false,true,false,false,1,synthetic_template
+MSG02204,TX005245,train,in_app,Movie tickets for tonight,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG02205,TX005249,train,sms_link,Your payment complaint is being handled. Pay the service charge to close the ticket.,support_scam,83,false,false,false,false,true,1,synthetic_template
+MSG02206,TX005250,validation,sms_link,We found suspicious activity. Confirm your account by paying Rs 1 through the request.,support_scam,98,false,false,false,false,true,1,synthetic_template
+MSG02207,TX005251,train,email,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,64,true,false,false,false,false,1,synthetic_template
+MSG02208,TX005253,train,sms_link,Movie tickets for tonight,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG02209,TX005254,train,sms_link,Rent transfer for March,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02210,TX005255,validation,phone_call,We could not process your refund. Pay Rs 337 verification charge to release Rs 16416.,refund_scam,67,false,false,false,false,true,1,synthetic_template
+MSG02211,TX005258,train,sms_link,Payment to the usual merchant,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02212,TX005259,train,in_app,Electricity bill payment,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02213,TX005262,train,in_app,Payment to the usual merchant,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02214,TX005267,train,in_app,Dinner split for yesterday,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG02215,TX005268,validation,in_app,Booking confirmation payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02216,TX005269,test,in_app,Payment for groceries,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02217,TX005273,train,social_media,Lucky draw winner alert: send the small confirmation payment to receive your prize.,lottery_scam,65,false,false,false,false,true,1,synthetic_template
+MSG02218,TX005276,train,social_media,"Congratulations, you won Rs 4120. Pay Rs 117 processing fee to claim it today.",lottery_scam,87,false,false,false,false,true,1,synthetic_template
+MSG02219,TX005280,train,in_app,We could not process your refund. Pay Rs 603 verification charge to release Rs 44318.,refund_scam,73,false,false,false,false,true,1,synthetic_template
+MSG02220,TX005282,train,sms_link,Electricity bill payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02221,TX005285,train,sms_link,Cab fare from airport,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG02222,TX005287,train,social_media,Call support on this number and approve the collect request for complaint verification.,support_scam,68,false,false,false,false,false,1,synthetic_template
+MSG02223,TX005290,test,sms_link,Payment for groceries,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02224,TX005293,train,sms_link,Online order payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02225,TX005295,test,sms_link,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,94,false,false,true,false,false,1,synthetic_template
+MSG02226,TX005297,train,sms_link,Booking confirmation payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02227,TX005298,test,qr_sticker,I am calling from the bank fraud desk. Approve the request while I stay on the line.,impersonation_scam,64,false,false,false,false,false,1,synthetic_template
+MSG02228,TX005300,train,whatsapp,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,66,true,false,false,false,false,1,synthetic_template
+MSG02229,TX005301,train,in_app,Sending back the amount you lent me,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02230,TX005305,train,whatsapp,Limited-time investment offer: deposit now and double your money this week.,investment_scam,87,false,false,false,false,false,1,synthetic_template
+MSG02231,TX005308,train,in_app,Sending back the amount you lent me,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02232,TX005311,train,in_app,Payment for groceries,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02233,TX005312,test,sms_link,Online order payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02234,TX005315,train,sms_link,Monthly subscription payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02235,TX005316,test,in_app,Online order payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02236,TX005321,train,whatsapp,Your friend changed numbers. Send the amount to this new UPI ID right away.,impersonation_scam,99,false,false,false,false,true,1,synthetic_template
+MSG02237,TX005323,train,sms_link,Dinner split for yesterday,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02238,TX005325,test,sms_link,Rent transfer for March,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02239,TX005327,train,in_app,Recharge for mobile plan,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG02240,TX005331,train,in_app,Rent transfer for March,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02241,TX005335,train,email,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,99,true,false,false,false,false,1,synthetic_template
+MSG02242,TX005339,train,sms_link,Rent transfer for March,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02243,TX005340,train,sms_link,Pharmacy purchase,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG02244,TX005346,train,in_app,Your friend changed numbers. Send the amount to this new UPI ID right away.,impersonation_scam,90,false,false,false,false,true,1,synthetic_template
+MSG02245,TX005348,train,in_app,Payment to the usual merchant,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02246,TX005350,train,social_media,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,89,false,false,false,true,false,1,synthetic_template
+MSG02247,TX005358,train,phone_call,Call support on this number and approve the collect request for complaint verification.,support_scam,73,false,false,false,false,false,1,synthetic_template
+MSG02248,TX005361,train,sms_link,Lunch payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02249,TX005362,train,sms_link,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,81,false,true,false,false,false,1,synthetic_template
+MSG02250,TX005363,validation,in_app,Electricity bill payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02251,TX005364,train,sms_link,Dinner split for yesterday,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG02252,TX005366,train,sms_link,Cab fare from airport,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02253,TX005367,validation,whatsapp,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,77,false,false,false,true,false,1,synthetic_template
+MSG02254,TX005368,test,in_app,Join the private trading group and send Rs 47711 for a guaranteed profit allocation.,investment_scam,85,false,false,false,false,true,1,synthetic_template
+MSG02255,TX005369,train,sms_link,Tuition fee transfer,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02256,TX005371,test,in_app,Booking confirmation payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02257,TX005376,validation,in_app,Payment for groceries,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02258,TX005379,validation,sms_link,Cab fare from airport,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG02259,TX005386,train,qr_sticker,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,94,false,false,false,true,false,1,synthetic_template
+MSG02260,TX005391,test,in_app,Cab fare from airport,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG02261,TX005398,train,whatsapp,I am calling from the bank fraud desk. Approve the request while I stay on the line.,impersonation_scam,70,false,false,false,false,false,1,synthetic_template
+MSG02262,TX005401,test,in_app,Dinner split for yesterday,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG02263,TX005402,train,whatsapp,Call support on this number and approve the collect request for complaint verification.,support_scam,79,false,false,false,false,false,1,synthetic_template
+MSG02264,TX005406,train,in_app,Lunch payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02265,TX005409,validation,in_app,Tuition fee transfer,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02266,TX005410,test,in_app,Sending back the amount you lent me,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02267,TX005412,train,in_app,Payment for groceries,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02268,TX005413,test,whatsapp,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,98,false,true,false,false,false,1,synthetic_template
+MSG02269,TX005415,test,qr_sticker,"Congratulations, you won Rs 2101. Pay Rs 14 processing fee to claim it today.",lottery_scam,53,false,false,false,false,true,1,synthetic_template
+MSG02270,TX005418,train,sms_link,Pharmacy purchase,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG02271,TX005419,train,in_app,Booking confirmation payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02272,TX005425,train,email,Your UPI account is under review. Share the OTP you receive to cancel the transaction.,otp_scam,84,true,false,false,false,false,1,synthetic_template
+MSG02273,TX005426,train,sms_link,Monthly subscription payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02274,TX005427,test,in_app,Pharmacy purchase,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02275,TX005434,train,sms_link,Lunch payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02276,TX005435,test,sms_link,Tuition fee transfer,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02277,TX005436,test,in_app,Pharmacy purchase,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG02278,TX005437,train,sms_link,Lunch payment,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02279,TX005441,train,sms_link,Tuition fee transfer,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02280,TX005443,test,social_media,Your payment complaint is being handled. Pay the service charge to close the ticket.,support_scam,66,false,false,false,false,true,1,synthetic_template
+MSG02281,TX005446,train,sms_link,Payment for groceries,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02282,TX005448,train,sms_link,Cab fare from airport,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG02283,TX005449,train,in_app,Online order payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02284,TX005455,test,sms_link,Online order payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02285,TX005456,train,in_app,Sending back the amount you lent me,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02286,TX005457,validation,in_app,Booking confirmation payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02287,TX005458,train,social_media,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,98,false,false,false,false,true,1,synthetic_template
+MSG02288,TX005459,train,in_app,Recharge for mobile plan,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG02289,TX005462,test,in_app,Movie tickets for tonight,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02290,TX005463,train,in_app,Pharmacy purchase,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG02291,TX005465,train,qr_sticker,Your payment complaint is being handled. Pay the service charge to close the ticket.,support_scam,61,false,false,false,false,true,1,synthetic_template
+MSG02292,TX005470,test,sms_link,Monthly subscription payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02293,TX005472,train,in_app,Lunch payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02294,TX005474,validation,in_app,Payment to the usual merchant,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02295,TX005475,train,sms_link,Electricity bill payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02296,TX005477,validation,sms_link,Payment to the usual merchant,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02297,TX005479,train,email,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,68,false,true,true,false,false,1,synthetic_template
+MSG02298,TX005483,train,in_app,Use this QR to verify your account and unlock the reward.,qr_scam,65,false,false,true,false,false,1,synthetic_template
+MSG02299,TX005484,train,email,Your friend changed numbers. Send the amount to this new UPI ID right away.,impersonation_scam,97,false,false,false,false,true,1,synthetic_template
+MSG02300,TX005488,validation,in_app,Dinner split for yesterday,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02301,TX005490,train,phone_call,We could not process your refund. Pay Rs 522 verification charge to release Rs 28996.,refund_scam,71,false,false,false,false,true,1,synthetic_template
+MSG02302,TX005491,train,sms_link,Sending back the amount you lent me,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02303,TX005493,validation,in_app,Cab fare from airport,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG02304,TX005495,train,qr_sticker,I am calling from the bank fraud desk. Approve the request while I stay on the line.,impersonation_scam,98,false,false,false,false,false,1,synthetic_template
+MSG02305,TX005497,train,in_app,Payment for groceries,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02306,TX005499,train,whatsapp,We could not process your refund. Pay Rs 493 verification charge to release Rs 30283.,refund_scam,62,false,false,false,false,true,1,synthetic_template
+MSG02307,TX005501,train,sms_link,Dinner split for yesterday,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG02308,TX005504,train,social_media,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,68,false,false,true,false,false,1,synthetic_template
+MSG02309,TX005505,train,sms_link,We could not process your refund. Pay Rs 623 verification charge to release Rs 34875.,refund_scam,73,false,false,false,false,true,1,synthetic_template
+MSG02310,TX005507,train,qr_sticker,"Congratulations, you won Rs 4592. Pay Rs 86 processing fee to claim it today.",lottery_scam,59,false,false,false,false,true,1,synthetic_template
+MSG02311,TX005509,train,in_app,Electricity bill payment,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02312,TX005516,train,sms_link,Pharmacy purchase,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG02313,TX005525,train,sms_link,Pharmacy purchase,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG02314,TX005527,validation,sms_link,Payment for groceries,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02315,TX005529,train,in_app,Sending back the amount you lent me,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02316,TX005531,train,in_app,Movie tickets for tonight,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02317,TX005533,test,phone_call,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,96,false,false,false,false,true,1,synthetic_template
+MSG02318,TX005535,train,phone_call,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,85,false,true,true,false,true,1,synthetic_template
+MSG02319,TX005536,train,sms_link,Online order payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02320,TX005539,train,in_app,Tuition fee transfer,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02321,TX005541,train,in_app,The payment is stuck. Read out the OTP so our support team can complete it.,otp_scam,64,true,false,false,false,true,1,synthetic_template
+MSG02322,TX005543,validation,in_app,Movie tickets for tonight,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG02323,TX005544,train,sms_link,Lunch payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02324,TX005546,train,sms_link,Monthly subscription payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02325,TX005547,train,in_app,Rent transfer for March,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02326,TX005550,test,sms_link,Rent transfer for March,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02327,TX005553,train,sms_link,Payment for groceries,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02328,TX005554,validation,sms_link,Recharge for mobile plan,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02329,TX005557,train,in_app,Electricity bill payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02330,TX005558,train,sms_link,Tuition fee transfer,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02331,TX005562,validation,sms_link,Lunch payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02332,TX005563,train,sms_link,Payment to the usual merchant,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02333,TX005567,train,sms_link,Tuition fee transfer,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02334,TX005568,train,in_app,Electricity bill payment,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02335,TX005569,test,sms_link,Monthly subscription payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02336,TX005570,train,in_app,Tuition fee transfer,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02337,TX005573,train,phone_call,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,64,false,true,false,false,false,1,synthetic_template
+MSG02338,TX005575,train,in_app,Booking confirmation payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02339,TX005576,train,sms_link,Movie tickets for tonight,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG02340,TX005580,train,email,Guaranteed daily returns are available today. Transfer the entry amount to activate your account.,investment_scam,69,false,false,false,false,true,1,synthetic_template
+MSG02341,TX005586,train,sms_link,Dinner split for yesterday,legitimate,14,false,false,false,false,false,0,synthetic_template
+MSG02342,TX005587,train,sms_link,Payment to the usual merchant,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02343,TX005588,train,sms_link,"Congratulations, you won Rs 1845. Pay Rs 41 processing fee to claim it today.",lottery_scam,98,false,false,false,false,true,1,synthetic_template
+MSG02344,TX005591,train,sms_link,Cab fare from airport,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG02345,TX005592,train,sms_link,Tuition fee transfer,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02346,TX005593,train,sms_link,Rent transfer for March,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02347,TX005594,train,sms_link,Payment for groceries,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02348,TX005595,train,sms_link,Electricity bill payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02349,TX005596,train,in_app,Payment to the usual merchant,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02350,TX005597,train,sms_link,Movie tickets for tonight,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG02351,TX005603,train,sms_link,Pharmacy purchase,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG02352,TX005604,train,sms_link,Payment for groceries,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02353,TX005605,test,in_app,Monthly subscription payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02354,TX005606,test,in_app,The payment is stuck. Read out the OTP so our support team can complete it.,otp_scam,98,true,false,false,false,true,1,synthetic_template
+MSG02355,TX005609,validation,in_app,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,73,false,false,false,true,false,1,synthetic_template
+MSG02356,TX005610,train,sms_link,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,79,false,true,true,false,true,1,synthetic_template
+MSG02357,TX005616,train,social_media,Your refund of Rs 52474 is ready. Approve the collect request to receive it.,refund_scam,84,false,false,false,false,true,1,synthetic_template
+MSG02358,TX005620,train,in_app,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,76,false,false,false,true,false,1,synthetic_template
+MSG02359,TX005622,test,in_app,Electricity bill payment,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02360,TX005628,train,sms_link,Payment to the usual merchant,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02361,TX005629,train,email,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,68,false,false,false,false,false,1,synthetic_template
+MSG02362,TX005630,test,in_app,Install the verification app and keep the screen visible while we help you.,remote_access_scam,81,false,false,false,true,false,1,synthetic_template
+MSG02363,TX005635,train,in_app,Monthly subscription payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02364,TX005637,train,in_app,Rent transfer for March,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02365,TX005638,train,in_app,Your refund of Rs 28410 is ready. Approve the collect request to receive it.,refund_scam,85,false,false,false,false,true,1,synthetic_template
+MSG02366,TX005639,validation,sms_link,Pharmacy purchase,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG02367,TX005641,train,qr_sticker,The payment failed. Scan the replacement QR and enter your UPI PIN to get the refund.,qr_scam,64,false,true,true,false,true,1,synthetic_template
+MSG02368,TX005643,train,sms_link,You have been selected for a reward. Share OTP and pay the release fee now.,lottery_scam,62,true,false,false,false,true,1,synthetic_template
+MSG02369,TX005649,train,in_app,Electricity bill payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02370,TX005650,test,social_media,I am calling from the bank fraud desk. Approve the request while I stay on the line.,impersonation_scam,93,false,false,false,false,false,1,synthetic_template
+MSG02371,TX005652,test,sms_link,Pharmacy purchase,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG02372,TX005656,train,email,We found suspicious activity. Confirm your account by paying Rs 1 through the request.,support_scam,93,false,false,false,false,true,1,synthetic_template
+MSG02373,TX005659,validation,sms_link,Online order payment,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02374,TX005661,train,sms_link,Movie tickets for tonight,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02375,TX005662,train,whatsapp,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,95,false,false,false,false,true,1,synthetic_template
+MSG02376,TX005663,validation,phone_call,Scan this QR to receive your cashback of Rs 48434. No other steps needed.,qr_scam,77,false,false,true,false,true,1,synthetic_template
+MSG02377,TX005664,train,sms_link,Electricity bill payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02378,TX005665,validation,social_media,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,83,false,false,false,true,false,1,synthetic_template
+MSG02379,TX005666,train,whatsapp,Call support on this number and approve the collect request for complaint verification.,support_scam,75,false,false,false,false,false,1,synthetic_template
+MSG02380,TX005667,train,sms_link,Dinner split for yesterday,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02381,TX005668,train,sms_link,Dinner split for yesterday,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG02382,TX005670,train,sms_link,Cab fare from airport,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG02383,TX005672,train,in_app,Rent transfer for March,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02384,TX005674,train,in_app,Monthly subscription payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02385,TX005677,test,phone_call,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,68,false,true,true,false,false,1,synthetic_template
+MSG02386,TX005679,train,sms_link,Sending back the amount you lent me,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02387,TX005681,test,in_app,Sending back the amount you lent me,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02388,TX005684,test,in_app,Movie tickets for tonight,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG02389,TX005685,test,in_app,Online order payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02390,TX005686,test,sms_link,Lunch payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02391,TX005687,train,in_app,Monthly subscription payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02392,TX005688,train,sms_link,Rent transfer for March,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02393,TX005689,train,sms_link,Recharge for mobile plan,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG02394,TX005692,train,in_app,Sending back the amount you lent me,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02395,TX005693,train,in_app,Pharmacy purchase,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG02396,TX005694,validation,email,Limited-time investment offer: deposit now and double your money this week.,investment_scam,90,false,false,false,false,false,1,synthetic_template
+MSG02397,TX005698,validation,in_app,Payment to the usual merchant,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02398,TX005699,test,email,Your failed transaction will be reversed after you share the OTP with the agent.,support_scam,72,true,false,false,false,false,1,synthetic_template
+MSG02399,TX005702,validation,whatsapp,"Hi, I am your manager. Please pay this vendor urgently and send the screenshot.",impersonation_scam,75,false,false,false,false,true,1,synthetic_template
+MSG02400,TX005704,train,phone_call,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,82,false,true,true,false,false,1,synthetic_template
+MSG02401,TX005706,validation,in_app,Pharmacy purchase,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG02402,TX005709,test,sms_link,Sending back the amount you lent me,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02403,TX005710,train,in_app,Online order payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02404,TX005718,train,in_app,Tuition fee transfer,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02405,TX005719,train,sms_link,Cab fare from airport,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02406,TX005723,train,in_app,Electricity bill payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02407,TX005726,validation,sms_link,Payment to the usual merchant,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02408,TX005727,train,sms_link,Monthly subscription payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02409,TX005731,train,sms_link,The delivery partner sent a new QR. Scan it to receive the money.,qr_scam,78,false,false,true,false,false,1,synthetic_template
+MSG02410,TX005732,train,whatsapp,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,94,false,false,false,true,false,1,synthetic_template
+MSG02411,TX005734,test,in_app,Your bank KYC expires today. Update it through this link or your account will be blocked.,kyc_scam,87,false,false,false,false,false,1,synthetic_template
+MSG02412,TX005736,train,in_app,Movie tickets for tonight,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02413,TX005738,train,sms_link,Dinner split for yesterday,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02414,TX005739,train,sms_link,Payment to the usual merchant,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02415,TX005740,train,email,Join the private trading group and send Rs 20899 for a guaranteed profit allocation.,investment_scam,99,false,false,false,false,true,1,synthetic_template
+MSG02416,TX005741,train,sms_link,Electricity bill payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02417,TX005745,train,sms_link,Lunch payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02418,TX005748,validation,in_app,Pharmacy purchase,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02419,TX005749,train,sms_link,Electricity bill payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02420,TX005752,train,sms_link,Movie tickets for tonight,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG02421,TX005757,train,social_media,Your mobile number won a cash reward. Approve the collect request to release it.,lottery_scam,46,false,false,false,false,false,1,synthetic_template
+MSG02422,TX005763,train,sms_link,Electricity bill payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02423,TX005764,validation,sms_link,Pharmacy purchase,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG02424,TX005766,train,social_media,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,82,true,false,false,false,false,1,synthetic_template
+MSG02425,TX005770,train,sms_link,Booking confirmation payment,legitimate,3,false,false,false,false,true,0,synthetic_template
+MSG02426,TX005771,test,sms_link,Monthly subscription payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02427,TX005774,train,in_app,Monthly subscription payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02428,TX005779,validation,sms_link,Limited-time investment offer: deposit now and double your money this week.,investment_scam,82,false,false,false,false,false,1,synthetic_template
+MSG02429,TX005780,train,sms_link,Scan this QR to receive your cashback of Rs 2030. No other steps needed.,qr_scam,60,false,false,true,false,true,1,synthetic_template
+MSG02430,TX005781,train,sms_link,Movie tickets for tonight,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG02431,TX005783,train,in_app,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,70,true,false,false,false,false,1,synthetic_template
+MSG02432,TX005784,train,in_app,Monthly subscription payment,legitimate,13,false,false,false,false,true,0,synthetic_template
+MSG02433,TX005785,train,qr_sticker,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,70,true,false,false,false,false,1,synthetic_template
+MSG02434,TX005787,train,in_app,Join the private trading group and send Rs 26212 for a guaranteed profit allocation.,investment_scam,92,false,false,false,false,true,1,synthetic_template
+MSG02435,TX005790,train,whatsapp,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,81,false,true,true,false,false,1,synthetic_template
+MSG02436,TX005791,test,in_app,Dinner split for yesterday,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG02437,TX005792,train,in_app,Monthly subscription payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02438,TX005793,train,sms_link,Rent transfer for March,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02439,TX005795,train,in_app,Payment to the usual merchant,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02440,TX005796,train,email,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,83,false,true,false,false,false,1,synthetic_template
+MSG02441,TX005798,test,in_app,Movie tickets for tonight,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02442,TX005799,train,sms_link,Online order payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02443,TX005801,train,sms_link,Sending back the amount you lent me,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02444,TX005802,train,sms_link,Rent transfer for March,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02445,TX005803,train,in_app,Customer care will fix your UPI issue. Install AnyDesk and share the code.,remote_access_scam,67,false,false,false,true,false,1,synthetic_template
+MSG02446,TX005810,validation,in_app,Movie tickets for tonight,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02447,TX005816,train,social_media,Use this QR to verify your account and unlock the reward.,qr_scam,77,false,false,true,false,false,1,synthetic_template
+MSG02448,TX005817,train,in_app,Electricity bill payment,legitimate,0,false,false,false,false,true,0,synthetic_template
+MSG02449,TX005819,train,in_app,Dinner split for yesterday,legitimate,13,false,false,false,false,false,0,synthetic_template
+MSG02450,TX005825,train,social_media,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,85,false,false,false,false,true,1,synthetic_template
+MSG02451,TX005827,train,in_app,Movie tickets for tonight,legitimate,9,false,false,false,false,false,0,synthetic_template
+MSG02452,TX005828,train,sms_link,Scan this QR to receive your cashback of Rs 53926. No other steps needed.,qr_scam,60,false,false,true,false,true,1,synthetic_template
+MSG02453,TX005834,test,in_app,Tuition fee transfer,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02454,TX005835,train,in_app,Recharge for mobile plan,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02455,TX005836,train,email,"Hi, I am your manager. Please pay this vendor urgently and send the screenshot.",impersonation_scam,91,false,false,false,false,true,1,synthetic_template
+MSG02456,TX005841,train,in_app,Sending back the amount you lent me,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02457,TX005842,validation,sms_link,Payment for groceries,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02458,TX005843,validation,sms_link,Lunch payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02459,TX005847,train,sms_link,Tuition fee transfer,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02460,TX005849,train,whatsapp,Our bank technician needs remote access to secure your account. Do not close the call.,remote_access_scam,94,false,false,false,true,false,1,synthetic_template
+MSG02461,TX005851,train,sms_link,Electricity bill payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02462,TX005853,test,email,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,69,true,false,false,false,false,1,synthetic_template
+MSG02463,TX005857,train,in_app,Dinner split for yesterday,legitimate,4,false,false,false,false,false,0,synthetic_template
+MSG02464,TX005858,train,sms_link,Monthly subscription payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02465,TX005864,test,in_app,Lunch payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02466,TX005865,validation,in_app,Tuition fee transfer,legitimate,8,false,false,false,false,true,0,synthetic_template
+MSG02467,TX005866,train,in_app,Payment for groceries,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02468,TX005867,train,sms_link,Online order payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02469,TX005868,train,sms_link,Sending back the amount you lent me,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02470,TX005871,validation,sms_link,Recharge for mobile plan,legitimate,0,false,false,false,false,false,0,synthetic_template
+MSG02471,TX005873,test,sms_link,Electricity bill payment,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02472,TX005874,validation,in_app,Rent transfer for March,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02473,TX005882,train,phone_call,"Congratulations, you won Rs 3400. Pay Rs 28 processing fee to claim it today.",lottery_scam,80,false,false,false,false,true,1,synthetic_template
+MSG02474,TX005884,test,phone_call,We could not process your refund. Pay Rs 921 verification charge to release Rs 29212.,refund_scam,94,false,false,false,false,true,1,synthetic_template
+MSG02475,TX005885,train,in_app,Pharmacy purchase,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG02476,TX005887,train,qr_sticker,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,96,false,true,true,false,false,1,synthetic_template
+MSG02477,TX005889,test,phone_call,Install the verification app and keep the screen visible while we help you.,remote_access_scam,70,false,false,false,true,false,1,synthetic_template
+MSG02478,TX005890,train,in_app,Recharge for mobile plan,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG02479,TX005895,test,sms_link,Dinner split for yesterday,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02480,TX005896,train,in_app,Cab fare from airport,legitimate,7,false,false,false,false,false,0,synthetic_template
+MSG02481,TX005898,train,email,Your failed transaction will be reversed after you share the OTP with the agent.,support_scam,94,true,false,false,false,false,1,synthetic_template
+MSG02482,TX005899,train,in_app,Pharmacy purchase,legitimate,11,false,false,false,false,false,0,synthetic_template
+MSG02483,TX005905,validation,sms_link,Rent transfer for March,legitimate,1,false,false,false,false,true,0,synthetic_template
+MSG02484,TX005906,train,in_app,Recharge for mobile plan,legitimate,14,false,false,false,false,false,0,synthetic_template
+MSG02485,TX005907,train,sms_link,Electricity bill payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02486,TX005911,train,phone_call,Urgent KYC verification: pay Rs 1 and approve the request to keep UPI active.,kyc_scam,96,false,false,false,false,true,1,synthetic_template
+MSG02487,TX005914,train,sms_link,Cab fare from airport,legitimate,12,false,false,false,false,false,0,synthetic_template
+MSG02488,TX005916,test,in_app,Cab fare from airport,legitimate,3,false,false,false,false,false,0,synthetic_template
+MSG02489,TX005917,test,in_app,Movie tickets for tonight,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG02490,TX005920,train,in_app,Payment for groceries,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02491,TX005921,train,phone_call,We are confirming your refund. Tell me the OTP from your bank message.,otp_scam,84,true,false,false,false,false,1,synthetic_template
+MSG02492,TX005922,validation,qr_sticker,Your refund of Rs 41319 is ready. Approve the collect request to receive it.,refund_scam,71,false,false,false,false,true,1,synthetic_template
+MSG02493,TX005923,test,sms_link,Lunch payment,legitimate,9,false,false,false,false,true,0,synthetic_template
+MSG02494,TX005927,train,sms_link,Tuition fee transfer,legitimate,6,false,false,false,false,true,0,synthetic_template
+MSG02495,TX005929,train,in_app,Recharge for mobile plan,legitimate,6,false,false,false,false,false,0,synthetic_template
+MSG02496,TX005932,train,sms_link,Your wallet is suspended. Confirm PAN and UPI PIN on the attached page immediately.,kyc_scam,98,false,true,false,false,false,1,synthetic_template
+MSG02497,TX005933,train,whatsapp,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,94,false,false,false,true,false,1,synthetic_template
+MSG02498,TX005935,validation,sms_link,Cab fare from airport,legitimate,15,false,false,false,false,false,0,synthetic_template
+MSG02499,TX005936,test,in_app,Payment for groceries,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02500,TX005937,validation,sms_link,Monthly subscription payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02501,TX005938,test,in_app,Monthly subscription payment,legitimate,7,false,false,false,false,true,0,synthetic_template
+MSG02502,TX005940,train,qr_sticker,Refund team here. Scan the QR and enter your UPI PIN to get the money back.,refund_scam,99,false,true,true,false,false,1,synthetic_template
+MSG02503,TX005946,train,sms_link,Cab fare from airport,legitimate,5,false,false,false,false,false,0,synthetic_template
+MSG02504,TX005949,test,in_app,Tuition fee transfer,legitimate,2,false,false,false,false,true,0,synthetic_template
+MSG02505,TX005951,train,email,Your refund of Rs 705 is ready. Approve the collect request to receive it.,refund_scam,62,false,false,false,false,true,1,synthetic_template
+MSG02506,TX005952,test,sms_link,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,93,true,false,false,false,false,1,synthetic_template
+MSG02507,TX005955,train,whatsapp,Complete KYC now. Our agent will guide you; install the remote support app when asked.,kyc_scam,74,false,false,false,true,false,1,synthetic_template
+MSG02508,TX005956,train,in_app,Booking confirmation payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02509,TX005958,train,in_app,Monthly subscription payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02510,TX005961,validation,sms_link,Monthly subscription payment,legitimate,12,false,false,false,false,true,0,synthetic_template
+MSG02511,TX005963,train,email,Scan this QR to receive your cashback of Rs 9002. No other steps needed.,qr_scam,86,false,false,true,false,true,1,synthetic_template
+MSG02512,TX005964,train,in_app,Sending back the amount you lent me,legitimate,5,false,false,false,false,true,0,synthetic_template
+MSG02513,TX005966,test,sms_link,Dinner split for yesterday,legitimate,8,false,false,false,false,false,0,synthetic_template
+MSG02514,TX005969,train,qr_sticker,Install the verification app and keep the screen visible while we help you.,remote_access_scam,89,false,false,false,true,false,1,synthetic_template
+MSG02515,TX005972,train,sms_link,Recharge for mobile plan,legitimate,2,false,false,false,false,false,0,synthetic_template
+MSG02516,TX005973,train,in_app,Online order payment,legitimate,14,false,false,false,false,true,0,synthetic_template
+MSG02517,TX005977,train,in_app,Online order payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02518,TX005980,validation,email,The payment is stuck. Read out the OTP so our support team can complete it.,otp_scam,98,true,false,false,false,true,1,synthetic_template
+MSG02519,TX005982,train,in_app,Tuition fee transfer,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02520,TX005984,validation,in_app,Your investment account can unlock a bonus if you pay the tax through this UPI request.,investment_scam,80,false,false,false,false,true,1,synthetic_template
+MSG02521,TX005987,train,in_app,Electricity bill payment,legitimate,4,false,false,false,false,true,0,synthetic_template
+MSG02522,TX005989,test,in_app,Electricity bill payment,legitimate,11,false,false,false,false,true,0,synthetic_template
+MSG02523,TX005990,train,phone_call,Call support on this number and approve the collect request for complaint verification.,support_scam,85,false,false,false,false,false,1,synthetic_template
+MSG02524,TX005992,test,sms_link,Lunch payment,legitimate,10,false,false,false,false,true,0,synthetic_template
+MSG02525,TX005993,train,in_app,Cab fare from airport,legitimate,1,false,false,false,false,false,0,synthetic_template
+MSG02526,TX005994,validation,sms_link,Monthly subscription payment,legitimate,15,false,false,false,false,true,0,synthetic_template
+MSG02527,TX005995,train,in_app,Security check required. Send the six digit OTP immediately to avoid suspension.,otp_scam,96,true,false,false,false,false,1,synthetic_template
+MSG02528,TX005998,train,whatsapp,Your refund of Rs 15195 is ready. Approve the collect request to receive it.,refund_scam,85,false,false,false,false,true,1,synthetic_template
+MSG02529,TX005999,train,in_app,Cab fare from airport,legitimate,10,false,false,false,false,false,0,synthetic_template
+MSG02530,TX006000,test,sms_link,Online order payment,legitimate,5,false,false,false,false,true,0,synthetic_template
+
