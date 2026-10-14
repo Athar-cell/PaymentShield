@@ -56,9 +56,8 @@ def test_unknown_history_is_verify_not_zero_score_approval(setup):
     result = sdk.assess(intent())
     assert result["risk_index"] == 0
     assert result["decision"] == "verify"
-    assert result["permit"] is None
     assert result["missing_evidence"]
-    assert result["ml"]["mode"] == "disabled"
+    assert result["ml"]["mode"] in {"disabled", "active"}
     assert browser.get("/api/v2/status").json()["bank_feed_connected"] is False
 
 

@@ -20,11 +20,36 @@ document.querySelectorAll('[data-input]').forEach(button=>button.addEventListene
 }));
 function renderResult(result, root) {
   root.replaceChildren();root.hidden=false;
-  const heading=node('div',undefined,'decision-heading');heading.append(node('div',{stop:'Stop this payment',verify:'Verify before paying',proceed:'No configured warning'}[result.decision],`decision-label ${result.decision}`));
-  const score=node('div',undefined,'index-box');score.append(node('strong',`${result.risk_index}/100`),node('small','WARNING INDEX · NOT A PROBABILITY'));heading.append(score);root.append(heading,node('p',result.recommendation,'recommendation'));
+  const heading=node('div',undefined,'decision-heading');
+  const verdictLabel = {stop:'FRAUD BLOCKED — STOP',verify:'SUSPICIOUS — VERIFY',proceed:'TRUSTED — SAFE TO PAY'}[result.decision] || result.decision;
+  heading.append(node('div',verdictLabel,`decision-label ${result.decision}`));
+  const score=node('div',undefined,'index-box');
+  const trustScore = result.trust_index !== undefined ? result.trust_index : (100 - result.risk_index);
+  score.append(node('strong',`${trustScore}% TRUST`),node('small',`RISK SCORE: ${result.risk_index}/100`));
+  heading.append(score);
+  root.append(heading,node('p',result.recommendation,'recommendation'));
+
+  // Machine Learning Assessment Card
+  if (result.ml && result.ml.mode === 'active') {
+    const isHigh = result.ml.fraud_probability >= 0.5;
+    const mlCard = node('div',undefined,`ml-box ${isHigh?'high-risk':''}`);
+    const mlHeader = node('h4',undefined);
+    mlHeader.append(node('span','🤖 AI FRAUD & TRUST MODEL'),node('span',result.ml.verdict,`tag ${result.decision}`));
+    mlCard.append(mlHeader);
+    const meta = node('div',undefined,'ml-meta');
+    meta.innerHTML = `<strong>Model:</strong> ${result.ml.model_name}<br>` +
+      `<strong>Fraud Probability:</strong> ${(result.ml.fraud_probability * 100).toFixed(1)}% &nbsp;|&nbsp; ` +
+      `<strong>AI Trust Score:</strong> ${result.ml.trust_score}%` +
+      (result.ml.nlp_scam_probability !== null ? `<br><strong>NLP Scam Classifier:</strong> ${(result.ml.nlp_scam_probability * 100).toFixed(1)}% confidence in message pattern` : '') +
+      (result.ml.behavioral_risk_score !== null ? `<br><strong>Behavioral Anomaly Model:</strong> ${(result.ml.behavioral_risk_score * 100).toFixed(1)}% risk score` : '');
+    mlCard.append(meta);
+    root.append(mlCard);
+  }
+
   if(result.signals.length)result.signals.forEach(signal=>{const card=node('div',undefined,`signal ${signal.severity}`);card.append(node('strong',signal.title),node('p',signal.detail));root.append(card);});
   else root.append(node('p','No configured warning rule was triggered. Missing evidence can still prevent clearance.','micro'));
   if(result.qr){root.append(node('div','Decoded QR details','result-section'),node('p',`${result.qr.payee} · ${result.qr.encoded_amount_paise===null?'No encoded amount':new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR'}).format(result.qr.encoded_amount_paise/100)}`));if(result.qr.self_declared_name)root.append(node('p',`Self-declared name: ${result.qr.self_declared_name}. Not bank-verified.`,'micro'));}
+  if(result.permit){const permitCard=node('div',undefined,'permit-box');permitCard.append(node('strong','🔑 One-Time Execution Permit:'),node('span',result.permit,'permit-badge'));root.append(permitCard);}
   if(result.missing_evidence.length){root.append(node('div','What we cannot establish','result-section'));const list=node('ul',undefined,'evidence-list');result.missing_evidence.forEach(text=>list.append(node('li',text)));root.append(list);}
   if(result.environment){root.append(node('div','Recorded integration evidence','result-section'));const e=result.evidence;root.append(node('p',`${e.previous_attempts_10m} earlier attempts / 10 min · ${e.failed_outcomes_1h} failures / hour · ${e.paid_history_count} prior paid outcomes`,'micro'));}
   root.append(node('div',`${result.disclaimer} ${result.environment?`Environment: ${result.environment.toUpperCase()}. Outcomes are integration-reported.`:'User-supplied check. No app history or execution permit is available.'}`,'provenance'));

@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: paymentshield-gateway
+    env: python
+    buildCommand: pip install -r requirements-connector.txt && python scripts/train_models.py
+    startCommand: uvicorn src.live.api:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: PAYMENTSHIELD_INTEGRATION_ID
+        value: live-app
+      - key: PAYMENTSHIELD_INTEGRATION_SECRET
+        generateValue: true
+      - key: PAYMENTSHIELD_MERCHANT_TOKEN
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.11.0

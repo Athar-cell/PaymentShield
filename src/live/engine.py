@@ -1,13 +1,43 @@
-"""Explain observed warning signals; never present a heuristic as confirmed fraud."""
+"""Explain observed warning signals and compute real-time machine learning trust scores."""
 from __future__ import annotations
 
 import math
+import os
+from pathlib import Path
+import pickle
 import re
 
 VERSION = "paymentshield-live-1"
 ML_FEATURES = ["amount_paise", "attempts_10m", "failed_1h", "paid_history_count",
                "amount_ratio", "new_device", "recipient_seen", "payee_mismatch",
                "amount_mismatch", "credential_request", "refund_debit_conflict", "remote_access_request"]
+
+_MODELS = None
+
+
+def _get_ml_models():
+    global _MODELS
+    if _MODELS is not None:
+        return _MODELS
+    models = {"message": None, "transaction": None}
+    root = Path(__file__).resolve().parents[2]
+    art = root / "artifacts"
+    msg_path = art / "message_model.pkl"
+    tx_path = art / "transaction_model.pkl"
+    if msg_path.is_file():
+        try:
+            with open(msg_path, "rb") as handle:
+                models["message"] = pickle.load(handle)
+        except Exception:
+            pass
+    if tx_path.is_file():
+        try:
+            with open(tx_path, "rb") as handle:
+                models["transaction"] = pickle.load(handle)
+        except Exception:
+            pass
+    _MODELS = models
+    return _MODELS
 
 
 def language_flags(message: str) -> dict:
@@ -45,6 +75,7 @@ def assess(intent: dict, history: dict, source: str = "signed_integration") -> d
     def add(code, title, detail, severity, points):
         signals.append({"code": code, "title": title, "detail": detail, "severity": severity, "points": points})
 
+    # Rule & Anomaly Checks
     if payee_mismatch:
         add("payee_changed", "Recipient does not match", "The payment UPI ID differs from the expected UPI ID supplied for this payment.", "critical", 95)
     if amount_mismatch:
@@ -63,6 +94,60 @@ def assess(intent: dict, history: dict, source: str = "signed_integration") -> d
         add("attempt_velocity", "Unusual attempt frequency", f"This integration recorded {attempts} earlier attempts in 10 minutes. Frequency alone is not proof of fraud.", "medium", 45)
     if ratio is not None and ratio >= 4:
         add("amount_outlier", "Amount outside this customer's observed range", f"This amount is {ratio:.1f} times the median of {paid} earlier paid outcomes reported by this integration.", "medium", 50)
+
+    # Real-Time Machine Learning Inference
+    models = _get_ml_models()
+    nlp_prob = None
+    tx_prob = None
+    msg_text = (intent.get("message") or "").strip()
+
+    if models["message"] is not None and msg_text:
+        try:
+            nlp_prob = float(models["message"].predict_proba([msg_text])[0, 1])
+            if nlp_prob >= 0.70 and not flags["credential_request"] and not flags["refund_debit_conflict"]:
+                add("ml_scam_language", "AI Model: High Scam Probability in Payment Context",
+                    f"The NLP Scam Classifier evaluated payment instructions at {nlp_prob*100:.1f}% scam probability.", "critical", 90)
+            elif nlp_prob >= 0.40 and not flags["credential_request"]:
+                add("ml_suspicious_language", "AI Model: Suspicious Language Patterns",
+                    f"The NLP Scam Classifier detected deceptive phrasing patterns ({nlp_prob*100:.1f}% risk score).", "high", 60)
+        except Exception:
+            nlp_prob = None
+
+    if models["transaction"] is not None:
+        try:
+            import pandas as pd
+            from src.fraudshield.data import TRANSACTION_FEATURES
+            row = {f: 0 for f in TRANSACTION_FEATURES}
+            row["amount_inr"] = float(intent.get("amount_paise", 0)) / 100.0
+            row["device_trust_score"] = 0.95 if (device_known and not new_device) else 0.45
+            row["urgency_score"] = 9.0 if (flags["credential_request"] or flags["refund_debit_conflict"] or (nlp_prob and nlp_prob > 0.5)) else 1.0
+            row["velocity_1h"] = float(attempts)
+            row["receiver_known"] = bool(seen)
+            row["new_device"] = bool(new_device) if new_device is not None else True
+            row["asks_for_otp"] = bool(flags["credential_request"])
+            row["asks_for_upi_pin"] = bool(flags["credential_request"])
+            row["asks_to_scan_qr"] = bool(source == "user_supplied" and "qr" in intent.get("purpose", ""))
+            row["asks_to_install_app"] = bool(flags["remote_access_request"])
+            row["amount_match"] = not bool(amount_mismatch)
+            row["merchant_match"] = not bool(payee_mismatch)
+            row["message_present"] = bool(msg_text)
+            df = pd.DataFrame([row])
+            tx_prob = float(models["transaction"].predict_proba(df)[0, 1])
+        except Exception:
+            tx_prob = None
+
+    ml_active = (models["message"] is not None or models["transaction"] is not None)
+    if nlp_prob is not None and tx_prob is not None:
+        combined_ml = max(nlp_prob, tx_prob, 0.6 * nlp_prob + 0.4 * tx_prob)
+    elif nlp_prob is not None:
+        combined_ml = nlp_prob
+    elif tx_prob is not None:
+        combined_ml = tx_prob
+    else:
+        combined_ml = 0.05
+
+    ml_trust_score = round(max(0.0, min(100.0, (1.0 - combined_ml) * 100.0)), 1)
+
     missing = []
     if source != "signed_integration":
         missing.append("Details are user-supplied; there is no authenticated app connection for this check.")
@@ -76,6 +161,7 @@ def assess(intent: dict, history: dict, source: str = "signed_integration") -> d
         missing.append("Device context is unavailable.")
     elif new_device:
         missing.append("This device reference has no earlier paid history in this integration.")
+
     score = min(100, max([0] + [signal["points"] for signal in signals]))
     if any(signal["severity"] == "critical" for signal in signals):
         decision, recommendation = "stop", "Do not approve this payment as presented. Resolve the specific mismatch or unsafe instruction first."
@@ -83,19 +169,44 @@ def assess(intent: dict, history: dict, source: str = "signed_integration") -> d
         decision, recommendation = "verify", "Pause and independently verify the recipient, amount, and request before deciding."
     else:
         decision, recommendation = "proceed", "No configured warning was found in the available integration history. Confirm the recipient and amount in your payment app."
+
+    trust_index = max(0, min(100, 100 - score))
+    trust_verdict = "TRUSTED" if decision == "proceed" else ("SUSPICIOUS" if decision == "verify" else "BLOCKED")
+
     return {
-        "decision": decision, "risk_index": score,
-        "recommendation": recommendation, "signals": signals, "missing_evidence": missing,
-        "evidence": {"source": source, "previous_attempts_10m": attempts, "failed_outcomes_1h": failures,
-                     "paid_history_count": paid, "recipient_seen_in_paid_history": seen,
-                     "device_known_in_paid_history": None if new_device is None else not new_device,
-                     "amount_ratio": round(ratio, 3) if ratio is not None and math.isfinite(ratio) else None,
-                     "expected_payee_present": bool(expected)},
-        "features": dict(zip(ML_FEATURES, [intent["amount_paise"], attempts, failures, paid, ratio,
+        "decision": decision,
+        "trust_verdict": trust_verdict,
+        "trust_index": trust_index,
+        "risk_index": score,
+        "recommendation": recommendation,
+        "signals": signals,
+        "missing_evidence": missing,
+        "evidence": {
+            "source": source,
+            "previous_attempts_10m": attempts,
+            "failed_outcomes_1h": failures,
+            "paid_history_count": paid,
+            "recipient_seen_in_paid_history": seen,
+            "device_known_in_paid_history": None if new_device is None else not new_device,
+            "amount_ratio": round(ratio, 3) if ratio is not None and math.isfinite(ratio) else None,
+            "expected_payee_present": bool(expected)
+        },
+        "features": dict(zip(ML_FEATURES, [
+            intent["amount_paise"], attempts, failures, paid, ratio,
             None if new_device is None else int(new_device), int(seen), int(payee_mismatch), int(amount_mismatch),
             int(flags["credential_request"]), int(flags["refund_debit_conflict"] or intent.get("purpose") == "receive_refund"),
-            int(flags["remote_access_request"])])),
+            int(flags["remote_access_request"])
+        ])),
         "engine_version": VERSION,
-        "ml": {"mode": "disabled", "reason": "The synthetic checkout model is not used for live decisions. Observed labelled data and prospective validation are required."},
+        "ml": {
+            "mode": "active" if ml_active else "disabled",
+            "model_name": "PaymentShield Multi-Modal Ensemble (Random Forest + TF-IDF NLP)",
+            "fraud_probability": round(combined_ml, 4) if ml_active else 0.0,
+            "trust_score": ml_trust_score if ml_active else 100.0,
+            "nlp_scam_probability": round(nlp_prob, 4) if nlp_prob is not None else None,
+            "behavioral_risk_score": round(tx_prob, 4) if tx_prob is not None else None,
+            "verdict": "FRAUD SUSPECTED" if combined_ml >= 0.65 else ("VERIFY REQUIRED" if combined_ml >= 0.35 else "TRUSTED (SAFE)")
+        },
         "disclaimer": "Risk guidance, not proof of fraud, a bank identity check, or payment authorization. A zero warning index can still require verification.",
     }
+

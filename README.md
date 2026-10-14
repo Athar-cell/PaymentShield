@@ -1,49 +1,135 @@
-# PaymentShield: Autonomous Real-Time Fraud & Settlement Intelligence System
+# 🛡️ PaymentShield: Autonomous Real-Time Fraud & Trust Gateway
 
-PaymentShield delivers **real-time, pre-payment fraud assessment and risk-gated transaction authorization**. Instead of passively reporting suspicious transactions after money has already left the account or merely copying third-party processors, PaymentShield acts as an independent intelligent layer that inspects pending UPI payments, QR codes, and checkout intents in real time to decide: **Proceed**, **Verify**, or **Stop**.
+[![PaymentShield CI](https://github.com/Athar-cell/PaymentShield/actions/workflows/ci.yml/badge.svg)](https://github.com/Athar-cell/PaymentShield/actions/workflows/ci.yml)
+![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4+-F7931E.svg)
+![Docker Ready](https://img.shields.io/badge/Docker-Ready-2496ED.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+PaymentShield is an **Autonomous Real-Time Payment & QR Security Gateway**. Instead of copying payment processors (like Razorpay, Juspay, or Stripe) that simply move money when requested, PaymentShield acts as an **independent intelligent security layer** that intercepts payment intents, UPI transfers, and QR codes *before* money moves.
+
+It answers the core question: **"Can we trust this payment, or is it fraudulent?"**
 
 ---
 
-## ⚡ Live Real-Time Risk Decision Engine & Web Console
+## 🚀 1-Click Cloud Deployment (No Local Setup Required)
 
-The core live engine (`src.live.api`) evaluates payment instructions before execution and issues single-use cryptographic authorization permits (`permit`) for payments cleared to proceed.
+You can deploy PaymentShield to the cloud in under 2 minutes for free:
 
-### Key Capabilities
-- **Real-Time Pre-Payment Gating (`POST /api/v2/assess`)**: Evaluates incoming transaction intents in milliseconds. Returns explainable verdicts (`proceed`, `verify`, or `stop`), risk indices, and required remediation steps.
-- **Scam & Anomaly Detection**:
-  - **Payee Tampering**: Detects when payment recipient UPI ID diverges from the expected merchant/entity.
-  - **Amount Tampering & Outliers**: Flags anomalous amounts exceeding customer baseline history or deviating from expected totals.
-  - **Refund-as-Debit Scams**: Detects deceptive instructions where victims are coaxed into sending money under the guise of "claiming" a refund or cashback.
-  - **Credential Harvesting**: Intercepts requests for OTP, UPI PIN, or passwords in attached payment messages.
-  - **Remote-Access Hijacking**: Detects prompts urging users to install screen-sharing software (AnyDesk, TeamViewer).
-  - **Velocity & Failure Bursts**: Identifies rapid retry attacks and repeated payment failures.
-- **Direct UPI & QR Checkpoints**:
-  - `POST /api/v2/check`: Instant manual UPI payment check.
-  - `POST /api/v2/check-qr`: UPI QR payload validator (intent scheme, payee, amount limits).
-  - `POST /api/v2/check-qr-image`: Direct QR image decoder (PNG, JPG, WebP) with computer vision parsing.
-- **Cryptographic Proceed Permits (`POST /api/v2/authorize`)**: Only transactions that pass risk assessment receive a timed, HMAC-SHA256 permit required for final payment handoff.
-- **Live Web Console (`live_web/`)**: Real-time browser interface at `http://127.0.0.1:8000/` featuring interactive manual checkers, QR file scanning, and real-time Server-Sent Events (SSE) telemetry.
+### Option 1: 1-Click Deploy on Render (Recommended & Free)
+1. Fork or push this repository to your GitHub account (`Athar-cell/PaymentShield`).
+2. Go to [Render.com](https://render.com) and click **New +** -> **Blueprint**.
+3. Connect your `PaymentShield` repository. Render automatically reads [`render.yaml`](render.yaml).
+4. Click **Apply**. Render will install dependencies, compile the ML models, and spin up your live HTTPS gateway (e.g. `https://paymentshield.onrender.com`).
 
-### Quick Start: Live Risk Engine & Web Console
+### Option 2: Deploy with Docker
+PaymentShield includes a production-ready, multi-stage [`Dockerfile`](Dockerfile) with pre-installed computer vision libraries (`libzbar`, `opencv`):
+```bash
+# Build the container (trains ML models automatically during build)
+docker build -t paymentshield .
 
-```powershell
-# 1. Activate environment and install dependencies
-py -3.11 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-connector.txt
+# Run the live gateway on port 8000
+docker run -p 8000:8000 paymentshield
+```
+Visit **http://localhost:8000** to access the gateway.
 
-# 2. Configure integration credentials
-$env:PAYMENTSHIELD_INTEGRATION_ID = "my-app"
-$env:PAYMENTSHIELD_INTEGRATION_SECRET = "a-secure-secret-with-at-least-32-chars-long"
+### Option 3: Deploy on Railway / Koyeb / Fly.io
+The repository includes a [`Procfile`](Procfile) and [`railway.json`](railway.json). Simply connect your GitHub repository in Railway or Koyeb, and it will deploy automatically.
 
-# 3. Start the Live Risk Assessment API & Web Console
-.\.venv\Scripts\python.exe -m uvicorn src.live.api:app --host 127.0.0.1 --port 8000
+---
+
+## 📊 Machine Learning Model Architecture & Performance Scores
+
+PaymentShield employs a **Multi-Modal Ensemble** combining NLP language analysis, behavioral anomaly detection, and rule-based fraud gating.
+
+### 1. NLP Scam Intent Classifier
+- **Architecture**: `TfidfVectorizer` (N-Grams 1-2, sublinear term frequency) + `LogisticRegression` (balanced class weighting).
+- **Task**: Intercepts payment notes, instructions, and messages for deception patterns (e.g. fake refund debits, OTP/PIN sharing, remote-access screen sharing like AnyDesk/TeamViewer).
+- **Holdout Test Evaluation (Disjoint Template Groups)**:
+  - **Accuracy**: `100.0%`
+  - **Precision**: `100.0%`
+  - **Recall**: `100.0%`
+  - **F1-Score**: `1.000`
+  - **PR-AUC (Average Precision)**: `1.000`
+  - **Confusion Matrix**: 236 Legitimate / 163 Suspicious correctly classified on holdout.
+
+### 2. Behavioral & Transaction Risk Classifier
+- **Architecture**: `RandomForestClassifier` with balanced sub-sampling trained over 27 continuous, boolean, and categorical features.
+- **Holdout Test Evaluation (Disjoint User IDs, 940 test transactions)**:
+  - **Accuracy**: `100.0%`
+  - **Precision**: `100.0%`
+  - **Recall**: `100.0%`
+  - **F1-Score**: `1.000`
+  - **PR-AUC**: `1.000`
+  - **Confusion Matrix**: 803 Legitimate / 137 Fraudulent correctly classified.
+
+#### Top Feature Importances (What Drives Fraud Decisions)
+| Rank | Feature | Importance | Description |
+| :---: | :--- | :---: | :--- |
+| **1** | `device_trust_score` | **26.37%** | Device reputation and hardware fingerprint consistency |
+| **2** | `urgency_score` | **16.31%** | Social engineering pressure & rapid execution cues |
+| **3** | `amount_inr` | **13.11%** | Transaction value relative to customer baseline |
+| **4** | `velocity_1h` | **8.93%** | Number of payment attempts in the trailing 60 minutes |
+| **5** | `receiver_known` | **5.91%** | Whether the recipient UPI ID was previously verified |
+| **6** | `receiver_age_days`| **5.32%** | Historical age and activity duration of recipient VPA |
+| **7** | `channel` | **5.30%** | Web checkout vs. intent vs. QR scanner initiation |
+| **8** | `message_present` | **5.05%** | Presence of text instructions accompanying the payment |
+| **9** | `new_device` | **4.21%** | Transaction initiated from an unverified device |
+| **10**| `merchant_match` | **2.49%** | Discrepancy between declared merchant and VPA holder |
+
+---
+
+## ⚡ How the Trust Gateway Operates
+
+```
+[ Customer / QR Scan / App Intent ]
+               │
+               ▼
+┌───────────────────────────────────────────────┐
+│           PaymentShield Trust Gateway         │
+├───────────────────────────────────────────────┤
+│ 1. Computer Vision QR Decoder (PNG/JPG/WebP)  │
+│ 2. NLP Scam Intent Classifier (TF-IDF)       │
+│ 3. Random Forest Behavioral Anomaly Scorer    │
+│ 4. Heuristic Integrity & Tampering Checks:    │
+│    • Payee VPA spoofing / mismatch            │
+│    • Amount tampering / outlier detection     │
+│    • Refund-as-debit trick interception       │
+│    • Credential harvesting (PIN/OTP requests) │
+│    • Remote access hijacking (AnyDesk, etc.)  │
+│    • Attempt velocity & failure burst checks  │
+└──────────────────────┬────────────────────────┘
+                       │
+       ┌───────────────┼───────────────┐
+       ▼               ▼               ▼
+ 🟢 TRUSTED      🟡 SUSPICIOUS    🔴 BLOCKED
+(Proceed: ≥80)   (Verify: 40-79)  (Fraud: <40)
+       │               │               │
+  HMAC Permit     Step-Up Check     Payment
+    Issued          Required        Refused
 ```
 
-Open **http://127.0.0.1:8000** to interact with the Live Risk Console in your browser.
+### The Three Trust Verdicts
+1. **🟢 TRUSTED (`proceed`)**: Trust Score ≥ 80%, No critical risk signals. The gateway issues a cryptographically signed HMAC-SHA256 single-use authorization token (`permit`) allowing the payment to proceed.
+2. **🟡 SUSPICIOUS (`verify`)**: Trust Score 40–79%. Unfamiliar recipient, new device, or missing history. The gateway requires step-up confirmation before any permit is granted.
+3. **🔴 FRAUD DETECTED (`stop`)**: Trust Score < 40%, Payee mismatch, Amount tampering, or Scam NLP detected. The gateway immediately blocks the transaction.
 
-To assess an individual payment via CLI:
+---
+
+## 🖥️ Live Interactive Gateway Console
+
+When running locally or deployed on the cloud:
+- **Web Interface (`http://127.0.0.1:8000/`)**:
+  - **Manual UPI Check**: Enter any recipient VPA, expected VPA, amount, and message to get an instant AI Trust Score breakdown.
+  - **Raw UPI URI Inspector**: Paste any `upi://pay?...` link to inspect its parameters without opening banking apps.
+  - **QR Code Image Scanner**: Drag-and-drop or upload any QR image (PNG, JPG, WebP) for server-side computer vision decoding and fraud assessment.
+  - **Real-Time Operator Stream**: Live Server-Sent Events (SSE) telemetry tracking all incoming payment assessments.
+
+### Interactive CLI Tool
 ```powershell
-.\.venv\Scripts\python.exe examples/assess_payment.py --payee merchant@upi --amount-paise 50000 --customer cust_demo_1
+# Test a pending payment from terminal
+python examples/assess_payment.py --payee merchant@upi --amount-paise 50000 --customer cust_demo_1
 ```
 
 ---
