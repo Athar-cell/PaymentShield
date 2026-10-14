@@ -10,3 +10,6 @@ artifacts/metrics.json
 !.env.example
 runtime/
 artifacts/checkout/
+artifacts/observed/
+artifacts/live/
+exports/

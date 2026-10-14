@@ -1,8 +1,56 @@
-# PaymentShield
+# PaymentShield: Autonomous Real-Time Fraud & Settlement Intelligence System
 
-## New direction: checkout risk connector
+PaymentShield delivers **real-time, pre-payment fraud assessment and risk-gated transaction authorization**. Instead of passively reporting suspicious transactions after money has already left the account or merely copying third-party processors, PaymentShield acts as an independent intelligent layer that inspects pending UPI payments, QR codes, and checkout intents in real time to decide: **Proceed**, **Verify**, or **Stop**.
 
-The project now includes **our own checkout, pre-payment risk decisions, merchant review,
+---
+
+## ⚡ Live Real-Time Risk Decision Engine & Web Console
+
+The core live engine (`src.live.api`) evaluates payment instructions before execution and issues single-use cryptographic authorization permits (`permit`) for payments cleared to proceed.
+
+### Key Capabilities
+- **Real-Time Pre-Payment Gating (`POST /api/v2/assess`)**: Evaluates incoming transaction intents in milliseconds. Returns explainable verdicts (`proceed`, `verify`, or `stop`), risk indices, and required remediation steps.
+- **Scam & Anomaly Detection**:
+  - **Payee Tampering**: Detects when payment recipient UPI ID diverges from the expected merchant/entity.
+  - **Amount Tampering & Outliers**: Flags anomalous amounts exceeding customer baseline history or deviating from expected totals.
+  - **Refund-as-Debit Scams**: Detects deceptive instructions where victims are coaxed into sending money under the guise of "claiming" a refund or cashback.
+  - **Credential Harvesting**: Intercepts requests for OTP, UPI PIN, or passwords in attached payment messages.
+  - **Remote-Access Hijacking**: Detects prompts urging users to install screen-sharing software (AnyDesk, TeamViewer).
+  - **Velocity & Failure Bursts**: Identifies rapid retry attacks and repeated payment failures.
+- **Direct UPI & QR Checkpoints**:
+  - `POST /api/v2/check`: Instant manual UPI payment check.
+  - `POST /api/v2/check-qr`: UPI QR payload validator (intent scheme, payee, amount limits).
+  - `POST /api/v2/check-qr-image`: Direct QR image decoder (PNG, JPG, WebP) with computer vision parsing.
+- **Cryptographic Proceed Permits (`POST /api/v2/authorize`)**: Only transactions that pass risk assessment receive a timed, HMAC-SHA256 permit required for final payment handoff.
+- **Live Web Console (`live_web/`)**: Real-time browser interface at `http://127.0.0.1:8000/` featuring interactive manual checkers, QR file scanning, and real-time Server-Sent Events (SSE) telemetry.
+
+### Quick Start: Live Risk Engine & Web Console
+
+```powershell
+# 1. Activate environment and install dependencies
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-connector.txt
+
+# 2. Configure integration credentials
+$env:PAYMENTSHIELD_INTEGRATION_ID = "my-app"
+$env:PAYMENTSHIELD_INTEGRATION_SECRET = "a-secure-secret-with-at-least-32-chars-long"
+
+# 3. Start the Live Risk Assessment API & Web Console
+.\.venv\Scripts\python.exe -m uvicorn src.live.api:app --host 127.0.0.1 --port 8000
+```
+
+Open **http://127.0.0.1:8000** to interact with the Live Risk Console in your browser.
+
+To assess an individual payment via CLI:
+```powershell
+.\.venv\Scripts\python.exe examples/assess_payment.py --payee merchant@upi --amount-paise 50000 --customer cust_demo_1
+```
+
+---
+
+## Checkout Risk Connector
+
+The project also includes **our own checkout, pre-payment risk decisions, merchant review,
 and a replaceable payment-provider adapter**. This is more than a dashboard: the backend
 prevents blocked/review payments from reaching provider checkout.
 

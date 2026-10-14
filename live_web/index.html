@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PaymentShield — Before you approve</title><meta name="description" content="Pre-payment risk checks, signed app integration, and QR inspection. Understand the evidence before you approve."><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/">P<span>PaymentShield<small>PRE-PAYMENT RISK LAYER</small></span></a><div class="service"><i></i><span id="service-status">Checking service…</span></div><a href="/docs" class="api-link" target="_blank" rel="noopener">API reference ↗</a></header>
+<main>
+<div class="hero"><div><p class="eyebrow">A CHECK BEFORE THE COMMITMENT</p><h1>Before you approve,<br><em>know what looks wrong.</em></h1><p class="intro">Check a payment or QR. Connect your app before its payment call.<br>Get a decision with evidence—not a claim that every payment is safe.</p></div><div class="architecture"><span>YOUR PAYMENT REQUEST</span><b>↓</b><strong>PaymentShield</strong><small>Observe · Check · Explain</small><b>↓</b><div><span>PROCEED</span><span>VERIFY</span><span>STOP</span></div></div></div>
+<nav class="tabs" aria-label="Risk workspace"><button class="active" data-panel="check" aria-pressed="true">01 &nbsp; Check before paying</button><button data-panel="connect" aria-pressed="false">02 &nbsp; Connect your app</button><button data-panel="learn" aria-pressed="false">03 &nbsp; Model evidence</button></nav>
+<div id="notification" role="status" aria-live="polite" hidden></div>
+<section id="panel-check" class="panel"><div class="grid">
+<article class="card"><div class="card-top"><div><span class="eyebrow">PENDING PAYMENT</span><h2>What are you about to approve?</h2></div><span class="tag">USER-SUPPLIED</span></div>
+<form id="check-form">
+<div class="switch" aria-label="Payment input"><button type="button" class="selected" data-input="details" aria-pressed="true">Payment details</button><button type="button" data-input="uri" aria-pressed="false">UPI link</button><button type="button" data-input="image" aria-pressed="false">QR image</button></div>
+<div id="input-details"><label for="payee">Recipient UPI ID</label><input id="payee" placeholder="recipient@bank" autocomplete="off" spellcheck="false"></div>
+<div id="input-uri" hidden><label for="upi-uri">UPI payment link</label><textarea id="upi-uri" rows="3" placeholder="Paste a upi://pay link. We inspect it without opening it." spellcheck="false"></textarea></div>
+<div id="input-image" hidden><label for="qr-image">Upload the QR you intend to scan</label><input id="qr-image" type="file" accept="image/png,image/jpeg,image/webp"><p class="micro">Up to 8 MiB and 16 megapixels. Decoded in the server process; image bytes are not saved.</p></div>
+<div class="two"><div><label for="amount">Intended amount · INR</label><input id="amount" inputmode="decimal" placeholder="0.00" required></div><div><label for="purpose">What were you told this is for?</label><select id="purpose"><option value="purchase">Paying for a purchase</option><option value="transfer">Sending money</option><option value="receive_refund">Receiving a refund</option></select></div></div>
+<label for="expected-payee">Expected UPI ID <span>Optional, from a trusted source</span></label><input id="expected-payee" placeholder="Compare against the UPI ID you independently expected" autocomplete="off" spellcheck="false">
+<div id="message-wrap"><label for="message">Payment instructions or message <span>Optional</span></label><textarea id="message" rows="3" maxlength="3000" placeholder="Paste the instructions—not your actual OTP, PIN, or password."></textarea></div>
+<button class="primary wide" id="check-button" type="submit">Check this payment <span>→</span></button><p class="micro centered">No money moves. We never ask for a UPI PIN, OTP, or card number.</p>
+</form></article>
+<article class="card result-card"><div class="card-top"><h2>Should you proceed?</h2><span class="tag">EVIDENCE FIRST</span></div><div id="result-empty" class="empty"><div class="shield">◇</div><h3>A decision needs context.</h3><p>Add the payment you’re considering.<br>Warnings and missing information will appear here.</p></div><div id="result" hidden aria-live="polite"></div></article>
+</div><div class="boundary"><strong>A clear boundary.</strong><p>A manual check cannot see your bank history or verify who owns a UPI ID. Matching names are not identity proof. “Verify” means the available evidence does not justify automatic clearance.</p></div></section>
+<section id="panel-connect" class="panel" hidden>
+<div class="section-heading"><div><span class="eyebrow">THE ACTUAL CONNECTOR</span><h2>Put the check before your payment call.</h2><p>Your backend submits the intent. PaymentShield returns a decision. A single-use permit gates the exact payment details.</p></div><span class="tag" id="integration-status">NOT CONFIGURED</span></div>
+<div class="grid"><article class="card"><h3>1. Configure our signing key</h3><p>This is a PaymentShield key shared with your own backend—not a Razorpay key. Keep it out of browser code.</p><pre>PAYMENTSHIELD_INTEGRATION_ID=my-app
+PAYMENTSHIELD_INTEGRATION_SECRET=&lt;32+ random characters&gt;
+PAYMENTSHIELD_MERCHANT_TOKEN=&lt;operator console token&gt;</pre><h3>2. Gate your existing payment function</h3><pre>from src.live.client import PaymentShieldClient
+
+shield = PaymentShieldClient(url, app_id, secret)
+result = shield.guard_and_call(
+    pending_payment,
+    send_payment=your_existing_payment_function
+)
+# No permit? The function is not called.</pre><p class="micro">The integrating app still owns user consent, bank authorization, payment idempotency, and settlement. This SDK currently targets a single trusted app backend.</p><a href="/docs" target="_blank" rel="noopener">See the signed API contracts ↗</a></article>
+<article class="card"><div class="card-top"><h3>Incoming requests</h3><span class="tag" id="stream-status">LOCKED</span></div><p>Read-only operator view. Requests appear only when an app actually submits them. Nothing is prefilled or randomly generated.</p><label for="operator-token">Operator console token</label><div class="inline"><input id="operator-token" type="password" autocomplete="off" placeholder="Token set on this server"><button id="connect-console" class="primary">Connect</button></div><p class="micro">Stored in page memory only. The server issues an HttpOnly, 30-minute read-only session.</p><div id="feed-summary" class="feed-summary" hidden></div><div id="feed" class="feed"><div class="empty small"><h3>No connected feed shown.</h3><p>Unlock the console, then submit a request from your app. A connected app feed is not a bank-wide Google Pay feed.</p></div></div></article></div><div id="feed-detail" class="card" hidden></div>
+</section>
+<section id="panel-learn" class="panel" hidden>
+<div class="section-heading"><div><span class="eyebrow">NO SYNTHETIC ACCURACY CLAIMS</span><h2>Train on outcomes. Show the misses.</h2><p>The old synthetic checkout model is not used by this service. Observed events and adjudicated labels feed a separate training pipeline.</p></div><span class="tag amber">LIVE ML ENFORCEMENT OFF</span></div>
+<div class="grid"><article class="card"><h3>What the live service checks today</h3><ul class="plain-list"><li>Expected recipient and amount versus the payment presented.</li><li>Refund/debit contradictions and credential-sharing instructions.</li><li>Attempt frequency and failures recorded by the integrating app.</li><li>Prior paid outcomes, device context, and amount outliers when history exists.</li></ul><p>These are explicit evidence checks, not a validated fraud classifier. Ambiguity routes to verification.</p><h3>What the ML pipeline will measure</h3><p>Temporal holdouts, train-only calibration, model comparison, precision, recall, false alarms, missed cases, ROC, PR, and a confusion matrix. No report is generated without enough labelled data.</p><pre>python scripts/train_observed.py \
+  --data &lt;authenticated-export.json&gt; \
+  --output artifacts/observed</pre><p class="micro">Integrator labels are not independently verified. A successful payment is not a legitimate-payment label, and a failed payment is not automatically fraud.</p></article><article class="card"><h3>Observed model report</h3><div id="model-report"><div class="empty small"><h3>No report loaded.</h3><p>Connect the operator console to inspect labelled-data counts and any observed-data evaluation. Empty means empty—not fake metrics.</p></div></div><button id="load-model" class="secondary">Load observed-data evidence</button></article></div>
+</section>
+<footer><strong>PaymentShield</strong><span>Risk guidance ≠ fraud proof ≠ bank authorization.</span><span id="version">Live Risk API</span></footer>
+</main></body></html>
