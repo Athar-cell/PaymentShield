@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+artifacts/*.pkl
+artifacts/metrics.json
+*.DS_Store
+
