@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from contextlib import contextmanager
+import os
 from pathlib import Path
 import sqlite3
 
@@ -8,7 +9,15 @@ import sqlite3
 class LiveStore:
     def __init__(self, path):
         self.path = Path(path)
-        self.path.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            test_file = self.path.parent / f".write_test_{os.getpid()}"
+            test_file.touch()
+            test_file.unlink()
+        except OSError:
+            import tempfile
+            self.path = Path(tempfile.gettempdir()) / self.path.name
+            self.path.parent.mkdir(parents=True, exist_ok=True)
         with self.transaction() as db:
             db.executescript("""
             CREATE TABLE IF NOT EXISTS live_assessments (

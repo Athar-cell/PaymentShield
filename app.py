@@ -21,8 +21,10 @@ from src.fraudshield.ui import COLORS, STYLE, TEAL, chart_style, esc, gauge
 ROOT = Path(__file__).parent
 DATA_DIR, ARTIFACT_DIR = ROOT / "data", ROOT / "artifacts"
 PAGES = ["Overview", "Scan & explain", "QR inspector", "Risk intelligence", "Model lab", "Demo studio"]
-st.set_page_config(page_title="PaymentShield | Think before you pay", page_icon="🛡", layout="wide")
-st.markdown(STYLE, unsafe_allow_html=True)
+if hasattr(st, "runtime") and st.runtime.exists():
+    st.set_page_config(page_title="PaymentShield | Think before you pay", page_icon="🛡", layout="wide")
+    st.markdown(STYLE, unsafe_allow_html=True)
+
 
 
 @st.cache_data
@@ -376,32 +378,40 @@ with st.sidebar:
     st.caption("Synthetic examples. Explainable checks.")
     st.link_button("View project on GitHub", "https://github.com/Athar-cell/PaymentShield")
 
-try:
-    transactions, messages, qr_events = load_tables()
-except Exception as exc:
-    st.error(f"The dataset could not be loaded: {exc}")
-    st.stop()
+if hasattr(st, "runtime") and st.runtime.exists():
+    try:
+        transactions, messages, qr_events = load_tables()
+    except Exception as exc:
+        st.error(f"The dataset could not be loaded: {exc}")
+        st.stop()
 
-page = st.session_state["page"]
-# The overview and dataset charts do not require expensive model initialization.
-tx_model = msg_model = metrics = model_error = None
-if page in ["Scan & explain", "Model lab", "Demo studio"]:
-    fingerprint = [f"{p.relative_to(DATA_DIR)}:{p.stat().st_size}:{p.stat().st_mtime_ns}" for p in sorted(DATA_DIR.rglob("*.csv"))]
-    tx_model, msg_model, metrics, model_error = get_models(MODEL_VERSION, fingerprint)
-    if model_error:
-        st.warning("Model training is unavailable in this session. Explicit safety rules remain active.")
-        with st.expander("Model setup details"):
-            st.code(model_error)
+    page = st.session_state["page"]
+    # The overview and dataset charts do not require expensive model initialization.
+    tx_model = msg_model = metrics = model_error = None
+    if page in ["Scan & explain", "Model lab", "Demo studio"]:
+        fingerprint = [f"{p.relative_to(DATA_DIR)}:{p.stat().st_size}:{p.stat().st_mtime_ns}" for p in sorted(DATA_DIR.rglob("*.csv"))]
+        tx_model, msg_model, metrics, model_error = get_models(MODEL_VERSION, fingerprint)
+        if model_error:
+            st.warning("Model training is unavailable in this session. Explicit safety rules remain active.")
+            with st.expander("Model setup details"):
+                st.code(model_error)
 
-if page == "Overview":
-    overview(transactions, messages, qr_events)
-elif page == "Scan & explain":
-    scan_page(tx_model, msg_model)
-elif page == "QR inspector":
-    qr_page(tx_model, msg_model)
-elif page == "Risk intelligence":
-    intelligence(transactions, messages, qr_events)
-elif page == "Model lab":
-    model_lab(metrics)
+    if page == "Overview":
+        overview(transactions, messages, qr_events)
+    elif page == "Scan & explain":
+        scan_page(tx_model, msg_model)
+    elif page == "QR inspector":
+        qr_page(tx_model, msg_model)
+    elif page == "Risk intelligence":
+        intelligence(transactions, messages, qr_events)
+    elif page == "Model lab":
+        model_lab(metrics)
+    else:
+        studio(tx_model, msg_model)
 else:
-    studio(tx_model, msg_model)
+    # Expose the FastAPI gateway application if imported by ASGI/WSGI servers (e.g. Vercel)
+    try:
+        from src.live.api import app
+    except Exception:
+        app = None
+

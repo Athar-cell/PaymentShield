@@ -3,7 +3,10 @@ __pycache__/
 .pytest_cache/
 .venv/
 artifacts/*.pkl
+!artifacts/message_model.pkl
+!artifacts/transaction_model.pkl
 artifacts/metrics.json
+!artifacts/metrics.json
 *.DS_Store
 .env
 .env.*
