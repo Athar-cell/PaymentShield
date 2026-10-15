@@ -21,7 +21,11 @@ from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
-from src.fraudshield.qr import decode_qr_image, parse_upi_payload
+try:
+    from src.fraudshield.qr import decode_qr_image, parse_upi_payload  # type: ignore[assignment]
+except Exception:  # cv2/PIL missing in serverless
+    decode_qr_image = None  # type: ignore[assignment]
+    parse_upi_payload = None  # type: ignore[assignment]
 from .contracts import Authorize, Feedback, Intent, ManualCheck, Outcome, QRCheck, QRImageCheck, Review
 from .engine import assess, VERSION
 from .storage import LiveStore
@@ -321,6 +325,8 @@ def create_app(db_path=None, integration_id=None, integration_secret=None, conso
     @app.post("/api/v2/check-qr")
     def check_qr(body: QRCheck, request: Request):
         manual_limit(request)
+        if parse_upi_payload is None:
+            raise HTTPException(503, "QR decoding unavailable in this deployment (cv2/PIL not installed).")
         parsed = urlsplit(body.payload)
         if parsed.path not in {"", "/"} or parsed.fragment:
             raise HTTPException(422, "Unexpected path or fragment in payment URI.")
@@ -332,6 +338,8 @@ def create_app(db_path=None, integration_id=None, integration_secret=None, conso
     @app.post("/api/v2/check-qr-image")
     async def check_qr_image(request: Request):
         manual_limit(request)
+        if decode_qr_image is None:
+            raise HTTPException(503, "QR image decoding unavailable in this deployment (cv2/PIL not installed).")
         raw_json = await limited_body(request, 12 * 1024 * 1024)
         try:
             body = QRImageCheck.model_validate_json(raw_json)
@@ -409,11 +417,23 @@ def create_app(db_path=None, integration_id=None, integration_secret=None, conso
                 "rows": [{"assessment_id": row["id"], "customer_group": row["customer"], "timestamp": row["created"],
                           **json.loads(row["features"]), "label_fraud": row["label"]} for row in rows]}
 
-    app.mount("/static", StaticFiles(directory=ROOT / "live_web"), name="static")
+    live_web_dir = ROOT / "live_web"
+    if live_web_dir.is_dir():
+        app.mount("/static", StaticFiles(directory=live_web_dir), name="static")
 
-    @app.get("/")
-    def home():
-        return FileResponse(ROOT / "live_web/index.html")
+        @app.get("/")
+        def home():
+            return FileResponse(live_web_dir / "index.html")
+    else:
+        @app.get("/")
+        def home():  # type: ignore[misc]
+            return {
+                "status": "ok",
+                "service": "PaymentShield Live Risk Gateway",
+                "version": VERSION,
+                "docs": "/docs",
+                "check": "/api/v2/check",
+            }
 
     return app
 
