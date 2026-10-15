@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PaymentShield — Checkout, with a second look</title>
+  <meta name="description" content="An explainable payment risk connector. Check, decide, then connect to provider checkout.">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/connector-sdk.js" defer></script><script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="PaymentShield home"><span class="brand-icon">P<span>✓</span></span><span>PaymentShield<small>PAYMENT INTELLIGENCE</small></span></a>
+    <div class="workspace"><span class="avatar">PS</span><div>Demo workspace<small>Developer sandbox</small></div><span class="dot"></span></div>
+    <p class="nav-label">WORKSPACE</p>
+    <nav aria-label="Main navigation">
+      <button class="nav active" data-page="checkout"><span>▣</span> Checkout playground</button>
+      <button class="nav" data-page="model"><span>◈</span> Model evaluation</button>
+      <button class="nav" data-page="merchant"><span>☷</span> Merchant review</button>
+      <button class="nav" data-page="connect"><span>↗</span> Integration guide</button>
+    </nav>
+    <div class="sidebar-note"><span class="dot"></span> Decisions before payments<p>Risk approval and payment success are two different things.</p></div>
+    <div class="sidebar-bottom">PaymentShield Connector <span>v0.1</span></div>
+  </aside>
+  <div class="shell">
+    <header><div class="breadcrumb">Workspace <span>/</span> <strong id="page-label">Checkout playground</strong></div><span class="mode" id="mode">Loading connector…</span></header>
+    <main>
+      <div id="global-message" role="status" aria-live="polite" hidden></div>
+      <section id="page-checkout" class="page">
+        <div class="eyebrow"><span></span> THE CHECKOUT CONNECTOR</div>
+        <div class="page-heading"><div><h1>A second look.<br>A smarter payment.</h1><p>From order to risk decision to provider checkout.<br>One connected flow, with a reason behind every decision.</p></div><div class="heading-badge"><span>↗</span><small>CHECK FIRST.<br>THEN CONNECT.</small></div></div>
+        <div class="notice" id="provider-notice">Checking provider configuration…</div>
+        <div class="flow-strip"><div><b>01</b><span>Create order<small>Server-priced, not browser-priced</small></span></div><i>→</i><div><b>02</b><span>Assess & decide<small>Model + observable rules</small></span></div><i>→</i><div><b>03</b><span>Connect to checkout<small>Only after clearance</small></span></div></div>
+        <div class="checkout-grid">
+          <article class="card shop-card">
+            <div class="card-heading"><div><span class="eyebrow">THE DEMO STORE</span><h2>Something for your everyday.</h2></div><span class="pill">INR</span></div>
+            <div class="product-art" aria-hidden="true"><div class="art-ring"></div><svg viewBox="0 0 320 210"><path d="M90 124v-24a70 70 0 0 1 140 0v24" fill="none" stroke="#1c3d3b" stroke-width="24"/><path d="M90 115v-15a70 70 0 0 1 140 0v15" fill="none" stroke="#9ec0b4" stroke-width="8"/><rect x="61" y="102" width="52" height="77" rx="23" fill="#173e3b" transform="rotate(-12 87 140)"/><rect x="207" y="102" width="52" height="77" rx="23" fill="#173e3b" transform="rotate(12 233 140)"/><rect x="86" y="110" width="21" height="60" rx="10" fill="#668a80" transform="rotate(-12 87 140)"/><rect x="213" y="110" width="21" height="60" rx="10" fill="#668a80" transform="rotate(12 233 140)"/></svg><span>BUILT FOR THE LONG PLAY.</span></div>
+            <label for="item">Choose an order</label><select id="item"></select>
+            <div class="price-row"><div><span id="product-category">Audio</span><h3 id="price">₹2,499</h3></div><div class="quantity"><label for="quantity">Quantity</label><input id="quantity" type="number" min="1" max="5" value="1"></div></div>
+            <div id="scenario-wrap"><label for="scenario">Synthetic customer journey</label><select id="scenario"><option value="returning">Returning customer · familiar purchase</option><option value="new_customer">New customer · limited history</option><option value="unusual">Unusual order · new device context</option><option value="burst">Repeated attempts · multiple failures</option></select><p class="micro">These are labelled demo fixtures, not data read from your phone or bank.</p></div>
+            <button id="assess" class="primary">Check & create payment <span>→</span></button>
+            <p class="secure-note">◇ No card numbers, OTPs, or UPI PINs collected here.</p>
+          </article>
+          <div class="right-stack">
+            <article class="card decision-card"><div class="card-heading"><h2>Payment decision</h2><span class="pill">SERVER ENFORCED</span></div>
+              <div id="decision-empty" class="empty-state"><div class="empty-icon">◇</div><h3>Every payment starts with a check.</h3><p>Create an order to see its risk assessment<br>and the next permitted action.</p></div>
+              <div id="decision" hidden><div class="decision-top"><div><span class="eyebrow">RISK INDEX / 100</span><div class="score" id="risk-score">—</div></div><span id="decision-badge" class="decision-badge"></span></div><div class="risk-track"><span id="risk-fill"></span></div><p id="score-note" class="micro"></p><ul id="reasons" class="reasons"></ul><div class="order-meta"><span>Order status</span><strong id="order-state"></strong></div><p id="order-id" class="micro mono"></p><button id="pay" class="primary" hidden>Continue to provider checkout →</button><div id="demo-bank" class="demo-bank" hidden><strong>Simulated bank response</strong><p>No payment app opens and no money moves.</p><div><button id="demo-success" class="primary">Simulate success</button><button id="demo-failure" class="secondary">Simulate failure</button></div></div><button id="refresh-order" class="text-button">Refresh payment status ↻</button></div>
+            </article>
+            <article class="card timeline-card"><div class="card-heading"><h2>The payment trail</h2><span class="live-label"><span class="dot"></span> Recorded events</span></div><ol id="timeline"><li class="muted">Your order’s verified event history will appear here.</li></ol></article>
+          </div>
+        </div>
+        <div class="bottom-note"><strong>Built to connect. Honest about the boundaries.</strong><p>Demo mode simulates payments. Razorpay test mode exercises the external API after you supply test credentials. Real Google Pay handoff requires an eligible provider setup and supported device/flow.</p></div>
+      </section>
+      <section id="page-model" class="page" hidden>
+        <div class="eyebrow">EVIDENCE, NOT JUST ACCURACY</div><h1>Know what the model misses.</h1><p class="intro">Train-only calibration. Validation-selected thresholds. An untouched synthetic test split.</p>
+        <div class="notice">All results on this page use synthetic data. They do not establish real-world fraud detection performance.</div><div id="model-content"><p>Loading evaluation…</p></div>
+      </section>
+      <section id="page-merchant" class="page" hidden>
+        <div class="eyebrow">THE HUMAN CHECKPOINT</div><h1>Review with context.</h1><p class="intro">Risk is a recommendation. Merchant clearance is an audited action. Provider success is separate.</p>
+        <article class="card access-card"><label for="merchant-token">Merchant access token</label><div class="inline-form"><input id="merchant-token" type="password" autocomplete="off" placeholder="Enter the token configured on your server"><button id="load-orders" class="primary">Unlock review queue</button></div><p class="micro">Held in page memory only. Never saved in browser storage or included in a URL.</p></article><div id="merchant-orders"></div>
+      </section>
+      <section id="page-connect" class="page" hidden>
+        <div class="eyebrow">A CONNECTOR, NOT A BANK</div><h1>Put the check in the flow.</h1><p class="intro">Your application calls PaymentShield. PaymentShield gates provider checkout. The provider confirms the result.</p>
+        <div class="guide-grid"><article class="card"><span class="step-number">01</span><h2>Run the connector</h2><p>Install dependencies and generate the checkout model.</p><pre>python -m pip install -r requirements-connector.txt
+python scripts/train_checkout.py
+python -m uvicorn src.connector.api:app --host 127.0.0.1 --port 8000</pre><p>The existing Streamlit application remains available separately.</p></article><article class="card"><span class="step-number">02</span><h2>Configure provider test mode</h2><p>Set server environment variables. Never place the secret in JavaScript.</p><pre>PAYMENTSHIELD_PROVIDER=razorpay_test
+RAZORPAY_KEY_ID=rzp_test_…
+RAZORPAY_KEY_SECRET=…
+RAZORPAY_WEBHOOK_SECRET=…
+PAYMENTSHIELD_MERCHANT_TOKEN=…</pre><p>Restart the service. Live keys are deliberately rejected.</p></article><article class="card"><span class="step-number">03</span><h2>Use the checkout client</h2><pre>&lt;script src="/static/connector-sdk.js"&gt;&lt;/script&gt;
+const shield = new PaymentShield();
+const order = await shield.createOrder({
+  item: 'headphones', quantity: 1,
+  idempotency_key: crypto.randomUUID()
+});
+// Only a cleared order can start checkout.
+await shield.checkout(order.id);</pre><p>Initial client supports this service’s same-origin store. A cross-site merchant SDK and authenticated customer-history ingestion are future work.</p></article><article class="card"><span class="step-number">04</span><h2>Confirm, don’t assume</h2><p>Set your public HTTPS webhook URL to:</p><pre>POST /api/v1/webhooks/razorpay</pre><p>Subscribe to payment.captured, payment.authorized, and payment.failed. Raw-body HMAC verification and duplicate suppression run server-side. Only captured payments become paid.</p><a href="/docs" target="_blank" rel="noopener">Explore the API reference ↗</a></article></div>
+        <div class="bottom-note"><strong>What this does not do</strong><p>It cannot intercept unrelated payments inside a personal Google Pay account. Test mode does not demonstrate a live Google Pay debit. Customer identity, multi-merchant onboarding, production rate limiting, durable hosting, and real-data validation are not complete.</p></div>
+      </section>
+    </main><footer>PaymentShield <span>Explainable decisions. Verifiable outcomes.</span><span>TEST-ONLY PROTOTYPE</span></footer>
+  </div>
+</body></html>

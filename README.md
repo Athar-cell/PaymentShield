@@ -1,5 +1,107 @@
 # PaymentShield
 
+## New direction: checkout risk connector
+
+The project now includes **our own checkout, pre-payment risk decisions, merchant review,
+and a replaceable payment-provider adapter**. This is more than a dashboard: the backend
+prevents blocked/review payments from reaching provider checkout.
+
+The original Streamlit research application is preserved below as the **legacy research
+guide**. Its data, model metrics, commands and deployment instructions are separate from
+the new checkout connector. Do not present the legacy UPI benchmark as checkout accuracy.
+
+### Run the new checkout
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-connector.txt
+.\.venv\Scripts\python.exe scripts/train_checkout.py
+$env:PAYMENTSHIELD_MERCHANT_TOKEN = "choose-a-long-random-local-value"
+.\.venv\Scripts\python.exe -m uvicorn src.connector.api:app --host 127.0.0.1 --port 8000
+```
+
+Open **http://127.0.0.1:8000**. The four sections are Checkout playground, Model evaluation,
+Merchant review, and Integration guide. The default is clearly labelled demo mode: no
+payment app opens and no money moves. Browser testing uses a separate disposable database.
+
+### What is ours, and why an external API may still be needed
+
+PaymentShield owns the interface, risk model, decision rules, review workflow, order store,
+checkout gating, and event trail. A payment adapter is a replaceable connection to the
+infrastructure that executes and confirms a payment. It is not the PaymentShield product.
+
+You do **not** need a Razorpay account to build or run our product in demo mode. The included
+optional Razorpay adapter needs test keys only if you choose to exercise Razorpay's external
+checkout/API. It rejects live keys. No account has been connected merely by adding this code.
+
+A personal Google Pay account is not a general-purpose API that lets this app intercept
+every transaction inside Google Pay. A real merchant handoff requires an eligible supported
+integration. Provider test mode is not a live Google Pay debit demonstration. Do not promise
+that a generic UPI link proves payment success.
+
+### End-to-end flow
+
+1. Server prices a catalog order; browser-supplied amounts are rejected.
+2. Risk engine returns proceed, review, or stop with explanations.
+3. Review orders require an authenticated merchant action and a recorded note. Hard-blocked
+   orders cannot be overridden in this prototype.
+4. Only ready orders can create a provider order. Repeated requests reuse the existing one.
+5. Demo mode simulates bank outcomes. The optional test adapter verifies provider signatures,
+   amount, currency, order association, and payment status server-side.
+6. Only captured provider payments become paid. Authorized is not paid. Signed webhook
+   processing suppresses duplicate bodies and does not let late failure events undo paid.
+
+### Checkout model and evaluation
+
+`scripts/train_checkout.py` generates a reproducible **12,000-row synthetic stochastic
+checkout benchmark**, comparing raw logistic regression, feature-engineered logistic
+regression, Random Forest, and gradient boosting. A dummy baseline and rules-only policy
+are evaluated separately. No legacy demo scenario rows are used in checkout training.
+
+Training and validation contain disjoint users in ordered date windows. Calibration uses
+train-only disjoint-user folds. Model selection and thresholds use validation only. A separate
+seed and later date window supply the final 2,400-row lockbox after selection; an earlier
+development holdout is not presented as blind evidence. Threshold selection targets at most
+5% validation false-positive rate; the test rate is reported honestly and can be higher.
+
+The model-only stop threshold is disabled unless validation has at least 90% precision and
+20 flagged examples. This is not a statistical guarantee. Explicit burst/failure rules can
+still stop a simulated order. Missing/broken models and unknown customer history go to review.
+
+The Model evaluation page shows an actual confusion matrix, precision–recall, ROC, calibration,
+validation model comparison, and combined-policy comparison. Output files are generated in
+`artifacts/checkout/`: `evaluation.json`, `evaluation.png`, `test_predictions.csv`, the generated
+dataset, and a trusted local model pickle. Models, databases, secrets, and generated checkout
+artifacts are not committed. Run the script to reproduce them or download CI artifacts.
+
+**The model is not production-ready.** The benchmark deliberately contains overlapping cases
+and stochastic labels. Synthetic assumptions are not observed fraud. Inspect missed cases and
+false alarms instead of claiming perfect accuracy; real, consented and appropriately labelled
+merchant data is still required for meaningful deployment validation.
+
+### Security and scope
+
+- Session-bound order access, server pricing, strict input validation, same-origin browser
+  writes, merchant-token review, order expiry and idempotency are implemented.
+- Test-provider mode ignores browser-selected customer fixtures. With no authenticated
+  customer-history integration, these orders require merchant review.
+- No card numbers, CVVs, UPI PINs, or OTPs are collected by PaymentShield.
+- Secret values stay in server environment variables. `.env.example` documents them but is
+  not automatically loaded. Never paste actual secrets into the repository or a chat.
+- A provider timeout yields an uncertain state, not a blind retry. Automated reconciliation,
+  multi-merchant isolation, durable production hosting, customer identity, distributed rate
+  limits, and cross-site SDK support remain future work.
+- This connector uses FastAPI + plain HTML/CSS/JavaScript and SQLite for a small single-service
+  prototype. It is not the previously proposed Next.js/PostgreSQL architecture and is not
+  deployed by the old Streamlit Community Cloud instructions.
+
+See [the full connector guide](docs/CONNECTOR.md), [the API implementation](src/connector/api.py),
+[the same-origin checkout client](web/connector-sdk.js), and [the training script](scripts/train_checkout.py).
+
+---
+
+## Legacy Streamlit research guide
+
 **Understand a suspicious payment before you approve it.**
 
 [![PaymentShield CI](https://github.com/Athar-cell/PaymentShield/actions/workflows/ci.yml/badge.svg)](https://github.com/Athar-cell/PaymentShield/actions/workflows/ci.yml)

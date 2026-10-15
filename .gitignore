@@ -5,3 +5,8 @@ __pycache__/
 artifacts/*.pkl
 artifacts/metrics.json
 *.DS_Store
+.env
+.env.*
+!.env.example
+runtime/
+artifacts/checkout/
