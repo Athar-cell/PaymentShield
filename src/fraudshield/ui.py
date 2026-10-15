@@ -12,7 +12,7 @@ COLORS = {"high": RED, "medium": AMBER, "low": TEAL}
 STYLE = """
 <style>
 .stApp { background: #F6F8FA; }
-.block-container { max-width: 1480px; padding-top: 2rem; padding-bottom: 3rem; }
+.block-container { max-width: 1480px; padding-top: 4.5rem; padding-bottom: 3rem; }
 [data-testid="stSidebar"] { background: #EDF2F3; border-right: 1px solid #DAE3E7; }
 h1, h2, h3 { letter-spacing: -.035em; color: #122A33; }
 .eyebrow { color: #087F78; font-size: .74rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: .6rem; }
@@ -38,7 +38,7 @@ h1, h2, h3 { letter-spacing: -.035em; color: #122A33; }
 [data-testid="stMetricValue"] { font-size:1.75rem; color:#122A33; }
 [data-testid="stForm"] { border-color:#D8E3E7; border-radius:18px; background:white; }
 button[kind="primary"] { background:#087F78; border-color:#087F78; }
-@media(max-width:800px) { .hero { grid-template-columns:1fr; padding:24px; } .payment-preview { display:none; } .block-container { padding-top:1rem; } }
+@media(max-width:800px) { .hero { grid-template-columns:1fr; padding:24px; } .payment-preview { display:none; } .block-container { padding-top:4rem; } }
 </style>
 """
 
