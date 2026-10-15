@@ -1,15 +1,18 @@
 from streamlit.testing.v1 import AppTest
+from pathlib import Path
+
+APP_PATH = Path(__file__).resolve().parents[1] / "app.py"
 
 
 def open_page(page):
-    app = AppTest.from_file("app.py", default_timeout=120).run()
+    app = AppTest.from_file(APP_PATH, default_timeout=120).run()
     app.sidebar.radio[0].set_value(page).run()
     assert not app.exception
     return app
 
 
 def test_overview_and_navigation():
-    app = AppTest.from_file("app.py", default_timeout=120).run()
+    app = AppTest.from_file(APP_PATH, default_timeout=120).run()
     assert not app.exception
     assert len(app.metric) == 4
 
