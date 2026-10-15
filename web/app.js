@@ -34,6 +34,9 @@ function renderOrder(value) {
   const assessment = value.assessment;
   $('risk-score').textContent = assessment.score.toFixed(1);
   $('risk-fill').style.left = `${Math.min(99,assessment.score)}%`;
+  // Policy thresholds are validation-selected, not fixed 40/70 score bands.
+  document.querySelector('.risk-track').style.background = '#e5ebe4';
+  $('risk-fill').style.background = {proceed:'var(--green)',review:'var(--amber)',stop:'var(--red)'}[assessment.decision];
   const badge = $('decision-badge'); badge.textContent = {proceed:'Proceed',review:'Review required',stop:'Stopped'}[assessment.decision]; badge.className = `decision-badge ${assessment.decision}`;
   $('score-note').textContent = assessment.note;
   $('reasons').replaceChildren(...assessment.reasons.map(reason => element('li',reason)));
