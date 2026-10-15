@@ -22,5 +22,23 @@ jobs:
       - name: Compile Python files
         run: python -m py_compile app.py scripts/train_models.py src/fraudshield/*.py tests/test_risk_engine.py
       - name: Run tests
-        run: pytest -q
-
+        run: python -m pytest -q
+      - name: Train models and audit data
+        run: python scripts/train_models.py
+      - name: Keep evaluation report
+        uses: actions/upload-artifact@v4
+        with:
+          name: paymentshield-evaluation
+          path: artifacts/metrics.json
+      - name: Install browser for visual checks
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Check the real browser and capture previews
+        run: python scripts/capture_demo.py
+      - name: Keep visual previews
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paymentshield-previews
+          path: artifacts/previews/

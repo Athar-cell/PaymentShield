@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Iterable
 
 import pandas as pd
 from sklearn.compose import ColumnTransformer
@@ -47,7 +46,6 @@ TRANSACTION_CATEGORICAL_FEATURES = [
     "channel",
     "day_of_week",
     "message_present",
-    "message_category",
 ]
 
 TRANSACTION_FEATURES = (
@@ -60,7 +58,8 @@ TRANSACTION_FEATURES = (
 def read_dataset(data_dir: str | Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Load the three linked tables from the repository data directory."""
     data_dir = Path(data_dir)
-    transactions = pd.read_csv(data_dir / "fraudshield_upi_transactions.csv")
+    parts = sorted((data_dir / "transactions").glob("part-*.csv"))
+    transactions = pd.concat([pd.read_csv(part) for part in parts], ignore_index=True) if parts else pd.read_csv(data_dir / "fraudshield_upi_transactions.csv")
     messages = pd.read_csv(data_dir / "fraudshield_scam_messages.csv")
     qr_events = pd.read_csv(data_dir / "fraudshield_qr_events.csv")
     return transactions, messages, qr_events
@@ -155,4 +154,3 @@ def filter_realistic_rows(frame: pd.DataFrame) -> pd.DataFrame:
 
 def split_rows(frame: pd.DataFrame, split: str) -> pd.DataFrame:
     return frame[frame["split"].astype(str).eq(split)].copy()
-

@@ -53,4 +53,3 @@ def test_qr_mismatch_is_high_risk():
 def test_normal_payment_is_low_risk():
     result = analyze_payment(base_features(), "Lunch payment to Rahul")
     assert result["risk_band"] == "low"
-

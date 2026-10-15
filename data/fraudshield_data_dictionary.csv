@@ -16,4 +16,3 @@ qr_events,merchant_match,Whether expected merchant and decoded merchant agree.,b
 qr_events,amount_match,Whether the amount in the QR payload matches the intended amount.,boolean
 qr_events,sticker_tampered,Synthetic indicator for a suspicious or replaced QR sticker.,boolean
 qr_events,label_fraud,Ground-truth target for QR risk classification.,binary target
-
